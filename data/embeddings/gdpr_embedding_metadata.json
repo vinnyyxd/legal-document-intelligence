@@ -1,0 +1,4794 @@
+{
+    "model": "gemini-embedding-001",
+    "dimensions": 768,
+    "normalized": true,
+    "total_chunks": 397,
+    "task_type": "RETRIEVAL_DOCUMENT",
+    "rows": [
+        {
+            "row_index": 0,
+            "chunk_id": "gdpr_article_1_paragraph_1_body_page_32_chunk_0001",
+            "document": "gdpr.pdf",
+            "article": "1",
+            "paragraph": "1",
+            "subclause": null,
+            "clause_reference": "Article 1(1)",
+            "page_numbers": [
+                32
+            ]
+        },
+        {
+            "row_index": 1,
+            "chunk_id": "gdpr_article_1_paragraph_2_body_page_32_chunk_0002",
+            "document": "gdpr.pdf",
+            "article": "1",
+            "paragraph": "2",
+            "subclause": null,
+            "clause_reference": "Article 1(2)",
+            "page_numbers": [
+                32
+            ]
+        },
+        {
+            "row_index": 2,
+            "chunk_id": "gdpr_article_1_paragraph_3_body_page_32_chunk_0003",
+            "document": "gdpr.pdf",
+            "article": "1",
+            "paragraph": "3",
+            "subclause": null,
+            "clause_reference": "Article 1(3)",
+            "page_numbers": [
+                32
+            ]
+        },
+        {
+            "row_index": 3,
+            "chunk_id": "gdpr_article_2_paragraph_1_body_page_32_chunk_0004",
+            "document": "gdpr.pdf",
+            "article": "2",
+            "paragraph": "1",
+            "subclause": null,
+            "clause_reference": "Article 2(1)",
+            "page_numbers": [
+                32
+            ]
+        },
+        {
+            "row_index": 4,
+            "chunk_id": "gdpr_article_2_paragraph_2_body_page_32_chunk_0005",
+            "document": "gdpr.pdf",
+            "article": "2",
+            "paragraph": "2",
+            "subclause": null,
+            "clause_reference": "Article 2(2)",
+            "page_numbers": [
+                32
+            ]
+        },
+        {
+            "row_index": 5,
+            "chunk_id": "gdpr_article_2_paragraph_3_body_page_32_chunk_0006",
+            "document": "gdpr.pdf",
+            "article": "2",
+            "paragraph": "3",
+            "subclause": null,
+            "clause_reference": "Article 2(3)",
+            "page_numbers": [
+                32
+            ]
+        },
+        {
+            "row_index": 6,
+            "chunk_id": "gdpr_article_2_paragraph_4_body_page_32_chunk_0007",
+            "document": "gdpr.pdf",
+            "article": "2",
+            "paragraph": "4",
+            "subclause": null,
+            "clause_reference": "Article 2(4)",
+            "page_numbers": [
+                32
+            ]
+        },
+        {
+            "row_index": 7,
+            "chunk_id": "gdpr_article_3_paragraph_1_body_page_32_chunk_0008",
+            "document": "gdpr.pdf",
+            "article": "3",
+            "paragraph": "1",
+            "subclause": null,
+            "clause_reference": "Article 3(1)",
+            "page_numbers": [
+                32
+            ]
+        },
+        {
+            "row_index": 8,
+            "chunk_id": "gdpr_article_3_paragraph_2_body_page_33_chunk_0009",
+            "document": "gdpr.pdf",
+            "article": "3",
+            "paragraph": "2",
+            "subclause": null,
+            "clause_reference": "Article 3(2)",
+            "page_numbers": [
+                33
+            ]
+        },
+        {
+            "row_index": 9,
+            "chunk_id": "gdpr_article_3_paragraph_3_body_page_33_chunk_0010",
+            "document": "gdpr.pdf",
+            "article": "3",
+            "paragraph": "3",
+            "subclause": null,
+            "clause_reference": "Article 3(3)",
+            "page_numbers": [
+                33
+            ]
+        },
+        {
+            "row_index": 10,
+            "chunk_id": "gdpr_article_5_paragraph_1_body_page_35_chunk_0011",
+            "document": "gdpr.pdf",
+            "article": "5",
+            "paragraph": "1",
+            "subclause": null,
+            "clause_reference": "Article 5(1)",
+            "page_numbers": [
+                35,
+                36
+            ]
+        },
+        {
+            "row_index": 11,
+            "chunk_id": "gdpr_article_5_paragraph_2_body_page_36_chunk_0012",
+            "document": "gdpr.pdf",
+            "article": "5",
+            "paragraph": "2",
+            "subclause": null,
+            "clause_reference": "Article 5(2)",
+            "page_numbers": [
+                36
+            ]
+        },
+        {
+            "row_index": 12,
+            "chunk_id": "gdpr_article_6_paragraph_1_body_page_36_chunk_0013",
+            "document": "gdpr.pdf",
+            "article": "6",
+            "paragraph": "1",
+            "subclause": null,
+            "clause_reference": "Article 6(1)",
+            "page_numbers": [
+                36
+            ]
+        },
+        {
+            "row_index": 13,
+            "chunk_id": "gdpr_article_6_paragraph_2_body_page_36_chunk_0014",
+            "document": "gdpr.pdf",
+            "article": "6",
+            "paragraph": "2",
+            "subclause": null,
+            "clause_reference": "Article 6(2)",
+            "page_numbers": [
+                36
+            ]
+        },
+        {
+            "row_index": 14,
+            "chunk_id": "gdpr_article_6_paragraph_3_body_page_36_chunk_0015",
+            "document": "gdpr.pdf",
+            "article": "6",
+            "paragraph": "3",
+            "subclause": null,
+            "clause_reference": "Article 6(3)",
+            "page_numbers": [
+                36,
+                37
+            ]
+        },
+        {
+            "row_index": 15,
+            "chunk_id": "gdpr_article_6_paragraph_4_body_page_37_chunk_0016",
+            "document": "gdpr.pdf",
+            "article": "6",
+            "paragraph": "4",
+            "subclause": null,
+            "clause_reference": "Article 6(4)",
+            "page_numbers": [
+                37
+            ]
+        },
+        {
+            "row_index": 16,
+            "chunk_id": "gdpr_article_7_paragraph_1_body_page_37_chunk_0017",
+            "document": "gdpr.pdf",
+            "article": "7",
+            "paragraph": "1",
+            "subclause": null,
+            "clause_reference": "Article 7(1)",
+            "page_numbers": [
+                37
+            ]
+        },
+        {
+            "row_index": 17,
+            "chunk_id": "gdpr_article_7_paragraph_2_body_page_37_chunk_0018",
+            "document": "gdpr.pdf",
+            "article": "7",
+            "paragraph": "2",
+            "subclause": null,
+            "clause_reference": "Article 7(2)",
+            "page_numbers": [
+                37
+            ]
+        },
+        {
+            "row_index": 18,
+            "chunk_id": "gdpr_article_7_paragraph_3_body_page_37_chunk_0019",
+            "document": "gdpr.pdf",
+            "article": "7",
+            "paragraph": "3",
+            "subclause": null,
+            "clause_reference": "Article 7(3)",
+            "page_numbers": [
+                37
+            ]
+        },
+        {
+            "row_index": 19,
+            "chunk_id": "gdpr_article_7_paragraph_4_body_page_37_chunk_0020",
+            "document": "gdpr.pdf",
+            "article": "7",
+            "paragraph": "4",
+            "subclause": null,
+            "clause_reference": "Article 7(4)",
+            "page_numbers": [
+                37
+            ]
+        },
+        {
+            "row_index": 20,
+            "chunk_id": "gdpr_article_8_paragraph_1_body_page_37_chunk_0021",
+            "document": "gdpr.pdf",
+            "article": "8",
+            "paragraph": "1",
+            "subclause": null,
+            "clause_reference": "Article 8(1)",
+            "page_numbers": [
+                37
+            ]
+        },
+        {
+            "row_index": 21,
+            "chunk_id": "gdpr_article_8_paragraph_2_body_page_38_chunk_0022",
+            "document": "gdpr.pdf",
+            "article": "8",
+            "paragraph": "2",
+            "subclause": null,
+            "clause_reference": "Article 8(2)",
+            "page_numbers": [
+                38
+            ]
+        },
+        {
+            "row_index": 22,
+            "chunk_id": "gdpr_article_8_paragraph_3_body_page_38_chunk_0023",
+            "document": "gdpr.pdf",
+            "article": "8",
+            "paragraph": "3",
+            "subclause": null,
+            "clause_reference": "Article 8(3)",
+            "page_numbers": [
+                38
+            ]
+        },
+        {
+            "row_index": 23,
+            "chunk_id": "gdpr_article_9_paragraph_1_body_page_38_chunk_0024",
+            "document": "gdpr.pdf",
+            "article": "9",
+            "paragraph": "1",
+            "subclause": null,
+            "clause_reference": "Article 9(1)",
+            "page_numbers": [
+                38
+            ]
+        },
+        {
+            "row_index": 24,
+            "chunk_id": "gdpr_article_9_paragraph_2_body_page_38_chunk_0025",
+            "document": "gdpr.pdf",
+            "article": "9",
+            "paragraph": "2",
+            "subclause": null,
+            "clause_reference": "Article 9(2)",
+            "page_numbers": [
+                38,
+                39
+            ]
+        },
+        {
+            "row_index": 25,
+            "chunk_id": "gdpr_article_9_paragraph_3_body_page_39_chunk_0026",
+            "document": "gdpr.pdf",
+            "article": "9",
+            "paragraph": "3",
+            "subclause": null,
+            "clause_reference": "Article 9(3)",
+            "page_numbers": [
+                39
+            ]
+        },
+        {
+            "row_index": 26,
+            "chunk_id": "gdpr_article_9_paragraph_4_body_page_39_chunk_0027",
+            "document": "gdpr.pdf",
+            "article": "9",
+            "paragraph": "4",
+            "subclause": null,
+            "clause_reference": "Article 9(4)",
+            "page_numbers": [
+                39
+            ]
+        },
+        {
+            "row_index": 27,
+            "chunk_id": "gdpr_article_11_paragraph_1_body_page_39_chunk_0028",
+            "document": "gdpr.pdf",
+            "article": "11",
+            "paragraph": "1",
+            "subclause": null,
+            "clause_reference": "Article 11(1)",
+            "page_numbers": [
+                39
+            ]
+        },
+        {
+            "row_index": 28,
+            "chunk_id": "gdpr_article_11_paragraph_2_body_page_39_chunk_0029",
+            "document": "gdpr.pdf",
+            "article": "11",
+            "paragraph": "2",
+            "subclause": null,
+            "clause_reference": "Article 11(2)",
+            "page_numbers": [
+                39
+            ]
+        },
+        {
+            "row_index": 29,
+            "chunk_id": "gdpr_article_12_paragraph_1_body_page_39_chunk_0030",
+            "document": "gdpr.pdf",
+            "article": "12",
+            "paragraph": "1",
+            "subclause": null,
+            "clause_reference": "Article 12(1)",
+            "page_numbers": [
+                39
+            ]
+        },
+        {
+            "row_index": 30,
+            "chunk_id": "gdpr_article_12_paragraph_2_body_page_40_chunk_0031",
+            "document": "gdpr.pdf",
+            "article": "12",
+            "paragraph": "2",
+            "subclause": null,
+            "clause_reference": "Article 12(2)",
+            "page_numbers": [
+                40
+            ]
+        },
+        {
+            "row_index": 31,
+            "chunk_id": "gdpr_article_12_paragraph_3_body_page_40_chunk_0032",
+            "document": "gdpr.pdf",
+            "article": "12",
+            "paragraph": "3",
+            "subclause": null,
+            "clause_reference": "Article 12(3)",
+            "page_numbers": [
+                40
+            ]
+        },
+        {
+            "row_index": 32,
+            "chunk_id": "gdpr_article_12_paragraph_4_body_page_40_chunk_0033",
+            "document": "gdpr.pdf",
+            "article": "12",
+            "paragraph": "4",
+            "subclause": null,
+            "clause_reference": "Article 12(4)",
+            "page_numbers": [
+                40
+            ]
+        },
+        {
+            "row_index": 33,
+            "chunk_id": "gdpr_article_12_paragraph_5_body_page_40_chunk_0034",
+            "document": "gdpr.pdf",
+            "article": "12",
+            "paragraph": "5",
+            "subclause": null,
+            "clause_reference": "Article 12(5)",
+            "page_numbers": [
+                40
+            ]
+        },
+        {
+            "row_index": 34,
+            "chunk_id": "gdpr_article_12_paragraph_6_body_page_40_chunk_0035",
+            "document": "gdpr.pdf",
+            "article": "12",
+            "paragraph": "6",
+            "subclause": null,
+            "clause_reference": "Article 12(6)",
+            "page_numbers": [
+                40
+            ]
+        },
+        {
+            "row_index": 35,
+            "chunk_id": "gdpr_article_12_paragraph_7_body_page_40_chunk_0036",
+            "document": "gdpr.pdf",
+            "article": "12",
+            "paragraph": "7",
+            "subclause": null,
+            "clause_reference": "Article 12(7)",
+            "page_numbers": [
+                40
+            ]
+        },
+        {
+            "row_index": 36,
+            "chunk_id": "gdpr_article_12_paragraph_8_body_page_40_chunk_0037",
+            "document": "gdpr.pdf",
+            "article": "12",
+            "paragraph": "8",
+            "subclause": null,
+            "clause_reference": "Article 12(8)",
+            "page_numbers": [
+                40
+            ]
+        },
+        {
+            "row_index": 37,
+            "chunk_id": "gdpr_article_13_paragraph_1_body_page_40_chunk_0038",
+            "document": "gdpr.pdf",
+            "article": "13",
+            "paragraph": "1",
+            "subclause": null,
+            "clause_reference": "Article 13(1)",
+            "page_numbers": [
+                40,
+                41
+            ]
+        },
+        {
+            "row_index": 38,
+            "chunk_id": "gdpr_article_13_paragraph_2_body_page_41_chunk_0039",
+            "document": "gdpr.pdf",
+            "article": "13",
+            "paragraph": "2",
+            "subclause": null,
+            "clause_reference": "Article 13(2)",
+            "page_numbers": [
+                41
+            ]
+        },
+        {
+            "row_index": 39,
+            "chunk_id": "gdpr_article_13_paragraph_3_body_page_41_chunk_0040",
+            "document": "gdpr.pdf",
+            "article": "13",
+            "paragraph": "3",
+            "subclause": null,
+            "clause_reference": "Article 13(3)",
+            "page_numbers": [
+                41
+            ]
+        },
+        {
+            "row_index": 40,
+            "chunk_id": "gdpr_article_13_paragraph_4_body_page_41_chunk_0041",
+            "document": "gdpr.pdf",
+            "article": "13",
+            "paragraph": "4",
+            "subclause": null,
+            "clause_reference": "Article 13(4)",
+            "page_numbers": [
+                41
+            ]
+        },
+        {
+            "row_index": 41,
+            "chunk_id": "gdpr_article_14_paragraph_1_body_page_41_chunk_0042",
+            "document": "gdpr.pdf",
+            "article": "14",
+            "paragraph": "1",
+            "subclause": null,
+            "clause_reference": "Article 14(1)",
+            "page_numbers": [
+                41,
+                42
+            ]
+        },
+        {
+            "row_index": 42,
+            "chunk_id": "gdpr_article_14_paragraph_2_body_page_42_chunk_0043",
+            "document": "gdpr.pdf",
+            "article": "14",
+            "paragraph": "2",
+            "subclause": null,
+            "clause_reference": "Article 14(2)",
+            "page_numbers": [
+                42
+            ]
+        },
+        {
+            "row_index": 43,
+            "chunk_id": "gdpr_article_14_paragraph_3_body_page_42_chunk_0044",
+            "document": "gdpr.pdf",
+            "article": "14",
+            "paragraph": "3",
+            "subclause": null,
+            "clause_reference": "Article 14(3)",
+            "page_numbers": [
+                42
+            ]
+        },
+        {
+            "row_index": 44,
+            "chunk_id": "gdpr_article_14_paragraph_4_body_page_42_chunk_0045",
+            "document": "gdpr.pdf",
+            "article": "14",
+            "paragraph": "4",
+            "subclause": null,
+            "clause_reference": "Article 14(4)",
+            "page_numbers": [
+                42
+            ]
+        },
+        {
+            "row_index": 45,
+            "chunk_id": "gdpr_article_14_paragraph_5_body_page_42_chunk_0046",
+            "document": "gdpr.pdf",
+            "article": "14",
+            "paragraph": "5",
+            "subclause": null,
+            "clause_reference": "Article 14(5)",
+            "page_numbers": [
+                42
+            ]
+        },
+        {
+            "row_index": 46,
+            "chunk_id": "gdpr_article_15_paragraph_1_body_page_43_chunk_0047",
+            "document": "gdpr.pdf",
+            "article": "15",
+            "paragraph": "1",
+            "subclause": null,
+            "clause_reference": "Article 15(1)",
+            "page_numbers": [
+                43
+            ]
+        },
+        {
+            "row_index": 47,
+            "chunk_id": "gdpr_article_15_paragraph_2_body_page_43_chunk_0048",
+            "document": "gdpr.pdf",
+            "article": "15",
+            "paragraph": "2",
+            "subclause": null,
+            "clause_reference": "Article 15(2)",
+            "page_numbers": [
+                43
+            ]
+        },
+        {
+            "row_index": 48,
+            "chunk_id": "gdpr_article_15_paragraph_3_body_page_43_chunk_0049",
+            "document": "gdpr.pdf",
+            "article": "15",
+            "paragraph": "3",
+            "subclause": null,
+            "clause_reference": "Article 15(3)",
+            "page_numbers": [
+                43
+            ]
+        },
+        {
+            "row_index": 49,
+            "chunk_id": "gdpr_article_15_paragraph_4_body_page_43_chunk_0050",
+            "document": "gdpr.pdf",
+            "article": "15",
+            "paragraph": "4",
+            "subclause": null,
+            "clause_reference": "Article 15(4)",
+            "page_numbers": [
+                43
+            ]
+        },
+        {
+            "row_index": 50,
+            "chunk_id": "gdpr_article_17_paragraph_1_body_page_43_chunk_0051",
+            "document": "gdpr.pdf",
+            "article": "17",
+            "paragraph": "1",
+            "subclause": null,
+            "clause_reference": "Article 17(1)",
+            "page_numbers": [
+                43,
+                44
+            ]
+        },
+        {
+            "row_index": 51,
+            "chunk_id": "gdpr_article_17_paragraph_2_body_page_44_chunk_0052",
+            "document": "gdpr.pdf",
+            "article": "17",
+            "paragraph": "2",
+            "subclause": null,
+            "clause_reference": "Article 17(2)",
+            "page_numbers": [
+                44
+            ]
+        },
+        {
+            "row_index": 52,
+            "chunk_id": "gdpr_article_17_paragraph_3_body_page_44_chunk_0053",
+            "document": "gdpr.pdf",
+            "article": "17",
+            "paragraph": "3",
+            "subclause": null,
+            "clause_reference": "Article 17(3)",
+            "page_numbers": [
+                44
+            ]
+        },
+        {
+            "row_index": 53,
+            "chunk_id": "gdpr_article_18_paragraph_1_body_page_44_chunk_0054",
+            "document": "gdpr.pdf",
+            "article": "18",
+            "paragraph": "1",
+            "subclause": null,
+            "clause_reference": "Article 18(1)",
+            "page_numbers": [
+                44
+            ]
+        },
+        {
+            "row_index": 54,
+            "chunk_id": "gdpr_article_18_paragraph_2_body_page_44_chunk_0055",
+            "document": "gdpr.pdf",
+            "article": "18",
+            "paragraph": "2",
+            "subclause": null,
+            "clause_reference": "Article 18(2)",
+            "page_numbers": [
+                44
+            ]
+        },
+        {
+            "row_index": 55,
+            "chunk_id": "gdpr_article_18_paragraph_3_body_page_45_chunk_0056",
+            "document": "gdpr.pdf",
+            "article": "18",
+            "paragraph": "3",
+            "subclause": null,
+            "clause_reference": "Article 18(3)",
+            "page_numbers": [
+                45
+            ]
+        },
+        {
+            "row_index": 56,
+            "chunk_id": "gdpr_article_20_paragraph_1_body_page_45_chunk_0057",
+            "document": "gdpr.pdf",
+            "article": "20",
+            "paragraph": "1",
+            "subclause": null,
+            "clause_reference": "Article 20(1)",
+            "page_numbers": [
+                45
+            ]
+        },
+        {
+            "row_index": 57,
+            "chunk_id": "gdpr_article_20_paragraph_2_body_page_45_chunk_0058",
+            "document": "gdpr.pdf",
+            "article": "20",
+            "paragraph": "2",
+            "subclause": null,
+            "clause_reference": "Article 20(2)",
+            "page_numbers": [
+                45
+            ]
+        },
+        {
+            "row_index": 58,
+            "chunk_id": "gdpr_article_20_paragraph_3_body_page_45_chunk_0059",
+            "document": "gdpr.pdf",
+            "article": "20",
+            "paragraph": "3",
+            "subclause": null,
+            "clause_reference": "Article 20(3)",
+            "page_numbers": [
+                45
+            ]
+        },
+        {
+            "row_index": 59,
+            "chunk_id": "gdpr_article_20_paragraph_4_body_page_45_chunk_0060",
+            "document": "gdpr.pdf",
+            "article": "20",
+            "paragraph": "4",
+            "subclause": null,
+            "clause_reference": "Article 20(4)",
+            "page_numbers": [
+                45
+            ]
+        },
+        {
+            "row_index": 60,
+            "chunk_id": "gdpr_article_21_paragraph_1_body_page_45_chunk_0061",
+            "document": "gdpr.pdf",
+            "article": "21",
+            "paragraph": "1",
+            "subclause": null,
+            "clause_reference": "Article 21(1)",
+            "page_numbers": [
+                45
+            ]
+        },
+        {
+            "row_index": 61,
+            "chunk_id": "gdpr_article_21_paragraph_2_body_page_45_chunk_0062",
+            "document": "gdpr.pdf",
+            "article": "21",
+            "paragraph": "2",
+            "subclause": null,
+            "clause_reference": "Article 21(2)",
+            "page_numbers": [
+                45
+            ]
+        },
+        {
+            "row_index": 62,
+            "chunk_id": "gdpr_article_21_paragraph_3_body_page_45_chunk_0063",
+            "document": "gdpr.pdf",
+            "article": "21",
+            "paragraph": "3",
+            "subclause": null,
+            "clause_reference": "Article 21(3)",
+            "page_numbers": [
+                45
+            ]
+        },
+        {
+            "row_index": 63,
+            "chunk_id": "gdpr_article_21_paragraph_4_body_page_46_chunk_0064",
+            "document": "gdpr.pdf",
+            "article": "21",
+            "paragraph": "4",
+            "subclause": null,
+            "clause_reference": "Article 21(4)",
+            "page_numbers": [
+                46
+            ]
+        },
+        {
+            "row_index": 64,
+            "chunk_id": "gdpr_article_21_paragraph_5_body_page_46_chunk_0065",
+            "document": "gdpr.pdf",
+            "article": "21",
+            "paragraph": "5",
+            "subclause": null,
+            "clause_reference": "Article 21(5)",
+            "page_numbers": [
+                46
+            ]
+        },
+        {
+            "row_index": 65,
+            "chunk_id": "gdpr_article_21_paragraph_6_body_page_46_chunk_0066",
+            "document": "gdpr.pdf",
+            "article": "21",
+            "paragraph": "6",
+            "subclause": null,
+            "clause_reference": "Article 21(6)",
+            "page_numbers": [
+                46
+            ]
+        },
+        {
+            "row_index": 66,
+            "chunk_id": "gdpr_article_22_paragraph_1_body_page_46_chunk_0067",
+            "document": "gdpr.pdf",
+            "article": "22",
+            "paragraph": "1",
+            "subclause": null,
+            "clause_reference": "Article 22(1)",
+            "page_numbers": [
+                46
+            ]
+        },
+        {
+            "row_index": 67,
+            "chunk_id": "gdpr_article_22_paragraph_2_body_page_46_chunk_0068",
+            "document": "gdpr.pdf",
+            "article": "22",
+            "paragraph": "2",
+            "subclause": null,
+            "clause_reference": "Article 22(2)",
+            "page_numbers": [
+                46
+            ]
+        },
+        {
+            "row_index": 68,
+            "chunk_id": "gdpr_article_22_paragraph_3_body_page_46_chunk_0069",
+            "document": "gdpr.pdf",
+            "article": "22",
+            "paragraph": "3",
+            "subclause": null,
+            "clause_reference": "Article 22(3)",
+            "page_numbers": [
+                46
+            ]
+        },
+        {
+            "row_index": 69,
+            "chunk_id": "gdpr_article_22_paragraph_4_body_page_46_chunk_0070",
+            "document": "gdpr.pdf",
+            "article": "22",
+            "paragraph": "4",
+            "subclause": null,
+            "clause_reference": "Article 22(4)",
+            "page_numbers": [
+                46
+            ]
+        },
+        {
+            "row_index": 70,
+            "chunk_id": "gdpr_article_23_paragraph_1_body_page_46_chunk_0071",
+            "document": "gdpr.pdf",
+            "article": "23",
+            "paragraph": "1",
+            "subclause": null,
+            "clause_reference": "Article 23(1)",
+            "page_numbers": [
+                46,
+                47
+            ]
+        },
+        {
+            "row_index": 71,
+            "chunk_id": "gdpr_article_23_paragraph_2_body_page_47_chunk_0072",
+            "document": "gdpr.pdf",
+            "article": "23",
+            "paragraph": "2",
+            "subclause": null,
+            "clause_reference": "Article 23(2)",
+            "page_numbers": [
+                47
+            ]
+        },
+        {
+            "row_index": 72,
+            "chunk_id": "gdpr_article_24_paragraph_1_body_page_47_chunk_0073",
+            "document": "gdpr.pdf",
+            "article": "24",
+            "paragraph": "1",
+            "subclause": null,
+            "clause_reference": "Article 24(1)",
+            "page_numbers": [
+                47
+            ]
+        },
+        {
+            "row_index": 73,
+            "chunk_id": "gdpr_article_24_paragraph_2_body_page_47_chunk_0074",
+            "document": "gdpr.pdf",
+            "article": "24",
+            "paragraph": "2",
+            "subclause": null,
+            "clause_reference": "Article 24(2)",
+            "page_numbers": [
+                47
+            ]
+        },
+        {
+            "row_index": 74,
+            "chunk_id": "gdpr_article_24_paragraph_3_body_page_47_chunk_0075",
+            "document": "gdpr.pdf",
+            "article": "24",
+            "paragraph": "3",
+            "subclause": null,
+            "clause_reference": "Article 24(3)",
+            "page_numbers": [
+                47
+            ]
+        },
+        {
+            "row_index": 75,
+            "chunk_id": "gdpr_article_25_paragraph_1_body_page_48_chunk_0076",
+            "document": "gdpr.pdf",
+            "article": "25",
+            "paragraph": "1",
+            "subclause": null,
+            "clause_reference": "Article 25(1)",
+            "page_numbers": [
+                48
+            ]
+        },
+        {
+            "row_index": 76,
+            "chunk_id": "gdpr_article_25_paragraph_2_body_page_48_chunk_0077",
+            "document": "gdpr.pdf",
+            "article": "25",
+            "paragraph": "2",
+            "subclause": null,
+            "clause_reference": "Article 25(2)",
+            "page_numbers": [
+                48
+            ]
+        },
+        {
+            "row_index": 77,
+            "chunk_id": "gdpr_article_25_paragraph_3_body_page_48_chunk_0078",
+            "document": "gdpr.pdf",
+            "article": "25",
+            "paragraph": "3",
+            "subclause": null,
+            "clause_reference": "Article 25(3)",
+            "page_numbers": [
+                48
+            ]
+        },
+        {
+            "row_index": 78,
+            "chunk_id": "gdpr_article_26_paragraph_1_body_page_48_chunk_0079",
+            "document": "gdpr.pdf",
+            "article": "26",
+            "paragraph": "1",
+            "subclause": null,
+            "clause_reference": "Article 26(1)",
+            "page_numbers": [
+                48
+            ]
+        },
+        {
+            "row_index": 79,
+            "chunk_id": "gdpr_article_26_paragraph_2_body_page_48_chunk_0080",
+            "document": "gdpr.pdf",
+            "article": "26",
+            "paragraph": "2",
+            "subclause": null,
+            "clause_reference": "Article 26(2)",
+            "page_numbers": [
+                48
+            ]
+        },
+        {
+            "row_index": 80,
+            "chunk_id": "gdpr_article_26_paragraph_3_body_page_48_chunk_0081",
+            "document": "gdpr.pdf",
+            "article": "26",
+            "paragraph": "3",
+            "subclause": null,
+            "clause_reference": "Article 26(3)",
+            "page_numbers": [
+                48
+            ]
+        },
+        {
+            "row_index": 81,
+            "chunk_id": "gdpr_article_27_paragraph_1_body_page_48_chunk_0082",
+            "document": "gdpr.pdf",
+            "article": "27",
+            "paragraph": "1",
+            "subclause": null,
+            "clause_reference": "Article 27(1)",
+            "page_numbers": [
+                48
+            ]
+        },
+        {
+            "row_index": 82,
+            "chunk_id": "gdpr_article_27_paragraph_2_body_page_48_chunk_0083",
+            "document": "gdpr.pdf",
+            "article": "27",
+            "paragraph": "2",
+            "subclause": null,
+            "clause_reference": "Article 27(2)",
+            "page_numbers": [
+                48
+            ]
+        },
+        {
+            "row_index": 83,
+            "chunk_id": "gdpr_article_27_paragraph_3_body_page_49_chunk_0084",
+            "document": "gdpr.pdf",
+            "article": "27",
+            "paragraph": "3",
+            "subclause": null,
+            "clause_reference": "Article 27(3)",
+            "page_numbers": [
+                49
+            ]
+        },
+        {
+            "row_index": 84,
+            "chunk_id": "gdpr_article_27_paragraph_4_body_page_49_chunk_0085",
+            "document": "gdpr.pdf",
+            "article": "27",
+            "paragraph": "4",
+            "subclause": null,
+            "clause_reference": "Article 27(4)",
+            "page_numbers": [
+                49
+            ]
+        },
+        {
+            "row_index": 85,
+            "chunk_id": "gdpr_article_27_paragraph_5_body_page_49_chunk_0086",
+            "document": "gdpr.pdf",
+            "article": "27",
+            "paragraph": "5",
+            "subclause": null,
+            "clause_reference": "Article 27(5)",
+            "page_numbers": [
+                49
+            ]
+        },
+        {
+            "row_index": 86,
+            "chunk_id": "gdpr_article_28_paragraph_1_body_page_49_chunk_0087",
+            "document": "gdpr.pdf",
+            "article": "28",
+            "paragraph": "1",
+            "subclause": null,
+            "clause_reference": "Article 28(1)",
+            "page_numbers": [
+                49
+            ]
+        },
+        {
+            "row_index": 87,
+            "chunk_id": "gdpr_article_28_paragraph_2_body_page_49_chunk_0088",
+            "document": "gdpr.pdf",
+            "article": "28",
+            "paragraph": "2",
+            "subclause": null,
+            "clause_reference": "Article 28(2)",
+            "page_numbers": [
+                49
+            ]
+        },
+        {
+            "row_index": 88,
+            "chunk_id": "gdpr_article_28_paragraph_3_body_page_49_chunk_0089",
+            "document": "gdpr.pdf",
+            "article": "28",
+            "paragraph": "3",
+            "subclause": null,
+            "clause_reference": "Article 28(3)",
+            "page_numbers": [
+                49,
+                50
+            ]
+        },
+        {
+            "row_index": 89,
+            "chunk_id": "gdpr_article_28_paragraph_4_body_page_50_chunk_0090",
+            "document": "gdpr.pdf",
+            "article": "28",
+            "paragraph": "4",
+            "subclause": null,
+            "clause_reference": "Article 28(4)",
+            "page_numbers": [
+                50
+            ]
+        },
+        {
+            "row_index": 90,
+            "chunk_id": "gdpr_article_28_paragraph_5_body_page_50_chunk_0091",
+            "document": "gdpr.pdf",
+            "article": "28",
+            "paragraph": "5",
+            "subclause": null,
+            "clause_reference": "Article 28(5)",
+            "page_numbers": [
+                50
+            ]
+        },
+        {
+            "row_index": 91,
+            "chunk_id": "gdpr_article_28_paragraph_6_body_page_50_chunk_0092",
+            "document": "gdpr.pdf",
+            "article": "28",
+            "paragraph": "6",
+            "subclause": null,
+            "clause_reference": "Article 28(6)",
+            "page_numbers": [
+                50
+            ]
+        },
+        {
+            "row_index": 92,
+            "chunk_id": "gdpr_article_28_paragraph_7_body_page_50_chunk_0093",
+            "document": "gdpr.pdf",
+            "article": "28",
+            "paragraph": "7",
+            "subclause": null,
+            "clause_reference": "Article 28(7)",
+            "page_numbers": [
+                50
+            ]
+        },
+        {
+            "row_index": 93,
+            "chunk_id": "gdpr_article_28_paragraph_8_body_page_50_chunk_0094",
+            "document": "gdpr.pdf",
+            "article": "28",
+            "paragraph": "8",
+            "subclause": null,
+            "clause_reference": "Article 28(8)",
+            "page_numbers": [
+                50
+            ]
+        },
+        {
+            "row_index": 94,
+            "chunk_id": "gdpr_article_28_paragraph_9_body_page_50_chunk_0095",
+            "document": "gdpr.pdf",
+            "article": "28",
+            "paragraph": "9",
+            "subclause": null,
+            "clause_reference": "Article 28(9)",
+            "page_numbers": [
+                50
+            ]
+        },
+        {
+            "row_index": 95,
+            "chunk_id": "gdpr_article_28_paragraph_10_body_page_50_chunk_0096",
+            "document": "gdpr.pdf",
+            "article": "28",
+            "paragraph": "10",
+            "subclause": null,
+            "clause_reference": "Article 28(10)",
+            "page_numbers": [
+                50
+            ]
+        },
+        {
+            "row_index": 96,
+            "chunk_id": "gdpr_article_30_paragraph_1_body_page_50_chunk_0097",
+            "document": "gdpr.pdf",
+            "article": "30",
+            "paragraph": "1",
+            "subclause": null,
+            "clause_reference": "Article 30(1)",
+            "page_numbers": [
+                50,
+                51
+            ]
+        },
+        {
+            "row_index": 97,
+            "chunk_id": "gdpr_article_30_paragraph_2_body_page_51_chunk_0098",
+            "document": "gdpr.pdf",
+            "article": "30",
+            "paragraph": "2",
+            "subclause": null,
+            "clause_reference": "Article 30(2)",
+            "page_numbers": [
+                51
+            ]
+        },
+        {
+            "row_index": 98,
+            "chunk_id": "gdpr_article_30_paragraph_3_body_page_51_chunk_0099",
+            "document": "gdpr.pdf",
+            "article": "30",
+            "paragraph": "3",
+            "subclause": null,
+            "clause_reference": "Article 30(3)",
+            "page_numbers": [
+                51
+            ]
+        },
+        {
+            "row_index": 99,
+            "chunk_id": "gdpr_article_30_paragraph_4_body_page_51_chunk_0100",
+            "document": "gdpr.pdf",
+            "article": "30",
+            "paragraph": "4",
+            "subclause": null,
+            "clause_reference": "Article 30(4)",
+            "page_numbers": [
+                51
+            ]
+        },
+        {
+            "row_index": 100,
+            "chunk_id": "gdpr_article_30_paragraph_5_body_page_51_chunk_0101",
+            "document": "gdpr.pdf",
+            "article": "30",
+            "paragraph": "5",
+            "subclause": null,
+            "clause_reference": "Article 30(5)",
+            "page_numbers": [
+                51
+            ]
+        },
+        {
+            "row_index": 101,
+            "chunk_id": "gdpr_article_32_paragraph_1_body_page_51_chunk_0102",
+            "document": "gdpr.pdf",
+            "article": "32",
+            "paragraph": "1",
+            "subclause": null,
+            "clause_reference": "Article 32(1)",
+            "page_numbers": [
+                51,
+                52
+            ]
+        },
+        {
+            "row_index": 102,
+            "chunk_id": "gdpr_article_32_paragraph_2_body_page_52_chunk_0103",
+            "document": "gdpr.pdf",
+            "article": "32",
+            "paragraph": "2",
+            "subclause": null,
+            "clause_reference": "Article 32(2)",
+            "page_numbers": [
+                52
+            ]
+        },
+        {
+            "row_index": 103,
+            "chunk_id": "gdpr_article_32_paragraph_3_body_page_52_chunk_0104",
+            "document": "gdpr.pdf",
+            "article": "32",
+            "paragraph": "3",
+            "subclause": null,
+            "clause_reference": "Article 32(3)",
+            "page_numbers": [
+                52
+            ]
+        },
+        {
+            "row_index": 104,
+            "chunk_id": "gdpr_article_32_paragraph_4_body_page_52_chunk_0105",
+            "document": "gdpr.pdf",
+            "article": "32",
+            "paragraph": "4",
+            "subclause": null,
+            "clause_reference": "Article 32(4)",
+            "page_numbers": [
+                52
+            ]
+        },
+        {
+            "row_index": 105,
+            "chunk_id": "gdpr_article_33_paragraph_1_body_page_52_chunk_0106",
+            "document": "gdpr.pdf",
+            "article": "33",
+            "paragraph": "1",
+            "subclause": null,
+            "clause_reference": "Article 33(1)",
+            "page_numbers": [
+                52
+            ]
+        },
+        {
+            "row_index": 106,
+            "chunk_id": "gdpr_article_33_paragraph_2_body_page_52_chunk_0107",
+            "document": "gdpr.pdf",
+            "article": "33",
+            "paragraph": "2",
+            "subclause": null,
+            "clause_reference": "Article 33(2)",
+            "page_numbers": [
+                52
+            ]
+        },
+        {
+            "row_index": 107,
+            "chunk_id": "gdpr_article_33_paragraph_3_body_page_52_chunk_0108",
+            "document": "gdpr.pdf",
+            "article": "33",
+            "paragraph": "3",
+            "subclause": null,
+            "clause_reference": "Article 33(3)",
+            "page_numbers": [
+                52
+            ]
+        },
+        {
+            "row_index": 108,
+            "chunk_id": "gdpr_article_33_paragraph_4_body_page_52_chunk_0109",
+            "document": "gdpr.pdf",
+            "article": "33",
+            "paragraph": "4",
+            "subclause": null,
+            "clause_reference": "Article 33(4)",
+            "page_numbers": [
+                52
+            ]
+        },
+        {
+            "row_index": 109,
+            "chunk_id": "gdpr_article_33_paragraph_5_body_page_52_chunk_0110",
+            "document": "gdpr.pdf",
+            "article": "33",
+            "paragraph": "5",
+            "subclause": null,
+            "clause_reference": "Article 33(5)",
+            "page_numbers": [
+                52
+            ]
+        },
+        {
+            "row_index": 110,
+            "chunk_id": "gdpr_article_34_paragraph_1_body_page_52_chunk_0111",
+            "document": "gdpr.pdf",
+            "article": "34",
+            "paragraph": "1",
+            "subclause": null,
+            "clause_reference": "Article 34(1)",
+            "page_numbers": [
+                52
+            ]
+        },
+        {
+            "row_index": 111,
+            "chunk_id": "gdpr_article_34_paragraph_2_body_page_53_chunk_0112",
+            "document": "gdpr.pdf",
+            "article": "34",
+            "paragraph": "2",
+            "subclause": null,
+            "clause_reference": "Article 34(2)",
+            "page_numbers": [
+                53
+            ]
+        },
+        {
+            "row_index": 112,
+            "chunk_id": "gdpr_article_34_paragraph_3_body_page_53_chunk_0113",
+            "document": "gdpr.pdf",
+            "article": "34",
+            "paragraph": "3",
+            "subclause": null,
+            "clause_reference": "Article 34(3)",
+            "page_numbers": [
+                53
+            ]
+        },
+        {
+            "row_index": 113,
+            "chunk_id": "gdpr_article_34_paragraph_4_body_page_53_chunk_0114",
+            "document": "gdpr.pdf",
+            "article": "34",
+            "paragraph": "4",
+            "subclause": null,
+            "clause_reference": "Article 34(4)",
+            "page_numbers": [
+                53
+            ]
+        },
+        {
+            "row_index": 114,
+            "chunk_id": "gdpr_article_35_paragraph_1_body_page_53_chunk_0115",
+            "document": "gdpr.pdf",
+            "article": "35",
+            "paragraph": "1",
+            "subclause": null,
+            "clause_reference": "Article 35(1)",
+            "page_numbers": [
+                53
+            ]
+        },
+        {
+            "row_index": 115,
+            "chunk_id": "gdpr_article_35_paragraph_2_body_page_53_chunk_0116",
+            "document": "gdpr.pdf",
+            "article": "35",
+            "paragraph": "2",
+            "subclause": null,
+            "clause_reference": "Article 35(2)",
+            "page_numbers": [
+                53
+            ]
+        },
+        {
+            "row_index": 116,
+            "chunk_id": "gdpr_article_35_paragraph_3_body_page_53_chunk_0117",
+            "document": "gdpr.pdf",
+            "article": "35",
+            "paragraph": "3",
+            "subclause": null,
+            "clause_reference": "Article 35(3)",
+            "page_numbers": [
+                53
+            ]
+        },
+        {
+            "row_index": 117,
+            "chunk_id": "gdpr_article_35_paragraph_4_body_page_53_chunk_0118",
+            "document": "gdpr.pdf",
+            "article": "35",
+            "paragraph": "4",
+            "subclause": null,
+            "clause_reference": "Article 35(4)",
+            "page_numbers": [
+                53
+            ]
+        },
+        {
+            "row_index": 118,
+            "chunk_id": "gdpr_article_35_paragraph_5_body_page_53_chunk_0119",
+            "document": "gdpr.pdf",
+            "article": "35",
+            "paragraph": "5",
+            "subclause": null,
+            "clause_reference": "Article 35(5)",
+            "page_numbers": [
+                53
+            ]
+        },
+        {
+            "row_index": 119,
+            "chunk_id": "gdpr_article_35_paragraph_6_body_page_53_chunk_0120",
+            "document": "gdpr.pdf",
+            "article": "35",
+            "paragraph": "6",
+            "subclause": null,
+            "clause_reference": "Article 35(6)",
+            "page_numbers": [
+                53
+            ]
+        },
+        {
+            "row_index": 120,
+            "chunk_id": "gdpr_article_35_paragraph_7_body_page_54_chunk_0121",
+            "document": "gdpr.pdf",
+            "article": "35",
+            "paragraph": "7",
+            "subclause": null,
+            "clause_reference": "Article 35(7)",
+            "page_numbers": [
+                54
+            ]
+        },
+        {
+            "row_index": 121,
+            "chunk_id": "gdpr_article_35_paragraph_8_body_page_54_chunk_0122",
+            "document": "gdpr.pdf",
+            "article": "35",
+            "paragraph": "8",
+            "subclause": null,
+            "clause_reference": "Article 35(8)",
+            "page_numbers": [
+                54
+            ]
+        },
+        {
+            "row_index": 122,
+            "chunk_id": "gdpr_article_35_paragraph_9_body_page_54_chunk_0123",
+            "document": "gdpr.pdf",
+            "article": "35",
+            "paragraph": "9",
+            "subclause": null,
+            "clause_reference": "Article 35(9)",
+            "page_numbers": [
+                54
+            ]
+        },
+        {
+            "row_index": 123,
+            "chunk_id": "gdpr_article_35_paragraph_10_body_page_54_chunk_0124",
+            "document": "gdpr.pdf",
+            "article": "35",
+            "paragraph": "10",
+            "subclause": null,
+            "clause_reference": "Article 35(10)",
+            "page_numbers": [
+                54
+            ]
+        },
+        {
+            "row_index": 124,
+            "chunk_id": "gdpr_article_35_paragraph_11_body_page_54_chunk_0125",
+            "document": "gdpr.pdf",
+            "article": "35",
+            "paragraph": "11",
+            "subclause": null,
+            "clause_reference": "Article 35(11)",
+            "page_numbers": [
+                54
+            ]
+        },
+        {
+            "row_index": 125,
+            "chunk_id": "gdpr_article_36_paragraph_1_body_page_54_chunk_0126",
+            "document": "gdpr.pdf",
+            "article": "36",
+            "paragraph": "1",
+            "subclause": null,
+            "clause_reference": "Article 36(1)",
+            "page_numbers": [
+                54
+            ]
+        },
+        {
+            "row_index": 126,
+            "chunk_id": "gdpr_article_36_paragraph_2_body_page_54_chunk_0127",
+            "document": "gdpr.pdf",
+            "article": "36",
+            "paragraph": "2",
+            "subclause": null,
+            "clause_reference": "Article 36(2)",
+            "page_numbers": [
+                54
+            ]
+        },
+        {
+            "row_index": 127,
+            "chunk_id": "gdpr_article_36_paragraph_3_body_page_54_chunk_0128",
+            "document": "gdpr.pdf",
+            "article": "36",
+            "paragraph": "3",
+            "subclause": null,
+            "clause_reference": "Article 36(3)",
+            "page_numbers": [
+                54,
+                55
+            ]
+        },
+        {
+            "row_index": 128,
+            "chunk_id": "gdpr_article_36_paragraph_4_body_page_55_chunk_0129",
+            "document": "gdpr.pdf",
+            "article": "36",
+            "paragraph": "4",
+            "subclause": null,
+            "clause_reference": "Article 36(4)",
+            "page_numbers": [
+                55
+            ]
+        },
+        {
+            "row_index": 129,
+            "chunk_id": "gdpr_article_36_paragraph_5_body_page_55_chunk_0130",
+            "document": "gdpr.pdf",
+            "article": "36",
+            "paragraph": "5",
+            "subclause": null,
+            "clause_reference": "Article 36(5)",
+            "page_numbers": [
+                55
+            ]
+        },
+        {
+            "row_index": 130,
+            "chunk_id": "gdpr_article_37_paragraph_1_body_page_55_chunk_0131",
+            "document": "gdpr.pdf",
+            "article": "37",
+            "paragraph": "1",
+            "subclause": null,
+            "clause_reference": "Article 37(1)",
+            "page_numbers": [
+                55
+            ]
+        },
+        {
+            "row_index": 131,
+            "chunk_id": "gdpr_article_37_paragraph_2_body_page_55_chunk_0132",
+            "document": "gdpr.pdf",
+            "article": "37",
+            "paragraph": "2",
+            "subclause": null,
+            "clause_reference": "Article 37(2)",
+            "page_numbers": [
+                55
+            ]
+        },
+        {
+            "row_index": 132,
+            "chunk_id": "gdpr_article_37_paragraph_3_body_page_55_chunk_0133",
+            "document": "gdpr.pdf",
+            "article": "37",
+            "paragraph": "3",
+            "subclause": null,
+            "clause_reference": "Article 37(3)",
+            "page_numbers": [
+                55
+            ]
+        },
+        {
+            "row_index": 133,
+            "chunk_id": "gdpr_article_37_paragraph_4_body_page_55_chunk_0134",
+            "document": "gdpr.pdf",
+            "article": "37",
+            "paragraph": "4",
+            "subclause": null,
+            "clause_reference": "Article 37(4)",
+            "page_numbers": [
+                55
+            ]
+        },
+        {
+            "row_index": 134,
+            "chunk_id": "gdpr_article_37_paragraph_5_body_page_55_chunk_0135",
+            "document": "gdpr.pdf",
+            "article": "37",
+            "paragraph": "5",
+            "subclause": null,
+            "clause_reference": "Article 37(5)",
+            "page_numbers": [
+                55
+            ]
+        },
+        {
+            "row_index": 135,
+            "chunk_id": "gdpr_article_37_paragraph_6_body_page_55_chunk_0136",
+            "document": "gdpr.pdf",
+            "article": "37",
+            "paragraph": "6",
+            "subclause": null,
+            "clause_reference": "Article 37(6)",
+            "page_numbers": [
+                55
+            ]
+        },
+        {
+            "row_index": 136,
+            "chunk_id": "gdpr_article_37_paragraph_7_body_page_55_chunk_0137",
+            "document": "gdpr.pdf",
+            "article": "37",
+            "paragraph": "7",
+            "subclause": null,
+            "clause_reference": "Article 37(7)",
+            "page_numbers": [
+                55
+            ]
+        },
+        {
+            "row_index": 137,
+            "chunk_id": "gdpr_article_38_paragraph_1_body_page_55_chunk_0138",
+            "document": "gdpr.pdf",
+            "article": "38",
+            "paragraph": "1",
+            "subclause": null,
+            "clause_reference": "Article 38(1)",
+            "page_numbers": [
+                55
+            ]
+        },
+        {
+            "row_index": 138,
+            "chunk_id": "gdpr_article_38_paragraph_2_body_page_56_chunk_0139",
+            "document": "gdpr.pdf",
+            "article": "38",
+            "paragraph": "2",
+            "subclause": null,
+            "clause_reference": "Article 38(2)",
+            "page_numbers": [
+                56
+            ]
+        },
+        {
+            "row_index": 139,
+            "chunk_id": "gdpr_article_38_paragraph_3_body_page_56_chunk_0140",
+            "document": "gdpr.pdf",
+            "article": "38",
+            "paragraph": "3",
+            "subclause": null,
+            "clause_reference": "Article 38(3)",
+            "page_numbers": [
+                56
+            ]
+        },
+        {
+            "row_index": 140,
+            "chunk_id": "gdpr_article_38_paragraph_4_body_page_56_chunk_0141",
+            "document": "gdpr.pdf",
+            "article": "38",
+            "paragraph": "4",
+            "subclause": null,
+            "clause_reference": "Article 38(4)",
+            "page_numbers": [
+                56
+            ]
+        },
+        {
+            "row_index": 141,
+            "chunk_id": "gdpr_article_38_paragraph_5_body_page_56_chunk_0142",
+            "document": "gdpr.pdf",
+            "article": "38",
+            "paragraph": "5",
+            "subclause": null,
+            "clause_reference": "Article 38(5)",
+            "page_numbers": [
+                56
+            ]
+        },
+        {
+            "row_index": 142,
+            "chunk_id": "gdpr_article_38_paragraph_6_body_page_56_chunk_0143",
+            "document": "gdpr.pdf",
+            "article": "38",
+            "paragraph": "6",
+            "subclause": null,
+            "clause_reference": "Article 38(6)",
+            "page_numbers": [
+                56
+            ]
+        },
+        {
+            "row_index": 143,
+            "chunk_id": "gdpr_article_39_paragraph_1_body_page_56_chunk_0144",
+            "document": "gdpr.pdf",
+            "article": "39",
+            "paragraph": "1",
+            "subclause": null,
+            "clause_reference": "Article 39(1)",
+            "page_numbers": [
+                56
+            ]
+        },
+        {
+            "row_index": 144,
+            "chunk_id": "gdpr_article_39_paragraph_2_body_page_56_chunk_0145",
+            "document": "gdpr.pdf",
+            "article": "39",
+            "paragraph": "2",
+            "subclause": null,
+            "clause_reference": "Article 39(2)",
+            "page_numbers": [
+                56
+            ]
+        },
+        {
+            "row_index": 145,
+            "chunk_id": "gdpr_article_40_paragraph_1_body_page_56_chunk_0146",
+            "document": "gdpr.pdf",
+            "article": "40",
+            "paragraph": "1",
+            "subclause": null,
+            "clause_reference": "Article 40(1)",
+            "page_numbers": [
+                56
+            ]
+        },
+        {
+            "row_index": 146,
+            "chunk_id": "gdpr_article_40_paragraph_2_body_page_56_chunk_0147",
+            "document": "gdpr.pdf",
+            "article": "40",
+            "paragraph": "2",
+            "subclause": null,
+            "clause_reference": "Article 40(2)",
+            "page_numbers": [
+                56,
+                57
+            ]
+        },
+        {
+            "row_index": 147,
+            "chunk_id": "gdpr_article_40_paragraph_3_body_page_57_chunk_0148",
+            "document": "gdpr.pdf",
+            "article": "40",
+            "paragraph": "3",
+            "subclause": null,
+            "clause_reference": "Article 40(3)",
+            "page_numbers": [
+                57
+            ]
+        },
+        {
+            "row_index": 148,
+            "chunk_id": "gdpr_article_40_paragraph_4_body_page_57_chunk_0149",
+            "document": "gdpr.pdf",
+            "article": "40",
+            "paragraph": "4",
+            "subclause": null,
+            "clause_reference": "Article 40(4)",
+            "page_numbers": [
+                57
+            ]
+        },
+        {
+            "row_index": 149,
+            "chunk_id": "gdpr_article_40_paragraph_5_body_page_57_chunk_0150",
+            "document": "gdpr.pdf",
+            "article": "40",
+            "paragraph": "5",
+            "subclause": null,
+            "clause_reference": "Article 40(5)",
+            "page_numbers": [
+                57
+            ]
+        },
+        {
+            "row_index": 150,
+            "chunk_id": "gdpr_article_40_paragraph_6_body_page_57_chunk_0151",
+            "document": "gdpr.pdf",
+            "article": "40",
+            "paragraph": "6",
+            "subclause": null,
+            "clause_reference": "Article 40(6)",
+            "page_numbers": [
+                57
+            ]
+        },
+        {
+            "row_index": 151,
+            "chunk_id": "gdpr_article_40_paragraph_7_body_page_57_chunk_0152",
+            "document": "gdpr.pdf",
+            "article": "40",
+            "paragraph": "7",
+            "subclause": null,
+            "clause_reference": "Article 40(7)",
+            "page_numbers": [
+                57
+            ]
+        },
+        {
+            "row_index": 152,
+            "chunk_id": "gdpr_article_40_paragraph_8_body_page_57_chunk_0153",
+            "document": "gdpr.pdf",
+            "article": "40",
+            "paragraph": "8",
+            "subclause": null,
+            "clause_reference": "Article 40(8)",
+            "page_numbers": [
+                57
+            ]
+        },
+        {
+            "row_index": 153,
+            "chunk_id": "gdpr_article_40_paragraph_9_body_page_57_chunk_0154",
+            "document": "gdpr.pdf",
+            "article": "40",
+            "paragraph": "9",
+            "subclause": null,
+            "clause_reference": "Article 40(9)",
+            "page_numbers": [
+                57
+            ]
+        },
+        {
+            "row_index": 154,
+            "chunk_id": "gdpr_article_40_paragraph_10_body_page_58_chunk_0155",
+            "document": "gdpr.pdf",
+            "article": "40",
+            "paragraph": "10",
+            "subclause": null,
+            "clause_reference": "Article 40(10)",
+            "page_numbers": [
+                58
+            ]
+        },
+        {
+            "row_index": 155,
+            "chunk_id": "gdpr_article_40_paragraph_11_body_page_58_chunk_0156",
+            "document": "gdpr.pdf",
+            "article": "40",
+            "paragraph": "11",
+            "subclause": null,
+            "clause_reference": "Article 40(11)",
+            "page_numbers": [
+                58
+            ]
+        },
+        {
+            "row_index": 156,
+            "chunk_id": "gdpr_article_41_paragraph_1_body_page_58_chunk_0157",
+            "document": "gdpr.pdf",
+            "article": "41",
+            "paragraph": "1",
+            "subclause": null,
+            "clause_reference": "Article 41(1)",
+            "page_numbers": [
+                58
+            ]
+        },
+        {
+            "row_index": 157,
+            "chunk_id": "gdpr_article_41_paragraph_2_body_page_58_chunk_0158",
+            "document": "gdpr.pdf",
+            "article": "41",
+            "paragraph": "2",
+            "subclause": null,
+            "clause_reference": "Article 41(2)",
+            "page_numbers": [
+                58
+            ]
+        },
+        {
+            "row_index": 158,
+            "chunk_id": "gdpr_article_41_paragraph_3_body_page_58_chunk_0159",
+            "document": "gdpr.pdf",
+            "article": "41",
+            "paragraph": "3",
+            "subclause": null,
+            "clause_reference": "Article 41(3)",
+            "page_numbers": [
+                58
+            ]
+        },
+        {
+            "row_index": 159,
+            "chunk_id": "gdpr_article_41_paragraph_4_body_page_58_chunk_0160",
+            "document": "gdpr.pdf",
+            "article": "41",
+            "paragraph": "4",
+            "subclause": null,
+            "clause_reference": "Article 41(4)",
+            "page_numbers": [
+                58
+            ]
+        },
+        {
+            "row_index": 160,
+            "chunk_id": "gdpr_article_41_paragraph_5_body_page_58_chunk_0161",
+            "document": "gdpr.pdf",
+            "article": "41",
+            "paragraph": "5",
+            "subclause": null,
+            "clause_reference": "Article 41(5)",
+            "page_numbers": [
+                58
+            ]
+        },
+        {
+            "row_index": 161,
+            "chunk_id": "gdpr_article_41_paragraph_6_body_page_58_chunk_0162",
+            "document": "gdpr.pdf",
+            "article": "41",
+            "paragraph": "6",
+            "subclause": null,
+            "clause_reference": "Article 41(6)",
+            "page_numbers": [
+                58
+            ]
+        },
+        {
+            "row_index": 162,
+            "chunk_id": "gdpr_article_42_paragraph_1_body_page_58_chunk_0163",
+            "document": "gdpr.pdf",
+            "article": "42",
+            "paragraph": "1",
+            "subclause": null,
+            "clause_reference": "Article 42(1)",
+            "page_numbers": [
+                58
+            ]
+        },
+        {
+            "row_index": 163,
+            "chunk_id": "gdpr_article_42_paragraph_2_body_page_59_chunk_0164",
+            "document": "gdpr.pdf",
+            "article": "42",
+            "paragraph": "2",
+            "subclause": null,
+            "clause_reference": "Article 42(2)",
+            "page_numbers": [
+                59
+            ]
+        },
+        {
+            "row_index": 164,
+            "chunk_id": "gdpr_article_42_paragraph_3_body_page_59_chunk_0165",
+            "document": "gdpr.pdf",
+            "article": "42",
+            "paragraph": "3",
+            "subclause": null,
+            "clause_reference": "Article 42(3)",
+            "page_numbers": [
+                59
+            ]
+        },
+        {
+            "row_index": 165,
+            "chunk_id": "gdpr_article_42_paragraph_4_body_page_59_chunk_0166",
+            "document": "gdpr.pdf",
+            "article": "42",
+            "paragraph": "4",
+            "subclause": null,
+            "clause_reference": "Article 42(4)",
+            "page_numbers": [
+                59
+            ]
+        },
+        {
+            "row_index": 166,
+            "chunk_id": "gdpr_article_42_paragraph_5_body_page_59_chunk_0167",
+            "document": "gdpr.pdf",
+            "article": "42",
+            "paragraph": "5",
+            "subclause": null,
+            "clause_reference": "Article 42(5)",
+            "page_numbers": [
+                59
+            ]
+        },
+        {
+            "row_index": 167,
+            "chunk_id": "gdpr_article_42_paragraph_6_body_page_59_chunk_0168",
+            "document": "gdpr.pdf",
+            "article": "42",
+            "paragraph": "6",
+            "subclause": null,
+            "clause_reference": "Article 42(6)",
+            "page_numbers": [
+                59
+            ]
+        },
+        {
+            "row_index": 168,
+            "chunk_id": "gdpr_article_42_paragraph_7_body_page_59_chunk_0169",
+            "document": "gdpr.pdf",
+            "article": "42",
+            "paragraph": "7",
+            "subclause": null,
+            "clause_reference": "Article 42(7)",
+            "page_numbers": [
+                59
+            ]
+        },
+        {
+            "row_index": 169,
+            "chunk_id": "gdpr_article_42_paragraph_8_body_page_59_chunk_0170",
+            "document": "gdpr.pdf",
+            "article": "42",
+            "paragraph": "8",
+            "subclause": null,
+            "clause_reference": "Article 42(8)",
+            "page_numbers": [
+                59
+            ]
+        },
+        {
+            "row_index": 170,
+            "chunk_id": "gdpr_article_43_paragraph_1_body_page_59_chunk_0171",
+            "document": "gdpr.pdf",
+            "article": "43",
+            "paragraph": "1",
+            "subclause": null,
+            "clause_reference": "Article 43(1)",
+            "page_numbers": [
+                59
+            ]
+        },
+        {
+            "row_index": 171,
+            "chunk_id": "gdpr_article_43_paragraph_2_body_page_59_chunk_0172",
+            "document": "gdpr.pdf",
+            "article": "43",
+            "paragraph": "2",
+            "subclause": null,
+            "clause_reference": "Article 43(2)",
+            "page_numbers": [
+                59,
+                60
+            ]
+        },
+        {
+            "row_index": 172,
+            "chunk_id": "gdpr_article_43_paragraph_3_body_page_60_chunk_0173",
+            "document": "gdpr.pdf",
+            "article": "43",
+            "paragraph": "3",
+            "subclause": null,
+            "clause_reference": "Article 43(3)",
+            "page_numbers": [
+                60
+            ]
+        },
+        {
+            "row_index": 173,
+            "chunk_id": "gdpr_article_43_paragraph_4_body_page_60_chunk_0174",
+            "document": "gdpr.pdf",
+            "article": "43",
+            "paragraph": "4",
+            "subclause": null,
+            "clause_reference": "Article 43(4)",
+            "page_numbers": [
+                60
+            ]
+        },
+        {
+            "row_index": 174,
+            "chunk_id": "gdpr_article_43_paragraph_5_body_page_60_chunk_0175",
+            "document": "gdpr.pdf",
+            "article": "43",
+            "paragraph": "5",
+            "subclause": null,
+            "clause_reference": "Article 43(5)",
+            "page_numbers": [
+                60
+            ]
+        },
+        {
+            "row_index": 175,
+            "chunk_id": "gdpr_article_43_paragraph_6_body_page_60_chunk_0176",
+            "document": "gdpr.pdf",
+            "article": "43",
+            "paragraph": "6",
+            "subclause": null,
+            "clause_reference": "Article 43(6)",
+            "page_numbers": [
+                60
+            ]
+        },
+        {
+            "row_index": 176,
+            "chunk_id": "gdpr_article_43_paragraph_7_body_page_60_chunk_0177",
+            "document": "gdpr.pdf",
+            "article": "43",
+            "paragraph": "7",
+            "subclause": null,
+            "clause_reference": "Article 43(7)",
+            "page_numbers": [
+                60
+            ]
+        },
+        {
+            "row_index": 177,
+            "chunk_id": "gdpr_article_43_paragraph_8_body_page_60_chunk_0178",
+            "document": "gdpr.pdf",
+            "article": "43",
+            "paragraph": "8",
+            "subclause": null,
+            "clause_reference": "Article 43(8)",
+            "page_numbers": [
+                60
+            ]
+        },
+        {
+            "row_index": 178,
+            "chunk_id": "gdpr_article_43_paragraph_9_body_page_60_chunk_0179",
+            "document": "gdpr.pdf",
+            "article": "43",
+            "paragraph": "9",
+            "subclause": null,
+            "clause_reference": "Article 43(9)",
+            "page_numbers": [
+                60
+            ]
+        },
+        {
+            "row_index": 179,
+            "chunk_id": "gdpr_article_45_paragraph_1_body_page_61_chunk_0180",
+            "document": "gdpr.pdf",
+            "article": "45",
+            "paragraph": "1",
+            "subclause": null,
+            "clause_reference": "Article 45(1)",
+            "page_numbers": [
+                61
+            ]
+        },
+        {
+            "row_index": 180,
+            "chunk_id": "gdpr_article_45_paragraph_2_body_page_61_chunk_0181",
+            "document": "gdpr.pdf",
+            "article": "45",
+            "paragraph": "2",
+            "subclause": null,
+            "clause_reference": "Article 45(2)",
+            "page_numbers": [
+                61
+            ]
+        },
+        {
+            "row_index": 181,
+            "chunk_id": "gdpr_article_45_paragraph_3_body_page_61_chunk_0182",
+            "document": "gdpr.pdf",
+            "article": "45",
+            "paragraph": "3",
+            "subclause": null,
+            "clause_reference": "Article 45(3)",
+            "page_numbers": [
+                61
+            ]
+        },
+        {
+            "row_index": 182,
+            "chunk_id": "gdpr_article_45_paragraph_4_body_page_61_chunk_0183",
+            "document": "gdpr.pdf",
+            "article": "45",
+            "paragraph": "4",
+            "subclause": null,
+            "clause_reference": "Article 45(4)",
+            "page_numbers": [
+                61
+            ]
+        },
+        {
+            "row_index": 183,
+            "chunk_id": "gdpr_article_45_paragraph_5_body_page_61_chunk_0184",
+            "document": "gdpr.pdf",
+            "article": "45",
+            "paragraph": "5",
+            "subclause": null,
+            "clause_reference": "Article 45(5)",
+            "page_numbers": [
+                61
+            ]
+        },
+        {
+            "row_index": 184,
+            "chunk_id": "gdpr_article_45_paragraph_6_body_page_61_chunk_0185",
+            "document": "gdpr.pdf",
+            "article": "45",
+            "paragraph": "6",
+            "subclause": null,
+            "clause_reference": "Article 45(6)",
+            "page_numbers": [
+                61
+            ]
+        },
+        {
+            "row_index": 185,
+            "chunk_id": "gdpr_article_45_paragraph_7_body_page_61_chunk_0186",
+            "document": "gdpr.pdf",
+            "article": "45",
+            "paragraph": "7",
+            "subclause": null,
+            "clause_reference": "Article 45(7)",
+            "page_numbers": [
+                61
+            ]
+        },
+        {
+            "row_index": 186,
+            "chunk_id": "gdpr_article_45_paragraph_8_body_page_61_chunk_0187",
+            "document": "gdpr.pdf",
+            "article": "45",
+            "paragraph": "8",
+            "subclause": null,
+            "clause_reference": "Article 45(8)",
+            "page_numbers": [
+                61
+            ]
+        },
+        {
+            "row_index": 187,
+            "chunk_id": "gdpr_article_45_paragraph_9_body_page_62_chunk_0188",
+            "document": "gdpr.pdf",
+            "article": "45",
+            "paragraph": "9",
+            "subclause": null,
+            "clause_reference": "Article 45(9)",
+            "page_numbers": [
+                62
+            ]
+        },
+        {
+            "row_index": 188,
+            "chunk_id": "gdpr_article_46_paragraph_1_body_page_62_chunk_0189",
+            "document": "gdpr.pdf",
+            "article": "46",
+            "paragraph": "1",
+            "subclause": null,
+            "clause_reference": "Article 46(1)",
+            "page_numbers": [
+                62
+            ]
+        },
+        {
+            "row_index": 189,
+            "chunk_id": "gdpr_article_46_paragraph_2_body_page_62_chunk_0190",
+            "document": "gdpr.pdf",
+            "article": "46",
+            "paragraph": "2",
+            "subclause": null,
+            "clause_reference": "Article 46(2)",
+            "page_numbers": [
+                62
+            ]
+        },
+        {
+            "row_index": 190,
+            "chunk_id": "gdpr_article_46_paragraph_3_body_page_62_chunk_0191",
+            "document": "gdpr.pdf",
+            "article": "46",
+            "paragraph": "3",
+            "subclause": null,
+            "clause_reference": "Article 46(3)",
+            "page_numbers": [
+                62
+            ]
+        },
+        {
+            "row_index": 191,
+            "chunk_id": "gdpr_article_46_paragraph_4_body_page_62_chunk_0192",
+            "document": "gdpr.pdf",
+            "article": "46",
+            "paragraph": "4",
+            "subclause": null,
+            "clause_reference": "Article 46(4)",
+            "page_numbers": [
+                62
+            ]
+        },
+        {
+            "row_index": 192,
+            "chunk_id": "gdpr_article_46_paragraph_5_body_page_62_chunk_0193",
+            "document": "gdpr.pdf",
+            "article": "46",
+            "paragraph": "5",
+            "subclause": null,
+            "clause_reference": "Article 46(5)",
+            "page_numbers": [
+                62
+            ]
+        },
+        {
+            "row_index": 193,
+            "chunk_id": "gdpr_article_47_paragraph_1_body_page_62_chunk_0194",
+            "document": "gdpr.pdf",
+            "article": "47",
+            "paragraph": "1",
+            "subclause": null,
+            "clause_reference": "Article 47(1)",
+            "page_numbers": [
+                62,
+                63
+            ]
+        },
+        {
+            "row_index": 194,
+            "chunk_id": "gdpr_article_47_paragraph_2_body_page_63_chunk_0195",
+            "document": "gdpr.pdf",
+            "article": "47",
+            "paragraph": "2",
+            "subclause": null,
+            "clause_reference": "Article 47(2)",
+            "page_numbers": [
+                63
+            ]
+        },
+        {
+            "row_index": 195,
+            "chunk_id": "gdpr_article_47_paragraph_3_body_page_64_chunk_0196",
+            "document": "gdpr.pdf",
+            "article": "47",
+            "paragraph": "3",
+            "subclause": null,
+            "clause_reference": "Article 47(3)",
+            "page_numbers": [
+                64
+            ]
+        },
+        {
+            "row_index": 196,
+            "chunk_id": "gdpr_article_49_paragraph_1_body_page_64_chunk_0197",
+            "document": "gdpr.pdf",
+            "article": "49",
+            "paragraph": "1",
+            "subclause": null,
+            "clause_reference": "Article 49(1)",
+            "page_numbers": [
+                64
+            ]
+        },
+        {
+            "row_index": 197,
+            "chunk_id": "gdpr_article_49_paragraph_2_body_page_64_chunk_0198",
+            "document": "gdpr.pdf",
+            "article": "49",
+            "paragraph": "2",
+            "subclause": null,
+            "clause_reference": "Article 49(2)",
+            "page_numbers": [
+                64
+            ]
+        },
+        {
+            "row_index": 198,
+            "chunk_id": "gdpr_article_49_paragraph_3_body_page_65_chunk_0199",
+            "document": "gdpr.pdf",
+            "article": "49",
+            "paragraph": "3",
+            "subclause": null,
+            "clause_reference": "Article 49(3)",
+            "page_numbers": [
+                65
+            ]
+        },
+        {
+            "row_index": 199,
+            "chunk_id": "gdpr_article_49_paragraph_4_body_page_65_chunk_0200",
+            "document": "gdpr.pdf",
+            "article": "49",
+            "paragraph": "4",
+            "subclause": null,
+            "clause_reference": "Article 49(4)",
+            "page_numbers": [
+                65
+            ]
+        },
+        {
+            "row_index": 200,
+            "chunk_id": "gdpr_article_49_paragraph_5_body_page_65_chunk_0201",
+            "document": "gdpr.pdf",
+            "article": "49",
+            "paragraph": "5",
+            "subclause": null,
+            "clause_reference": "Article 49(5)",
+            "page_numbers": [
+                65
+            ]
+        },
+        {
+            "row_index": 201,
+            "chunk_id": "gdpr_article_49_paragraph_6_body_page_65_chunk_0202",
+            "document": "gdpr.pdf",
+            "article": "49",
+            "paragraph": "6",
+            "subclause": null,
+            "clause_reference": "Article 49(6)",
+            "page_numbers": [
+                65
+            ]
+        },
+        {
+            "row_index": 202,
+            "chunk_id": "gdpr_article_51_paragraph_1_body_page_65_chunk_0203",
+            "document": "gdpr.pdf",
+            "article": "51",
+            "paragraph": "1",
+            "subclause": null,
+            "clause_reference": "Article 51(1)",
+            "page_numbers": [
+                65
+            ]
+        },
+        {
+            "row_index": 203,
+            "chunk_id": "gdpr_article_51_paragraph_2_body_page_65_chunk_0204",
+            "document": "gdpr.pdf",
+            "article": "51",
+            "paragraph": "2",
+            "subclause": null,
+            "clause_reference": "Article 51(2)",
+            "page_numbers": [
+                65
+            ]
+        },
+        {
+            "row_index": 204,
+            "chunk_id": "gdpr_article_51_paragraph_3_body_page_65_chunk_0205",
+            "document": "gdpr.pdf",
+            "article": "51",
+            "paragraph": "3",
+            "subclause": null,
+            "clause_reference": "Article 51(3)",
+            "page_numbers": [
+                65
+            ]
+        },
+        {
+            "row_index": 205,
+            "chunk_id": "gdpr_article_51_paragraph_4_body_page_65_chunk_0206",
+            "document": "gdpr.pdf",
+            "article": "51",
+            "paragraph": "4",
+            "subclause": null,
+            "clause_reference": "Article 51(4)",
+            "page_numbers": [
+                65
+            ]
+        },
+        {
+            "row_index": 206,
+            "chunk_id": "gdpr_article_52_paragraph_1_body_page_66_chunk_0207",
+            "document": "gdpr.pdf",
+            "article": "52",
+            "paragraph": "1",
+            "subclause": null,
+            "clause_reference": "Article 52(1)",
+            "page_numbers": [
+                66
+            ]
+        },
+        {
+            "row_index": 207,
+            "chunk_id": "gdpr_article_52_paragraph_2_body_page_66_chunk_0208",
+            "document": "gdpr.pdf",
+            "article": "52",
+            "paragraph": "2",
+            "subclause": null,
+            "clause_reference": "Article 52(2)",
+            "page_numbers": [
+                66
+            ]
+        },
+        {
+            "row_index": 208,
+            "chunk_id": "gdpr_article_52_paragraph_3_body_page_66_chunk_0209",
+            "document": "gdpr.pdf",
+            "article": "52",
+            "paragraph": "3",
+            "subclause": null,
+            "clause_reference": "Article 52(3)",
+            "page_numbers": [
+                66
+            ]
+        },
+        {
+            "row_index": 209,
+            "chunk_id": "gdpr_article_52_paragraph_4_body_page_66_chunk_0210",
+            "document": "gdpr.pdf",
+            "article": "52",
+            "paragraph": "4",
+            "subclause": null,
+            "clause_reference": "Article 52(4)",
+            "page_numbers": [
+                66
+            ]
+        },
+        {
+            "row_index": 210,
+            "chunk_id": "gdpr_article_52_paragraph_5_body_page_66_chunk_0211",
+            "document": "gdpr.pdf",
+            "article": "52",
+            "paragraph": "5",
+            "subclause": null,
+            "clause_reference": "Article 52(5)",
+            "page_numbers": [
+                66
+            ]
+        },
+        {
+            "row_index": 211,
+            "chunk_id": "gdpr_article_52_paragraph_6_body_page_66_chunk_0212",
+            "document": "gdpr.pdf",
+            "article": "52",
+            "paragraph": "6",
+            "subclause": null,
+            "clause_reference": "Article 52(6)",
+            "page_numbers": [
+                66
+            ]
+        },
+        {
+            "row_index": 212,
+            "chunk_id": "gdpr_article_53_paragraph_1_body_page_66_chunk_0213",
+            "document": "gdpr.pdf",
+            "article": "53",
+            "paragraph": "1",
+            "subclause": null,
+            "clause_reference": "Article 53(1)",
+            "page_numbers": [
+                66
+            ]
+        },
+        {
+            "row_index": 213,
+            "chunk_id": "gdpr_article_53_paragraph_2_body_page_66_chunk_0214",
+            "document": "gdpr.pdf",
+            "article": "53",
+            "paragraph": "2",
+            "subclause": null,
+            "clause_reference": "Article 53(2)",
+            "page_numbers": [
+                66
+            ]
+        },
+        {
+            "row_index": 214,
+            "chunk_id": "gdpr_article_53_paragraph_3_body_page_66_chunk_0215",
+            "document": "gdpr.pdf",
+            "article": "53",
+            "paragraph": "3",
+            "subclause": null,
+            "clause_reference": "Article 53(3)",
+            "page_numbers": [
+                66
+            ]
+        },
+        {
+            "row_index": 215,
+            "chunk_id": "gdpr_article_53_paragraph_4_body_page_66_chunk_0216",
+            "document": "gdpr.pdf",
+            "article": "53",
+            "paragraph": "4",
+            "subclause": null,
+            "clause_reference": "Article 53(4)",
+            "page_numbers": [
+                66
+            ]
+        },
+        {
+            "row_index": 216,
+            "chunk_id": "gdpr_article_54_paragraph_1_body_page_66_chunk_0217",
+            "document": "gdpr.pdf",
+            "article": "54",
+            "paragraph": "1",
+            "subclause": null,
+            "clause_reference": "Article 54(1)",
+            "page_numbers": [
+                66,
+                67
+            ]
+        },
+        {
+            "row_index": 217,
+            "chunk_id": "gdpr_article_54_paragraph_2_body_page_67_chunk_0218",
+            "document": "gdpr.pdf",
+            "article": "54",
+            "paragraph": "2",
+            "subclause": null,
+            "clause_reference": "Article 54(2)",
+            "page_numbers": [
+                67
+            ]
+        },
+        {
+            "row_index": 218,
+            "chunk_id": "gdpr_article_55_paragraph_1_body_page_67_chunk_0219",
+            "document": "gdpr.pdf",
+            "article": "55",
+            "paragraph": "1",
+            "subclause": null,
+            "clause_reference": "Article 55(1)",
+            "page_numbers": [
+                67
+            ]
+        },
+        {
+            "row_index": 219,
+            "chunk_id": "gdpr_article_55_paragraph_2_body_page_67_chunk_0220",
+            "document": "gdpr.pdf",
+            "article": "55",
+            "paragraph": "2",
+            "subclause": null,
+            "clause_reference": "Article 55(2)",
+            "page_numbers": [
+                67
+            ]
+        },
+        {
+            "row_index": 220,
+            "chunk_id": "gdpr_article_55_paragraph_3_body_page_67_chunk_0221",
+            "document": "gdpr.pdf",
+            "article": "55",
+            "paragraph": "3",
+            "subclause": null,
+            "clause_reference": "Article 55(3)",
+            "page_numbers": [
+                67
+            ]
+        },
+        {
+            "row_index": 221,
+            "chunk_id": "gdpr_article_56_paragraph_1_body_page_67_chunk_0222",
+            "document": "gdpr.pdf",
+            "article": "56",
+            "paragraph": "1",
+            "subclause": null,
+            "clause_reference": "Article 56(1)",
+            "page_numbers": [
+                67
+            ]
+        },
+        {
+            "row_index": 222,
+            "chunk_id": "gdpr_article_56_paragraph_2_body_page_67_chunk_0223",
+            "document": "gdpr.pdf",
+            "article": "56",
+            "paragraph": "2",
+            "subclause": null,
+            "clause_reference": "Article 56(2)",
+            "page_numbers": [
+                67
+            ]
+        },
+        {
+            "row_index": 223,
+            "chunk_id": "gdpr_article_56_paragraph_3_body_page_67_chunk_0224",
+            "document": "gdpr.pdf",
+            "article": "56",
+            "paragraph": "3",
+            "subclause": null,
+            "clause_reference": "Article 56(3)",
+            "page_numbers": [
+                67
+            ]
+        },
+        {
+            "row_index": 224,
+            "chunk_id": "gdpr_article_56_paragraph_4_body_page_68_chunk_0225",
+            "document": "gdpr.pdf",
+            "article": "56",
+            "paragraph": "4",
+            "subclause": null,
+            "clause_reference": "Article 56(4)",
+            "page_numbers": [
+                68
+            ]
+        },
+        {
+            "row_index": 225,
+            "chunk_id": "gdpr_article_56_paragraph_5_body_page_68_chunk_0226",
+            "document": "gdpr.pdf",
+            "article": "56",
+            "paragraph": "5",
+            "subclause": null,
+            "clause_reference": "Article 56(5)",
+            "page_numbers": [
+                68
+            ]
+        },
+        {
+            "row_index": 226,
+            "chunk_id": "gdpr_article_56_paragraph_6_body_page_68_chunk_0227",
+            "document": "gdpr.pdf",
+            "article": "56",
+            "paragraph": "6",
+            "subclause": null,
+            "clause_reference": "Article 56(6)",
+            "page_numbers": [
+                68
+            ]
+        },
+        {
+            "row_index": 227,
+            "chunk_id": "gdpr_article_57_paragraph_1_body_page_68_chunk_0228",
+            "document": "gdpr.pdf",
+            "article": "57",
+            "paragraph": "1",
+            "subclause": null,
+            "clause_reference": "Article 57(1)",
+            "page_numbers": [
+                68,
+                69
+            ]
+        },
+        {
+            "row_index": 228,
+            "chunk_id": "gdpr_article_57_paragraph_2_body_page_69_chunk_0229",
+            "document": "gdpr.pdf",
+            "article": "57",
+            "paragraph": "2",
+            "subclause": null,
+            "clause_reference": "Article 57(2)",
+            "page_numbers": [
+                69
+            ]
+        },
+        {
+            "row_index": 229,
+            "chunk_id": "gdpr_article_57_paragraph_3_body_page_69_chunk_0230",
+            "document": "gdpr.pdf",
+            "article": "57",
+            "paragraph": "3",
+            "subclause": null,
+            "clause_reference": "Article 57(3)",
+            "page_numbers": [
+                69
+            ]
+        },
+        {
+            "row_index": 230,
+            "chunk_id": "gdpr_article_57_paragraph_4_body_page_69_chunk_0231",
+            "document": "gdpr.pdf",
+            "article": "57",
+            "paragraph": "4",
+            "subclause": null,
+            "clause_reference": "Article 57(4)",
+            "page_numbers": [
+                69
+            ]
+        },
+        {
+            "row_index": 231,
+            "chunk_id": "gdpr_article_58_paragraph_1_body_page_69_chunk_0232",
+            "document": "gdpr.pdf",
+            "article": "58",
+            "paragraph": "1",
+            "subclause": null,
+            "clause_reference": "Article 58(1)",
+            "page_numbers": [
+                69
+            ]
+        },
+        {
+            "row_index": 232,
+            "chunk_id": "gdpr_article_58_paragraph_2_body_page_69_chunk_0233",
+            "document": "gdpr.pdf",
+            "article": "58",
+            "paragraph": "2",
+            "subclause": null,
+            "clause_reference": "Article 58(2)",
+            "page_numbers": [
+                69,
+                70
+            ]
+        },
+        {
+            "row_index": 233,
+            "chunk_id": "gdpr_article_58_paragraph_3_body_page_70_chunk_0234",
+            "document": "gdpr.pdf",
+            "article": "58",
+            "paragraph": "3",
+            "subclause": null,
+            "clause_reference": "Article 58(3)",
+            "page_numbers": [
+                70
+            ]
+        },
+        {
+            "row_index": 234,
+            "chunk_id": "gdpr_article_58_paragraph_4_body_page_70_chunk_0235",
+            "document": "gdpr.pdf",
+            "article": "58",
+            "paragraph": "4",
+            "subclause": null,
+            "clause_reference": "Article 58(4)",
+            "page_numbers": [
+                70
+            ]
+        },
+        {
+            "row_index": 235,
+            "chunk_id": "gdpr_article_58_paragraph_5_body_page_70_chunk_0236",
+            "document": "gdpr.pdf",
+            "article": "58",
+            "paragraph": "5",
+            "subclause": null,
+            "clause_reference": "Article 58(5)",
+            "page_numbers": [
+                70
+            ]
+        },
+        {
+            "row_index": 236,
+            "chunk_id": "gdpr_article_58_paragraph_6_body_page_70_chunk_0237",
+            "document": "gdpr.pdf",
+            "article": "58",
+            "paragraph": "6",
+            "subclause": null,
+            "clause_reference": "Article 58(6)",
+            "page_numbers": [
+                70
+            ]
+        },
+        {
+            "row_index": 237,
+            "chunk_id": "gdpr_article_60_paragraph_1_body_page_71_chunk_0238",
+            "document": "gdpr.pdf",
+            "article": "60",
+            "paragraph": "1",
+            "subclause": null,
+            "clause_reference": "Article 60(1)",
+            "page_numbers": [
+                71
+            ]
+        },
+        {
+            "row_index": 238,
+            "chunk_id": "gdpr_article_60_paragraph_2_body_page_71_chunk_0239",
+            "document": "gdpr.pdf",
+            "article": "60",
+            "paragraph": "2",
+            "subclause": null,
+            "clause_reference": "Article 60(2)",
+            "page_numbers": [
+                71
+            ]
+        },
+        {
+            "row_index": 239,
+            "chunk_id": "gdpr_article_60_paragraph_3_body_page_71_chunk_0240",
+            "document": "gdpr.pdf",
+            "article": "60",
+            "paragraph": "3",
+            "subclause": null,
+            "clause_reference": "Article 60(3)",
+            "page_numbers": [
+                71
+            ]
+        },
+        {
+            "row_index": 240,
+            "chunk_id": "gdpr_article_60_paragraph_4_body_page_71_chunk_0241",
+            "document": "gdpr.pdf",
+            "article": "60",
+            "paragraph": "4",
+            "subclause": null,
+            "clause_reference": "Article 60(4)",
+            "page_numbers": [
+                71
+            ]
+        },
+        {
+            "row_index": 241,
+            "chunk_id": "gdpr_article_60_paragraph_5_body_page_71_chunk_0242",
+            "document": "gdpr.pdf",
+            "article": "60",
+            "paragraph": "5",
+            "subclause": null,
+            "clause_reference": "Article 60(5)",
+            "page_numbers": [
+                71
+            ]
+        },
+        {
+            "row_index": 242,
+            "chunk_id": "gdpr_article_60_paragraph_6_body_page_71_chunk_0243",
+            "document": "gdpr.pdf",
+            "article": "60",
+            "paragraph": "6",
+            "subclause": null,
+            "clause_reference": "Article 60(6)",
+            "page_numbers": [
+                71
+            ]
+        },
+        {
+            "row_index": 243,
+            "chunk_id": "gdpr_article_60_paragraph_7_body_page_71_chunk_0244",
+            "document": "gdpr.pdf",
+            "article": "60",
+            "paragraph": "7",
+            "subclause": null,
+            "clause_reference": "Article 60(7)",
+            "page_numbers": [
+                71
+            ]
+        },
+        {
+            "row_index": 244,
+            "chunk_id": "gdpr_article_60_paragraph_8_body_page_71_chunk_0245",
+            "document": "gdpr.pdf",
+            "article": "60",
+            "paragraph": "8",
+            "subclause": null,
+            "clause_reference": "Article 60(8)",
+            "page_numbers": [
+                71
+            ]
+        },
+        {
+            "row_index": 245,
+            "chunk_id": "gdpr_article_60_paragraph_9_body_page_71_chunk_0246",
+            "document": "gdpr.pdf",
+            "article": "60",
+            "paragraph": "9",
+            "subclause": null,
+            "clause_reference": "Article 60(9)",
+            "page_numbers": [
+                71
+            ]
+        },
+        {
+            "row_index": 246,
+            "chunk_id": "gdpr_article_60_paragraph_10_body_page_71_chunk_0247",
+            "document": "gdpr.pdf",
+            "article": "60",
+            "paragraph": "10",
+            "subclause": null,
+            "clause_reference": "Article 60(10)",
+            "page_numbers": [
+                71
+            ]
+        },
+        {
+            "row_index": 247,
+            "chunk_id": "gdpr_article_60_paragraph_11_body_page_72_chunk_0248",
+            "document": "gdpr.pdf",
+            "article": "60",
+            "paragraph": "11",
+            "subclause": null,
+            "clause_reference": "Article 60(11)",
+            "page_numbers": [
+                72
+            ]
+        },
+        {
+            "row_index": 248,
+            "chunk_id": "gdpr_article_60_paragraph_12_body_page_72_chunk_0249",
+            "document": "gdpr.pdf",
+            "article": "60",
+            "paragraph": "12",
+            "subclause": null,
+            "clause_reference": "Article 60(12)",
+            "page_numbers": [
+                72
+            ]
+        },
+        {
+            "row_index": 249,
+            "chunk_id": "gdpr_article_61_paragraph_1_body_page_72_chunk_0250",
+            "document": "gdpr.pdf",
+            "article": "61",
+            "paragraph": "1",
+            "subclause": null,
+            "clause_reference": "Article 61(1)",
+            "page_numbers": [
+                72
+            ]
+        },
+        {
+            "row_index": 250,
+            "chunk_id": "gdpr_article_61_paragraph_2_body_page_72_chunk_0251",
+            "document": "gdpr.pdf",
+            "article": "61",
+            "paragraph": "2",
+            "subclause": null,
+            "clause_reference": "Article 61(2)",
+            "page_numbers": [
+                72
+            ]
+        },
+        {
+            "row_index": 251,
+            "chunk_id": "gdpr_article_61_paragraph_3_body_page_72_chunk_0252",
+            "document": "gdpr.pdf",
+            "article": "61",
+            "paragraph": "3",
+            "subclause": null,
+            "clause_reference": "Article 61(3)",
+            "page_numbers": [
+                72
+            ]
+        },
+        {
+            "row_index": 252,
+            "chunk_id": "gdpr_article_61_paragraph_4_body_page_72_chunk_0253",
+            "document": "gdpr.pdf",
+            "article": "61",
+            "paragraph": "4",
+            "subclause": null,
+            "clause_reference": "Article 61(4)",
+            "page_numbers": [
+                72
+            ]
+        },
+        {
+            "row_index": 253,
+            "chunk_id": "gdpr_article_61_paragraph_5_body_page_72_chunk_0254",
+            "document": "gdpr.pdf",
+            "article": "61",
+            "paragraph": "5",
+            "subclause": null,
+            "clause_reference": "Article 61(5)",
+            "page_numbers": [
+                72
+            ]
+        },
+        {
+            "row_index": 254,
+            "chunk_id": "gdpr_article_61_paragraph_6_body_page_72_chunk_0255",
+            "document": "gdpr.pdf",
+            "article": "61",
+            "paragraph": "6",
+            "subclause": null,
+            "clause_reference": "Article 61(6)",
+            "page_numbers": [
+                72
+            ]
+        },
+        {
+            "row_index": 255,
+            "chunk_id": "gdpr_article_61_paragraph_7_body_page_72_chunk_0256",
+            "document": "gdpr.pdf",
+            "article": "61",
+            "paragraph": "7",
+            "subclause": null,
+            "clause_reference": "Article 61(7)",
+            "page_numbers": [
+                72
+            ]
+        },
+        {
+            "row_index": 256,
+            "chunk_id": "gdpr_article_61_paragraph_8_body_page_72_chunk_0257",
+            "document": "gdpr.pdf",
+            "article": "61",
+            "paragraph": "8",
+            "subclause": null,
+            "clause_reference": "Article 61(8)",
+            "page_numbers": [
+                72
+            ]
+        },
+        {
+            "row_index": 257,
+            "chunk_id": "gdpr_article_61_paragraph_9_body_page_72_chunk_0258",
+            "document": "gdpr.pdf",
+            "article": "61",
+            "paragraph": "9",
+            "subclause": null,
+            "clause_reference": "Article 61(9)",
+            "page_numbers": [
+                72
+            ]
+        },
+        {
+            "row_index": 258,
+            "chunk_id": "gdpr_article_62_paragraph_1_body_page_72_chunk_0259",
+            "document": "gdpr.pdf",
+            "article": "62",
+            "paragraph": "1",
+            "subclause": null,
+            "clause_reference": "Article 62(1)",
+            "page_numbers": [
+                72
+            ]
+        },
+        {
+            "row_index": 259,
+            "chunk_id": "gdpr_article_62_paragraph_2_body_page_73_chunk_0260",
+            "document": "gdpr.pdf",
+            "article": "62",
+            "paragraph": "2",
+            "subclause": null,
+            "clause_reference": "Article 62(2)",
+            "page_numbers": [
+                73
+            ]
+        },
+        {
+            "row_index": 260,
+            "chunk_id": "gdpr_article_62_paragraph_3_body_page_73_chunk_0261",
+            "document": "gdpr.pdf",
+            "article": "62",
+            "paragraph": "3",
+            "subclause": null,
+            "clause_reference": "Article 62(3)",
+            "page_numbers": [
+                73
+            ]
+        },
+        {
+            "row_index": 261,
+            "chunk_id": "gdpr_article_62_paragraph_4_body_page_73_chunk_0262",
+            "document": "gdpr.pdf",
+            "article": "62",
+            "paragraph": "4",
+            "subclause": null,
+            "clause_reference": "Article 62(4)",
+            "page_numbers": [
+                73
+            ]
+        },
+        {
+            "row_index": 262,
+            "chunk_id": "gdpr_article_62_paragraph_5_body_page_73_chunk_0263",
+            "document": "gdpr.pdf",
+            "article": "62",
+            "paragraph": "5",
+            "subclause": null,
+            "clause_reference": "Article 62(5)",
+            "page_numbers": [
+                73
+            ]
+        },
+        {
+            "row_index": 263,
+            "chunk_id": "gdpr_article_62_paragraph_6_body_page_73_chunk_0264",
+            "document": "gdpr.pdf",
+            "article": "62",
+            "paragraph": "6",
+            "subclause": null,
+            "clause_reference": "Article 62(6)",
+            "page_numbers": [
+                73
+            ]
+        },
+        {
+            "row_index": 264,
+            "chunk_id": "gdpr_article_62_paragraph_7_body_page_73_chunk_0265",
+            "document": "gdpr.pdf",
+            "article": "62",
+            "paragraph": "7",
+            "subclause": null,
+            "clause_reference": "Article 62(7)",
+            "page_numbers": [
+                73
+            ]
+        },
+        {
+            "row_index": 265,
+            "chunk_id": "gdpr_article_64_paragraph_1_body_page_73_chunk_0266",
+            "document": "gdpr.pdf",
+            "article": "64",
+            "paragraph": "1",
+            "subclause": null,
+            "clause_reference": "Article 64(1)",
+            "page_numbers": [
+                73,
+                74
+            ]
+        },
+        {
+            "row_index": 266,
+            "chunk_id": "gdpr_article_64_paragraph_2_body_page_74_chunk_0267",
+            "document": "gdpr.pdf",
+            "article": "64",
+            "paragraph": "2",
+            "subclause": null,
+            "clause_reference": "Article 64(2)",
+            "page_numbers": [
+                74
+            ]
+        },
+        {
+            "row_index": 267,
+            "chunk_id": "gdpr_article_64_paragraph_3_body_page_74_chunk_0268",
+            "document": "gdpr.pdf",
+            "article": "64",
+            "paragraph": "3",
+            "subclause": null,
+            "clause_reference": "Article 64(3)",
+            "page_numbers": [
+                74
+            ]
+        },
+        {
+            "row_index": 268,
+            "chunk_id": "gdpr_article_64_paragraph_4_body_page_74_chunk_0269",
+            "document": "gdpr.pdf",
+            "article": "64",
+            "paragraph": "4",
+            "subclause": null,
+            "clause_reference": "Article 64(4)",
+            "page_numbers": [
+                74
+            ]
+        },
+        {
+            "row_index": 269,
+            "chunk_id": "gdpr_article_64_paragraph_5_body_page_74_chunk_0270",
+            "document": "gdpr.pdf",
+            "article": "64",
+            "paragraph": "5",
+            "subclause": null,
+            "clause_reference": "Article 64(5)",
+            "page_numbers": [
+                74
+            ]
+        },
+        {
+            "row_index": 270,
+            "chunk_id": "gdpr_article_64_paragraph_6_body_page_74_chunk_0271",
+            "document": "gdpr.pdf",
+            "article": "64",
+            "paragraph": "6",
+            "subclause": null,
+            "clause_reference": "Article 64(6)",
+            "page_numbers": [
+                74
+            ]
+        },
+        {
+            "row_index": 271,
+            "chunk_id": "gdpr_article_64_paragraph_7_body_page_74_chunk_0272",
+            "document": "gdpr.pdf",
+            "article": "64",
+            "paragraph": "7",
+            "subclause": null,
+            "clause_reference": "Article 64(7)",
+            "page_numbers": [
+                74
+            ]
+        },
+        {
+            "row_index": 272,
+            "chunk_id": "gdpr_article_64_paragraph_8_body_page_74_chunk_0273",
+            "document": "gdpr.pdf",
+            "article": "64",
+            "paragraph": "8",
+            "subclause": null,
+            "clause_reference": "Article 64(8)",
+            "page_numbers": [
+                74
+            ]
+        },
+        {
+            "row_index": 273,
+            "chunk_id": "gdpr_article_65_paragraph_1_body_page_74_chunk_0274",
+            "document": "gdpr.pdf",
+            "article": "65",
+            "paragraph": "1",
+            "subclause": null,
+            "clause_reference": "Article 65(1)",
+            "page_numbers": [
+                74,
+                75
+            ]
+        },
+        {
+            "row_index": 274,
+            "chunk_id": "gdpr_article_65_paragraph_2_body_page_75_chunk_0275",
+            "document": "gdpr.pdf",
+            "article": "65",
+            "paragraph": "2",
+            "subclause": null,
+            "clause_reference": "Article 65(2)",
+            "page_numbers": [
+                75
+            ]
+        },
+        {
+            "row_index": 275,
+            "chunk_id": "gdpr_article_65_paragraph_3_body_page_75_chunk_0276",
+            "document": "gdpr.pdf",
+            "article": "65",
+            "paragraph": "3",
+            "subclause": null,
+            "clause_reference": "Article 65(3)",
+            "page_numbers": [
+                75
+            ]
+        },
+        {
+            "row_index": 276,
+            "chunk_id": "gdpr_article_65_paragraph_4_body_page_75_chunk_0277",
+            "document": "gdpr.pdf",
+            "article": "65",
+            "paragraph": "4",
+            "subclause": null,
+            "clause_reference": "Article 65(4)",
+            "page_numbers": [
+                75
+            ]
+        },
+        {
+            "row_index": 277,
+            "chunk_id": "gdpr_article_65_paragraph_5_body_page_75_chunk_0278",
+            "document": "gdpr.pdf",
+            "article": "65",
+            "paragraph": "5",
+            "subclause": null,
+            "clause_reference": "Article 65(5)",
+            "page_numbers": [
+                75
+            ]
+        },
+        {
+            "row_index": 278,
+            "chunk_id": "gdpr_article_65_paragraph_6_body_page_75_chunk_0279",
+            "document": "gdpr.pdf",
+            "article": "65",
+            "paragraph": "6",
+            "subclause": null,
+            "clause_reference": "Article 65(6)",
+            "page_numbers": [
+                75
+            ]
+        },
+        {
+            "row_index": 279,
+            "chunk_id": "gdpr_article_66_paragraph_1_body_page_75_chunk_0280",
+            "document": "gdpr.pdf",
+            "article": "66",
+            "paragraph": "1",
+            "subclause": null,
+            "clause_reference": "Article 66(1)",
+            "page_numbers": [
+                75
+            ]
+        },
+        {
+            "row_index": 280,
+            "chunk_id": "gdpr_article_66_paragraph_2_body_page_75_chunk_0281",
+            "document": "gdpr.pdf",
+            "article": "66",
+            "paragraph": "2",
+            "subclause": null,
+            "clause_reference": "Article 66(2)",
+            "page_numbers": [
+                75
+            ]
+        },
+        {
+            "row_index": 281,
+            "chunk_id": "gdpr_article_66_paragraph_3_body_page_75_chunk_0282",
+            "document": "gdpr.pdf",
+            "article": "66",
+            "paragraph": "3",
+            "subclause": null,
+            "clause_reference": "Article 66(3)",
+            "page_numbers": [
+                75
+            ]
+        },
+        {
+            "row_index": 282,
+            "chunk_id": "gdpr_article_66_paragraph_4_body_page_75_chunk_0283",
+            "document": "gdpr.pdf",
+            "article": "66",
+            "paragraph": "4",
+            "subclause": null,
+            "clause_reference": "Article 66(4)",
+            "page_numbers": [
+                75
+            ]
+        },
+        {
+            "row_index": 283,
+            "chunk_id": "gdpr_article_68_paragraph_1_body_page_76_chunk_0284",
+            "document": "gdpr.pdf",
+            "article": "68",
+            "paragraph": "1",
+            "subclause": null,
+            "clause_reference": "Article 68(1)",
+            "page_numbers": [
+                76
+            ]
+        },
+        {
+            "row_index": 284,
+            "chunk_id": "gdpr_article_68_paragraph_2_body_page_76_chunk_0285",
+            "document": "gdpr.pdf",
+            "article": "68",
+            "paragraph": "2",
+            "subclause": null,
+            "clause_reference": "Article 68(2)",
+            "page_numbers": [
+                76
+            ]
+        },
+        {
+            "row_index": 285,
+            "chunk_id": "gdpr_article_68_paragraph_3_body_page_76_chunk_0286",
+            "document": "gdpr.pdf",
+            "article": "68",
+            "paragraph": "3",
+            "subclause": null,
+            "clause_reference": "Article 68(3)",
+            "page_numbers": [
+                76
+            ]
+        },
+        {
+            "row_index": 286,
+            "chunk_id": "gdpr_article_68_paragraph_4_body_page_76_chunk_0287",
+            "document": "gdpr.pdf",
+            "article": "68",
+            "paragraph": "4",
+            "subclause": null,
+            "clause_reference": "Article 68(4)",
+            "page_numbers": [
+                76
+            ]
+        },
+        {
+            "row_index": 287,
+            "chunk_id": "gdpr_article_68_paragraph_5_body_page_76_chunk_0288",
+            "document": "gdpr.pdf",
+            "article": "68",
+            "paragraph": "5",
+            "subclause": null,
+            "clause_reference": "Article 68(5)",
+            "page_numbers": [
+                76
+            ]
+        },
+        {
+            "row_index": 288,
+            "chunk_id": "gdpr_article_68_paragraph_6_body_page_76_chunk_0289",
+            "document": "gdpr.pdf",
+            "article": "68",
+            "paragraph": "6",
+            "subclause": null,
+            "clause_reference": "Article 68(6)",
+            "page_numbers": [
+                76
+            ]
+        },
+        {
+            "row_index": 289,
+            "chunk_id": "gdpr_article_69_paragraph_1_body_page_76_chunk_0290",
+            "document": "gdpr.pdf",
+            "article": "69",
+            "paragraph": "1",
+            "subclause": null,
+            "clause_reference": "Article 69(1)",
+            "page_numbers": [
+                76
+            ]
+        },
+        {
+            "row_index": 290,
+            "chunk_id": "gdpr_article_69_paragraph_2_body_page_76_chunk_0291",
+            "document": "gdpr.pdf",
+            "article": "69",
+            "paragraph": "2",
+            "subclause": null,
+            "clause_reference": "Article 69(2)",
+            "page_numbers": [
+                76
+            ]
+        },
+        {
+            "row_index": 291,
+            "chunk_id": "gdpr_article_70_paragraph_1_body_page_76_chunk_0292",
+            "document": "gdpr.pdf",
+            "article": "70",
+            "paragraph": "1",
+            "subclause": null,
+            "clause_reference": "Article 70(1)",
+            "page_numbers": [
+                76
+            ]
+        },
+        {
+            "row_index": 292,
+            "chunk_id": "gdpr_article_70_paragraph_1_subclause_a_page_76_chunk_0293",
+            "document": "gdpr.pdf",
+            "article": "70",
+            "paragraph": "1",
+            "subclause": "a",
+            "clause_reference": "Article 70(1)(a)",
+            "page_numbers": [
+                76
+            ]
+        },
+        {
+            "row_index": 293,
+            "chunk_id": "gdpr_article_70_paragraph_1_subclause_b_page_77_chunk_0294",
+            "document": "gdpr.pdf",
+            "article": "70",
+            "paragraph": "1",
+            "subclause": "b",
+            "clause_reference": "Article 70(1)(b)",
+            "page_numbers": [
+                77
+            ]
+        },
+        {
+            "row_index": 294,
+            "chunk_id": "gdpr_article_70_paragraph_1_subclause_c_page_77_chunk_0295",
+            "document": "gdpr.pdf",
+            "article": "70",
+            "paragraph": "1",
+            "subclause": "c",
+            "clause_reference": "Article 70(1)(c)",
+            "page_numbers": [
+                77
+            ]
+        },
+        {
+            "row_index": 295,
+            "chunk_id": "gdpr_article_70_paragraph_1_subclause_d_page_77_chunk_0296",
+            "document": "gdpr.pdf",
+            "article": "70",
+            "paragraph": "1",
+            "subclause": "d",
+            "clause_reference": "Article 70(1)(d)",
+            "page_numbers": [
+                77
+            ]
+        },
+        {
+            "row_index": 296,
+            "chunk_id": "gdpr_article_70_paragraph_1_subclause_e_page_77_chunk_0297",
+            "document": "gdpr.pdf",
+            "article": "70",
+            "paragraph": "1",
+            "subclause": "e",
+            "clause_reference": "Article 70(1)(e)",
+            "page_numbers": [
+                77
+            ]
+        },
+        {
+            "row_index": 297,
+            "chunk_id": "gdpr_article_70_paragraph_1_subclause_f_page_77_chunk_0298",
+            "document": "gdpr.pdf",
+            "article": "70",
+            "paragraph": "1",
+            "subclause": "f",
+            "clause_reference": "Article 70(1)(f)",
+            "page_numbers": [
+                77
+            ]
+        },
+        {
+            "row_index": 298,
+            "chunk_id": "gdpr_article_70_paragraph_1_subclause_g_page_77_chunk_0299",
+            "document": "gdpr.pdf",
+            "article": "70",
+            "paragraph": "1",
+            "subclause": "g",
+            "clause_reference": "Article 70(1)(g)",
+            "page_numbers": [
+                77
+            ]
+        },
+        {
+            "row_index": 299,
+            "chunk_id": "gdpr_article_70_paragraph_1_subclause_h_page_77_chunk_0300",
+            "document": "gdpr.pdf",
+            "article": "70",
+            "paragraph": "1",
+            "subclause": "h",
+            "clause_reference": "Article 70(1)(h)",
+            "page_numbers": [
+                77
+            ]
+        },
+        {
+            "row_index": 300,
+            "chunk_id": "gdpr_article_70_paragraph_1_subclause_i_page_77_chunk_0301",
+            "document": "gdpr.pdf",
+            "article": "70",
+            "paragraph": "1",
+            "subclause": "i",
+            "clause_reference": "Article 70(1)(i)",
+            "page_numbers": [
+                77
+            ]
+        },
+        {
+            "row_index": 301,
+            "chunk_id": "gdpr_article_70_paragraph_1_subclause_j_page_77_chunk_0302",
+            "document": "gdpr.pdf",
+            "article": "70",
+            "paragraph": "1",
+            "subclause": "j",
+            "clause_reference": "Article 70(1)(j)",
+            "page_numbers": [
+                77
+            ]
+        },
+        {
+            "row_index": 302,
+            "chunk_id": "gdpr_article_70_paragraph_1_subclause_k_page_77_chunk_0303",
+            "document": "gdpr.pdf",
+            "article": "70",
+            "paragraph": "1",
+            "subclause": "k",
+            "clause_reference": "Article 70(1)(k)",
+            "page_numbers": [
+                77
+            ]
+        },
+        {
+            "row_index": 303,
+            "chunk_id": "gdpr_article_70_paragraph_1_subclause_l_page_77_chunk_0304",
+            "document": "gdpr.pdf",
+            "article": "70",
+            "paragraph": "1",
+            "subclause": "l",
+            "clause_reference": "Article 70(1)(l)",
+            "page_numbers": [
+                77
+            ]
+        },
+        {
+            "row_index": 304,
+            "chunk_id": "gdpr_article_70_paragraph_1_subclause_m_page_77_chunk_0305",
+            "document": "gdpr.pdf",
+            "article": "70",
+            "paragraph": "1",
+            "subclause": "m",
+            "clause_reference": "Article 70(1)(m)",
+            "page_numbers": [
+                77
+            ]
+        },
+        {
+            "row_index": 305,
+            "chunk_id": "gdpr_article_70_paragraph_1_subclause_n_page_77_chunk_0306",
+            "document": "gdpr.pdf",
+            "article": "70",
+            "paragraph": "1",
+            "subclause": "n",
+            "clause_reference": "Article 70(1)(n)",
+            "page_numbers": [
+                77
+            ]
+        },
+        {
+            "row_index": 306,
+            "chunk_id": "gdpr_article_70_paragraph_1_subclause_o_page_77_chunk_0307",
+            "document": "gdpr.pdf",
+            "article": "70",
+            "paragraph": "1",
+            "subclause": "o",
+            "clause_reference": "Article 70(1)(o)",
+            "page_numbers": [
+                77
+            ]
+        },
+        {
+            "row_index": 307,
+            "chunk_id": "gdpr_article_70_paragraph_1_subclause_p_page_77_chunk_0308",
+            "document": "gdpr.pdf",
+            "article": "70",
+            "paragraph": "1",
+            "subclause": "p",
+            "clause_reference": "Article 70(1)(p)",
+            "page_numbers": [
+                77
+            ]
+        },
+        {
+            "row_index": 308,
+            "chunk_id": "gdpr_article_70_paragraph_1_subclause_q_page_77_chunk_0309",
+            "document": "gdpr.pdf",
+            "article": "70",
+            "paragraph": "1",
+            "subclause": "q",
+            "clause_reference": "Article 70(1)(q)",
+            "page_numbers": [
+                77
+            ]
+        },
+        {
+            "row_index": 309,
+            "chunk_id": "gdpr_article_70_paragraph_1_subclause_r_page_77_chunk_0310",
+            "document": "gdpr.pdf",
+            "article": "70",
+            "paragraph": "1",
+            "subclause": "r",
+            "clause_reference": "Article 70(1)(r)",
+            "page_numbers": [
+                77
+            ]
+        },
+        {
+            "row_index": 310,
+            "chunk_id": "gdpr_article_70_paragraph_1_subclause_s_page_77_chunk_0311",
+            "document": "gdpr.pdf",
+            "article": "70",
+            "paragraph": "1",
+            "subclause": "s",
+            "clause_reference": "Article 70(1)(s)",
+            "page_numbers": [
+                77
+            ]
+        },
+        {
+            "row_index": 311,
+            "chunk_id": "gdpr_article_70_paragraph_1_subclause_t_page_78_chunk_0312",
+            "document": "gdpr.pdf",
+            "article": "70",
+            "paragraph": "1",
+            "subclause": "t",
+            "clause_reference": "Article 70(1)(t)",
+            "page_numbers": [
+                78
+            ]
+        },
+        {
+            "row_index": 312,
+            "chunk_id": "gdpr_article_70_paragraph_1_subclause_u_page_78_chunk_0313",
+            "document": "gdpr.pdf",
+            "article": "70",
+            "paragraph": "1",
+            "subclause": "u",
+            "clause_reference": "Article 70(1)(u)",
+            "page_numbers": [
+                78
+            ]
+        },
+        {
+            "row_index": 313,
+            "chunk_id": "gdpr_article_70_paragraph_1_subclause_v_page_78_chunk_0314",
+            "document": "gdpr.pdf",
+            "article": "70",
+            "paragraph": "1",
+            "subclause": "v",
+            "clause_reference": "Article 70(1)(v)",
+            "page_numbers": [
+                78
+            ]
+        },
+        {
+            "row_index": 314,
+            "chunk_id": "gdpr_article_70_paragraph_1_subclause_w_page_78_chunk_0315",
+            "document": "gdpr.pdf",
+            "article": "70",
+            "paragraph": "1",
+            "subclause": "w",
+            "clause_reference": "Article 70(1)(w)",
+            "page_numbers": [
+                78
+            ]
+        },
+        {
+            "row_index": 315,
+            "chunk_id": "gdpr_article_70_paragraph_1_subclause_x_page_78_chunk_0316",
+            "document": "gdpr.pdf",
+            "article": "70",
+            "paragraph": "1",
+            "subclause": "x",
+            "clause_reference": "Article 70(1)(x)",
+            "page_numbers": [
+                78
+            ]
+        },
+        {
+            "row_index": 316,
+            "chunk_id": "gdpr_article_70_paragraph_1_subclause_y_page_78_chunk_0317",
+            "document": "gdpr.pdf",
+            "article": "70",
+            "paragraph": "1",
+            "subclause": "y",
+            "clause_reference": "Article 70(1)(y)",
+            "page_numbers": [
+                78
+            ]
+        },
+        {
+            "row_index": 317,
+            "chunk_id": "gdpr_article_70_paragraph_2_body_page_78_chunk_0318",
+            "document": "gdpr.pdf",
+            "article": "70",
+            "paragraph": "2",
+            "subclause": null,
+            "clause_reference": "Article 70(2)",
+            "page_numbers": [
+                78
+            ]
+        },
+        {
+            "row_index": 318,
+            "chunk_id": "gdpr_article_70_paragraph_3_body_page_78_chunk_0319",
+            "document": "gdpr.pdf",
+            "article": "70",
+            "paragraph": "3",
+            "subclause": null,
+            "clause_reference": "Article 70(3)",
+            "page_numbers": [
+                78
+            ]
+        },
+        {
+            "row_index": 319,
+            "chunk_id": "gdpr_article_70_paragraph_4_body_page_78_chunk_0320",
+            "document": "gdpr.pdf",
+            "article": "70",
+            "paragraph": "4",
+            "subclause": null,
+            "clause_reference": "Article 70(4)",
+            "page_numbers": [
+                78
+            ]
+        },
+        {
+            "row_index": 320,
+            "chunk_id": "gdpr_article_71_paragraph_1_body_page_78_chunk_0321",
+            "document": "gdpr.pdf",
+            "article": "71",
+            "paragraph": "1",
+            "subclause": null,
+            "clause_reference": "Article 71(1)",
+            "page_numbers": [
+                78
+            ]
+        },
+        {
+            "row_index": 321,
+            "chunk_id": "gdpr_article_71_paragraph_2_body_page_78_chunk_0322",
+            "document": "gdpr.pdf",
+            "article": "71",
+            "paragraph": "2",
+            "subclause": null,
+            "clause_reference": "Article 71(2)",
+            "page_numbers": [
+                78
+            ]
+        },
+        {
+            "row_index": 322,
+            "chunk_id": "gdpr_article_72_paragraph_1_body_page_78_chunk_0323",
+            "document": "gdpr.pdf",
+            "article": "72",
+            "paragraph": "1",
+            "subclause": null,
+            "clause_reference": "Article 72(1)",
+            "page_numbers": [
+                78
+            ]
+        },
+        {
+            "row_index": 323,
+            "chunk_id": "gdpr_article_72_paragraph_2_body_page_78_chunk_0324",
+            "document": "gdpr.pdf",
+            "article": "72",
+            "paragraph": "2",
+            "subclause": null,
+            "clause_reference": "Article 72(2)",
+            "page_numbers": [
+                78
+            ]
+        },
+        {
+            "row_index": 324,
+            "chunk_id": "gdpr_article_73_paragraph_1_body_page_78_chunk_0325",
+            "document": "gdpr.pdf",
+            "article": "73",
+            "paragraph": "1",
+            "subclause": null,
+            "clause_reference": "Article 73(1)",
+            "page_numbers": [
+                78
+            ]
+        },
+        {
+            "row_index": 325,
+            "chunk_id": "gdpr_article_73_paragraph_2_body_page_78_chunk_0326",
+            "document": "gdpr.pdf",
+            "article": "73",
+            "paragraph": "2",
+            "subclause": null,
+            "clause_reference": "Article 73(2)",
+            "page_numbers": [
+                78
+            ]
+        },
+        {
+            "row_index": 326,
+            "chunk_id": "gdpr_article_74_paragraph_1_body_page_79_chunk_0327",
+            "document": "gdpr.pdf",
+            "article": "74",
+            "paragraph": "1",
+            "subclause": null,
+            "clause_reference": "Article 74(1)",
+            "page_numbers": [
+                79
+            ]
+        },
+        {
+            "row_index": 327,
+            "chunk_id": "gdpr_article_74_paragraph_2_body_page_79_chunk_0328",
+            "document": "gdpr.pdf",
+            "article": "74",
+            "paragraph": "2",
+            "subclause": null,
+            "clause_reference": "Article 74(2)",
+            "page_numbers": [
+                79
+            ]
+        },
+        {
+            "row_index": 328,
+            "chunk_id": "gdpr_article_75_paragraph_1_body_page_79_chunk_0329",
+            "document": "gdpr.pdf",
+            "article": "75",
+            "paragraph": "1",
+            "subclause": null,
+            "clause_reference": "Article 75(1)",
+            "page_numbers": [
+                79
+            ]
+        },
+        {
+            "row_index": 329,
+            "chunk_id": "gdpr_article_75_paragraph_2_body_page_79_chunk_0330",
+            "document": "gdpr.pdf",
+            "article": "75",
+            "paragraph": "2",
+            "subclause": null,
+            "clause_reference": "Article 75(2)",
+            "page_numbers": [
+                79
+            ]
+        },
+        {
+            "row_index": 330,
+            "chunk_id": "gdpr_article_75_paragraph_3_body_page_79_chunk_0331",
+            "document": "gdpr.pdf",
+            "article": "75",
+            "paragraph": "3",
+            "subclause": null,
+            "clause_reference": "Article 75(3)",
+            "page_numbers": [
+                79
+            ]
+        },
+        {
+            "row_index": 331,
+            "chunk_id": "gdpr_article_75_paragraph_4_body_page_79_chunk_0332",
+            "document": "gdpr.pdf",
+            "article": "75",
+            "paragraph": "4",
+            "subclause": null,
+            "clause_reference": "Article 75(4)",
+            "page_numbers": [
+                79
+            ]
+        },
+        {
+            "row_index": 332,
+            "chunk_id": "gdpr_article_75_paragraph_5_body_page_79_chunk_0333",
+            "document": "gdpr.pdf",
+            "article": "75",
+            "paragraph": "5",
+            "subclause": null,
+            "clause_reference": "Article 75(5)",
+            "page_numbers": [
+                79
+            ]
+        },
+        {
+            "row_index": 333,
+            "chunk_id": "gdpr_article_75_paragraph_6_body_page_79_chunk_0334",
+            "document": "gdpr.pdf",
+            "article": "75",
+            "paragraph": "6",
+            "subclause": null,
+            "clause_reference": "Article 75(6)",
+            "page_numbers": [
+                79
+            ]
+        },
+        {
+            "row_index": 334,
+            "chunk_id": "gdpr_article_76_paragraph_1_body_page_79_chunk_0335",
+            "document": "gdpr.pdf",
+            "article": "76",
+            "paragraph": "1",
+            "subclause": null,
+            "clause_reference": "Article 76(1)",
+            "page_numbers": [
+                79
+            ]
+        },
+        {
+            "row_index": 335,
+            "chunk_id": "gdpr_article_76_paragraph_2_body_page_80_chunk_0336",
+            "document": "gdpr.pdf",
+            "article": "76",
+            "paragraph": "2",
+            "subclause": null,
+            "clause_reference": "Article 76(2)",
+            "page_numbers": [
+                80
+            ]
+        },
+        {
+            "row_index": 336,
+            "chunk_id": "gdpr_article_77_paragraph_1_body_page_80_chunk_0337",
+            "document": "gdpr.pdf",
+            "article": "77",
+            "paragraph": "1",
+            "subclause": null,
+            "clause_reference": "Article 77(1)",
+            "page_numbers": [
+                80
+            ]
+        },
+        {
+            "row_index": 337,
+            "chunk_id": "gdpr_article_77_paragraph_2_body_page_80_chunk_0338",
+            "document": "gdpr.pdf",
+            "article": "77",
+            "paragraph": "2",
+            "subclause": null,
+            "clause_reference": "Article 77(2)",
+            "page_numbers": [
+                80
+            ]
+        },
+        {
+            "row_index": 338,
+            "chunk_id": "gdpr_article_78_paragraph_1_body_page_80_chunk_0339",
+            "document": "gdpr.pdf",
+            "article": "78",
+            "paragraph": "1",
+            "subclause": null,
+            "clause_reference": "Article 78(1)",
+            "page_numbers": [
+                80
+            ]
+        },
+        {
+            "row_index": 339,
+            "chunk_id": "gdpr_article_78_paragraph_2_body_page_80_chunk_0340",
+            "document": "gdpr.pdf",
+            "article": "78",
+            "paragraph": "2",
+            "subclause": null,
+            "clause_reference": "Article 78(2)",
+            "page_numbers": [
+                80
+            ]
+        },
+        {
+            "row_index": 340,
+            "chunk_id": "gdpr_article_78_paragraph_3_body_page_80_chunk_0341",
+            "document": "gdpr.pdf",
+            "article": "78",
+            "paragraph": "3",
+            "subclause": null,
+            "clause_reference": "Article 78(3)",
+            "page_numbers": [
+                80
+            ]
+        },
+        {
+            "row_index": 341,
+            "chunk_id": "gdpr_article_78_paragraph_4_body_page_80_chunk_0342",
+            "document": "gdpr.pdf",
+            "article": "78",
+            "paragraph": "4",
+            "subclause": null,
+            "clause_reference": "Article 78(4)",
+            "page_numbers": [
+                80
+            ]
+        },
+        {
+            "row_index": 342,
+            "chunk_id": "gdpr_article_79_paragraph_1_body_page_80_chunk_0343",
+            "document": "gdpr.pdf",
+            "article": "79",
+            "paragraph": "1",
+            "subclause": null,
+            "clause_reference": "Article 79(1)",
+            "page_numbers": [
+                80
+            ]
+        },
+        {
+            "row_index": 343,
+            "chunk_id": "gdpr_article_79_paragraph_2_body_page_80_chunk_0344",
+            "document": "gdpr.pdf",
+            "article": "79",
+            "paragraph": "2",
+            "subclause": null,
+            "clause_reference": "Article 79(2)",
+            "page_numbers": [
+                80
+            ]
+        },
+        {
+            "row_index": 344,
+            "chunk_id": "gdpr_article_80_paragraph_1_body_page_81_chunk_0345",
+            "document": "gdpr.pdf",
+            "article": "80",
+            "paragraph": "1",
+            "subclause": null,
+            "clause_reference": "Article 80(1)",
+            "page_numbers": [
+                81
+            ]
+        },
+        {
+            "row_index": 345,
+            "chunk_id": "gdpr_article_80_paragraph_2_body_page_81_chunk_0346",
+            "document": "gdpr.pdf",
+            "article": "80",
+            "paragraph": "2",
+            "subclause": null,
+            "clause_reference": "Article 80(2)",
+            "page_numbers": [
+                81
+            ]
+        },
+        {
+            "row_index": 346,
+            "chunk_id": "gdpr_article_81_paragraph_1_body_page_81_chunk_0347",
+            "document": "gdpr.pdf",
+            "article": "81",
+            "paragraph": "1",
+            "subclause": null,
+            "clause_reference": "Article 81(1)",
+            "page_numbers": [
+                81
+            ]
+        },
+        {
+            "row_index": 347,
+            "chunk_id": "gdpr_article_81_paragraph_2_body_page_81_chunk_0348",
+            "document": "gdpr.pdf",
+            "article": "81",
+            "paragraph": "2",
+            "subclause": null,
+            "clause_reference": "Article 81(2)",
+            "page_numbers": [
+                81
+            ]
+        },
+        {
+            "row_index": 348,
+            "chunk_id": "gdpr_article_81_paragraph_3_body_page_81_chunk_0349",
+            "document": "gdpr.pdf",
+            "article": "81",
+            "paragraph": "3",
+            "subclause": null,
+            "clause_reference": "Article 81(3)",
+            "page_numbers": [
+                81
+            ]
+        },
+        {
+            "row_index": 349,
+            "chunk_id": "gdpr_article_82_paragraph_1_body_page_81_chunk_0350",
+            "document": "gdpr.pdf",
+            "article": "82",
+            "paragraph": "1",
+            "subclause": null,
+            "clause_reference": "Article 82(1)",
+            "page_numbers": [
+                81
+            ]
+        },
+        {
+            "row_index": 350,
+            "chunk_id": "gdpr_article_82_paragraph_2_body_page_81_chunk_0351",
+            "document": "gdpr.pdf",
+            "article": "82",
+            "paragraph": "2",
+            "subclause": null,
+            "clause_reference": "Article 82(2)",
+            "page_numbers": [
+                81
+            ]
+        },
+        {
+            "row_index": 351,
+            "chunk_id": "gdpr_article_82_paragraph_3_body_page_81_chunk_0352",
+            "document": "gdpr.pdf",
+            "article": "82",
+            "paragraph": "3",
+            "subclause": null,
+            "clause_reference": "Article 82(3)",
+            "page_numbers": [
+                81
+            ]
+        },
+        {
+            "row_index": 352,
+            "chunk_id": "gdpr_article_82_paragraph_4_body_page_81_chunk_0353",
+            "document": "gdpr.pdf",
+            "article": "82",
+            "paragraph": "4",
+            "subclause": null,
+            "clause_reference": "Article 82(4)",
+            "page_numbers": [
+                81
+            ]
+        },
+        {
+            "row_index": 353,
+            "chunk_id": "gdpr_article_82_paragraph_5_body_page_81_chunk_0354",
+            "document": "gdpr.pdf",
+            "article": "82",
+            "paragraph": "5",
+            "subclause": null,
+            "clause_reference": "Article 82(5)",
+            "page_numbers": [
+                81
+            ]
+        },
+        {
+            "row_index": 354,
+            "chunk_id": "gdpr_article_82_paragraph_6_body_page_82_chunk_0355",
+            "document": "gdpr.pdf",
+            "article": "82",
+            "paragraph": "6",
+            "subclause": null,
+            "clause_reference": "Article 82(6)",
+            "page_numbers": [
+                82
+            ]
+        },
+        {
+            "row_index": 355,
+            "chunk_id": "gdpr_article_83_paragraph_1_body_page_82_chunk_0356",
+            "document": "gdpr.pdf",
+            "article": "83",
+            "paragraph": "1",
+            "subclause": null,
+            "clause_reference": "Article 83(1)",
+            "page_numbers": [
+                82
+            ]
+        },
+        {
+            "row_index": 356,
+            "chunk_id": "gdpr_article_83_paragraph_2_body_page_82_chunk_0357",
+            "document": "gdpr.pdf",
+            "article": "83",
+            "paragraph": "2",
+            "subclause": null,
+            "clause_reference": "Article 83(2)",
+            "page_numbers": [
+                82
+            ]
+        },
+        {
+            "row_index": 357,
+            "chunk_id": "gdpr_article_83_paragraph_3_body_page_82_chunk_0358",
+            "document": "gdpr.pdf",
+            "article": "83",
+            "paragraph": "3",
+            "subclause": null,
+            "clause_reference": "Article 83(3)",
+            "page_numbers": [
+                82
+            ]
+        },
+        {
+            "row_index": 358,
+            "chunk_id": "gdpr_article_83_paragraph_4_body_page_82_chunk_0359",
+            "document": "gdpr.pdf",
+            "article": "83",
+            "paragraph": "4",
+            "subclause": null,
+            "clause_reference": "Article 83(4)",
+            "page_numbers": [
+                82
+            ]
+        },
+        {
+            "row_index": 359,
+            "chunk_id": "gdpr_article_83_paragraph_5_body_page_83_chunk_0360",
+            "document": "gdpr.pdf",
+            "article": "83",
+            "paragraph": "5",
+            "subclause": null,
+            "clause_reference": "Article 83(5)",
+            "page_numbers": [
+                83
+            ]
+        },
+        {
+            "row_index": 360,
+            "chunk_id": "gdpr_article_83_paragraph_6_body_page_83_chunk_0361",
+            "document": "gdpr.pdf",
+            "article": "83",
+            "paragraph": "6",
+            "subclause": null,
+            "clause_reference": "Article 83(6)",
+            "page_numbers": [
+                83
+            ]
+        },
+        {
+            "row_index": 361,
+            "chunk_id": "gdpr_article_83_paragraph_7_body_page_83_chunk_0362",
+            "document": "gdpr.pdf",
+            "article": "83",
+            "paragraph": "7",
+            "subclause": null,
+            "clause_reference": "Article 83(7)",
+            "page_numbers": [
+                83
+            ]
+        },
+        {
+            "row_index": 362,
+            "chunk_id": "gdpr_article_83_paragraph_8_body_page_83_chunk_0363",
+            "document": "gdpr.pdf",
+            "article": "83",
+            "paragraph": "8",
+            "subclause": null,
+            "clause_reference": "Article 83(8)",
+            "page_numbers": [
+                83
+            ]
+        },
+        {
+            "row_index": 363,
+            "chunk_id": "gdpr_article_83_paragraph_9_body_page_83_chunk_0364",
+            "document": "gdpr.pdf",
+            "article": "83",
+            "paragraph": "9",
+            "subclause": null,
+            "clause_reference": "Article 83(9)",
+            "page_numbers": [
+                83
+            ]
+        },
+        {
+            "row_index": 364,
+            "chunk_id": "gdpr_article_84_paragraph_1_body_page_83_chunk_0365",
+            "document": "gdpr.pdf",
+            "article": "84",
+            "paragraph": "1",
+            "subclause": null,
+            "clause_reference": "Article 84(1)",
+            "page_numbers": [
+                83
+            ]
+        },
+        {
+            "row_index": 365,
+            "chunk_id": "gdpr_article_84_paragraph_2_body_page_83_chunk_0366",
+            "document": "gdpr.pdf",
+            "article": "84",
+            "paragraph": "2",
+            "subclause": null,
+            "clause_reference": "Article 84(2)",
+            "page_numbers": [
+                83
+            ]
+        },
+        {
+            "row_index": 366,
+            "chunk_id": "gdpr_article_85_paragraph_1_body_page_83_chunk_0367",
+            "document": "gdpr.pdf",
+            "article": "85",
+            "paragraph": "1",
+            "subclause": null,
+            "clause_reference": "Article 85(1)",
+            "page_numbers": [
+                83
+            ]
+        },
+        {
+            "row_index": 367,
+            "chunk_id": "gdpr_article_85_paragraph_2_body_page_84_chunk_0368",
+            "document": "gdpr.pdf",
+            "article": "85",
+            "paragraph": "2",
+            "subclause": null,
+            "clause_reference": "Article 85(2)",
+            "page_numbers": [
+                84
+            ]
+        },
+        {
+            "row_index": 368,
+            "chunk_id": "gdpr_article_85_paragraph_3_body_page_84_chunk_0369",
+            "document": "gdpr.pdf",
+            "article": "85",
+            "paragraph": "3",
+            "subclause": null,
+            "clause_reference": "Article 85(3)",
+            "page_numbers": [
+                84
+            ]
+        },
+        {
+            "row_index": 369,
+            "chunk_id": "gdpr_article_88_paragraph_1_body_page_84_chunk_0370",
+            "document": "gdpr.pdf",
+            "article": "88",
+            "paragraph": "1",
+            "subclause": null,
+            "clause_reference": "Article 88(1)",
+            "page_numbers": [
+                84
+            ]
+        },
+        {
+            "row_index": 370,
+            "chunk_id": "gdpr_article_88_paragraph_2_body_page_84_chunk_0371",
+            "document": "gdpr.pdf",
+            "article": "88",
+            "paragraph": "2",
+            "subclause": null,
+            "clause_reference": "Article 88(2)",
+            "page_numbers": [
+                84
+            ]
+        },
+        {
+            "row_index": 371,
+            "chunk_id": "gdpr_article_88_paragraph_3_body_page_84_chunk_0372",
+            "document": "gdpr.pdf",
+            "article": "88",
+            "paragraph": "3",
+            "subclause": null,
+            "clause_reference": "Article 88(3)",
+            "page_numbers": [
+                84
+            ]
+        },
+        {
+            "row_index": 372,
+            "chunk_id": "gdpr_article_89_paragraph_1_body_page_84_chunk_0373",
+            "document": "gdpr.pdf",
+            "article": "89",
+            "paragraph": "1",
+            "subclause": null,
+            "clause_reference": "Article 89(1)",
+            "page_numbers": [
+                84,
+                85
+            ]
+        },
+        {
+            "row_index": 373,
+            "chunk_id": "gdpr_article_89_paragraph_2_body_page_85_chunk_0374",
+            "document": "gdpr.pdf",
+            "article": "89",
+            "paragraph": "2",
+            "subclause": null,
+            "clause_reference": "Article 89(2)",
+            "page_numbers": [
+                85
+            ]
+        },
+        {
+            "row_index": 374,
+            "chunk_id": "gdpr_article_89_paragraph_3_body_page_85_chunk_0375",
+            "document": "gdpr.pdf",
+            "article": "89",
+            "paragraph": "3",
+            "subclause": null,
+            "clause_reference": "Article 89(3)",
+            "page_numbers": [
+                85
+            ]
+        },
+        {
+            "row_index": 375,
+            "chunk_id": "gdpr_article_89_paragraph_4_body_page_85_chunk_0376",
+            "document": "gdpr.pdf",
+            "article": "89",
+            "paragraph": "4",
+            "subclause": null,
+            "clause_reference": "Article 89(4)",
+            "page_numbers": [
+                85
+            ]
+        },
+        {
+            "row_index": 376,
+            "chunk_id": "gdpr_article_90_paragraph_1_body_page_85_chunk_0377",
+            "document": "gdpr.pdf",
+            "article": "90",
+            "paragraph": "1",
+            "subclause": null,
+            "clause_reference": "Article 90(1)",
+            "page_numbers": [
+                85
+            ]
+        },
+        {
+            "row_index": 377,
+            "chunk_id": "gdpr_article_90_paragraph_2_body_page_85_chunk_0378",
+            "document": "gdpr.pdf",
+            "article": "90",
+            "paragraph": "2",
+            "subclause": null,
+            "clause_reference": "Article 90(2)",
+            "page_numbers": [
+                85
+            ]
+        },
+        {
+            "row_index": 378,
+            "chunk_id": "gdpr_article_91_paragraph_1_body_page_85_chunk_0379",
+            "document": "gdpr.pdf",
+            "article": "91",
+            "paragraph": "1",
+            "subclause": null,
+            "clause_reference": "Article 91(1)",
+            "page_numbers": [
+                85
+            ]
+        },
+        {
+            "row_index": 379,
+            "chunk_id": "gdpr_article_91_paragraph_2_body_page_85_chunk_0380",
+            "document": "gdpr.pdf",
+            "article": "91",
+            "paragraph": "2",
+            "subclause": null,
+            "clause_reference": "Article 91(2)",
+            "page_numbers": [
+                85
+            ]
+        },
+        {
+            "row_index": 380,
+            "chunk_id": "gdpr_article_92_paragraph_1_body_page_85_chunk_0381",
+            "document": "gdpr.pdf",
+            "article": "92",
+            "paragraph": "1",
+            "subclause": null,
+            "clause_reference": "Article 92(1)",
+            "page_numbers": [
+                85
+            ]
+        },
+        {
+            "row_index": 381,
+            "chunk_id": "gdpr_article_92_paragraph_2_body_page_86_chunk_0382",
+            "document": "gdpr.pdf",
+            "article": "92",
+            "paragraph": "2",
+            "subclause": null,
+            "clause_reference": "Article 92(2)",
+            "page_numbers": [
+                86
+            ]
+        },
+        {
+            "row_index": 382,
+            "chunk_id": "gdpr_article_92_paragraph_3_body_page_86_chunk_0383",
+            "document": "gdpr.pdf",
+            "article": "92",
+            "paragraph": "3",
+            "subclause": null,
+            "clause_reference": "Article 92(3)",
+            "page_numbers": [
+                86
+            ]
+        },
+        {
+            "row_index": 383,
+            "chunk_id": "gdpr_article_92_paragraph_4_body_page_86_chunk_0384",
+            "document": "gdpr.pdf",
+            "article": "92",
+            "paragraph": "4",
+            "subclause": null,
+            "clause_reference": "Article 92(4)",
+            "page_numbers": [
+                86
+            ]
+        },
+        {
+            "row_index": 384,
+            "chunk_id": "gdpr_article_92_paragraph_5_body_page_86_chunk_0385",
+            "document": "gdpr.pdf",
+            "article": "92",
+            "paragraph": "5",
+            "subclause": null,
+            "clause_reference": "Article 92(5)",
+            "page_numbers": [
+                86
+            ]
+        },
+        {
+            "row_index": 385,
+            "chunk_id": "gdpr_article_93_paragraph_1_body_page_86_chunk_0386",
+            "document": "gdpr.pdf",
+            "article": "93",
+            "paragraph": "1",
+            "subclause": null,
+            "clause_reference": "Article 93(1)",
+            "page_numbers": [
+                86
+            ]
+        },
+        {
+            "row_index": 386,
+            "chunk_id": "gdpr_article_93_paragraph_2_body_page_86_chunk_0387",
+            "document": "gdpr.pdf",
+            "article": "93",
+            "paragraph": "2",
+            "subclause": null,
+            "clause_reference": "Article 93(2)",
+            "page_numbers": [
+                86
+            ]
+        },
+        {
+            "row_index": 387,
+            "chunk_id": "gdpr_article_93_paragraph_3_body_page_86_chunk_0388",
+            "document": "gdpr.pdf",
+            "article": "93",
+            "paragraph": "3",
+            "subclause": null,
+            "clause_reference": "Article 93(3)",
+            "page_numbers": [
+                86
+            ]
+        },
+        {
+            "row_index": 388,
+            "chunk_id": "gdpr_article_94_paragraph_1_body_page_86_chunk_0389",
+            "document": "gdpr.pdf",
+            "article": "94",
+            "paragraph": "1",
+            "subclause": null,
+            "clause_reference": "Article 94(1)",
+            "page_numbers": [
+                86
+            ]
+        },
+        {
+            "row_index": 389,
+            "chunk_id": "gdpr_article_94_paragraph_2_body_page_86_chunk_0390",
+            "document": "gdpr.pdf",
+            "article": "94",
+            "paragraph": "2",
+            "subclause": null,
+            "clause_reference": "Article 94(2)",
+            "page_numbers": [
+                86
+            ]
+        },
+        {
+            "row_index": 390,
+            "chunk_id": "gdpr_article_97_paragraph_1_body_page_87_chunk_0391",
+            "document": "gdpr.pdf",
+            "article": "97",
+            "paragraph": "1",
+            "subclause": null,
+            "clause_reference": "Article 97(1)",
+            "page_numbers": [
+                87
+            ]
+        },
+        {
+            "row_index": 391,
+            "chunk_id": "gdpr_article_97_paragraph_2_body_page_87_chunk_0392",
+            "document": "gdpr.pdf",
+            "article": "97",
+            "paragraph": "2",
+            "subclause": null,
+            "clause_reference": "Article 97(2)",
+            "page_numbers": [
+                87
+            ]
+        },
+        {
+            "row_index": 392,
+            "chunk_id": "gdpr_article_97_paragraph_3_body_page_87_chunk_0393",
+            "document": "gdpr.pdf",
+            "article": "97",
+            "paragraph": "3",
+            "subclause": null,
+            "clause_reference": "Article 97(3)",
+            "page_numbers": [
+                87
+            ]
+        },
+        {
+            "row_index": 393,
+            "chunk_id": "gdpr_article_97_paragraph_4_body_page_87_chunk_0394",
+            "document": "gdpr.pdf",
+            "article": "97",
+            "paragraph": "4",
+            "subclause": null,
+            "clause_reference": "Article 97(4)",
+            "page_numbers": [
+                87
+            ]
+        },
+        {
+            "row_index": 394,
+            "chunk_id": "gdpr_article_97_paragraph_5_body_page_87_chunk_0395",
+            "document": "gdpr.pdf",
+            "article": "97",
+            "paragraph": "5",
+            "subclause": null,
+            "clause_reference": "Article 97(5)",
+            "page_numbers": [
+                87
+            ]
+        },
+        {
+            "row_index": 395,
+            "chunk_id": "gdpr_article_99_paragraph_1_body_page_87_chunk_0396",
+            "document": "gdpr.pdf",
+            "article": "99",
+            "paragraph": "1",
+            "subclause": null,
+            "clause_reference": "Article 99(1)",
+            "page_numbers": [
+                87
+            ]
+        },
+        {
+            "row_index": 396,
+            "chunk_id": "gdpr_article_99_paragraph_2_body_page_87_chunk_0397",
+            "document": "gdpr.pdf",
+            "article": "99",
+            "paragraph": "2",
+            "subclause": null,
+            "clause_reference": "Article 99(2)",
+            "page_numbers": [
+                87,
+                88
+            ]
+        }
+    ]
+}
