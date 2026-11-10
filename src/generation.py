@@ -3,6 +3,7 @@ import json
 import re
 
 from google.genai import types
+from src.gemini_utils import generate_with_retry
 
 
 # --------------------------------------------------
@@ -268,13 +269,17 @@ Generate the evidence-grounded JSON answer now.
 """
 
     # Generate structured JSON response
-    response = client.models.generate_content(
+    response = generate_with_retry(
+        client=client,
         model=model,
         contents=prompt,
         config=types.GenerateContentConfig(
             response_mime_type="application/json",
             max_output_tokens=max_output_tokens
-        )
+        ),
+        fallback_models=["gemini-3.8-flash"],
+        max_attempts=2,
+        base_delay=15
     )
 
     raw_text = response.text
