@@ -135,14 +135,29 @@ def display_rag_result(result):
                 for index in range(1, len(evidence) + 1)
             ]
 
-            # Match explicit evidence identifiers in the
-            # final verifier-approved answer.
-            cited_ids = set(
-                re.findall(
-                    r"(?<![A-Za-z0-9])E[1-9][0-9]*(?![A-Za-z0-9])",
-                    answer,
+            # Prefer structured claim-to-evidence references.
+            # The formatted legal answer contains document/page
+            # citations rather than raw evidence IDs.
+            claims = generation.get("claims") or []
+
+            cited_ids = {
+                evidence_id
+                for claim in claims
+                if isinstance(claim, dict)
+                for evidence_id in claim.get("evidence_ids", [])
+                if isinstance(evidence_id, str)
+                and evidence_id in evidence_map
+            }
+
+            # Preserve compatibility with legacy answers that
+            # include evidence IDs directly in their text.
+            if not cited_ids:
+                cited_ids = set(
+                    re.findall(
+                        r"(?<![A-Za-z0-9])E[1-9][0-9]*(?![A-Za-z0-9])",
+                        answer,
+                    )
                 )
-            )
 
             cited_evidence_ids = [
                 evidence_id
