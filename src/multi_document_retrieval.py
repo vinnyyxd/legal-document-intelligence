@@ -303,6 +303,11 @@ def answer_multiple_documents(
     from src.reranking import rerank_results
     from src.generation import generate_grounded_answer
     from src.verification import verify_generated_answer
+    from src.legal_reasoning import (
+        analyze_legal_question,
+        analyze_evidence_coverage,
+        build_legal_reasoning_report,
+    )
 
     if not isinstance(question, str) or not question.strip():
         raise ValueError("Question cannot be empty.")
@@ -312,6 +317,11 @@ def answer_multiple_documents(
 
     if retrieval_k < 1 or rerank_k < 1:
         raise ValueError("Retrieval limits must be positive.")
+
+    question_analysis = analyze_legal_question(
+        question,
+        document_count=len(document_ids),
+    )
 
     search_context = build_multi_document_search(
         document_ids,
@@ -329,6 +339,8 @@ def answer_multiple_documents(
 
     if not retrieved:
         return {
+            "evidence_coverage": None,
+            "question_analysis": question_analysis,
             "question": question,
             "status": "insufficient_evidence",
             "answer": (
@@ -352,6 +364,8 @@ def answer_multiple_documents(
 
     if not reranked:
         return {
+            "evidence_coverage": None,
+            "question_analysis": question_analysis,
             "question": question,
             "status": "insufficient_evidence",
             "answer": (
@@ -370,6 +384,12 @@ def answer_multiple_documents(
         client=client,
         question=question,
         retrieved_results=reranked,
+    )
+
+    evidence_coverage = analyze_evidence_coverage(
+        question_analysis=question_analysis,
+        retrieved_results=reranked,
+        generated_result=generated,
     )
 
     verification = verify_generated_answer(
@@ -400,7 +420,17 @@ def answer_multiple_documents(
             "Verifier returned an invalid final answer."
         )
 
+    reasoning_report = build_legal_reasoning_report(
+        question_analysis=question_analysis,
+        evidence_coverage=evidence_coverage,
+        generated_result=generated,
+        verification=verification,
+    )
+
     return {
+        "reasoning_report": reasoning_report,
+        "evidence_coverage": evidence_coverage,
+            "question_analysis": question_analysis,
         "question": question,
         "status": final_status,
         "answer": final_answer,

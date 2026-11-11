@@ -10,6 +10,7 @@ from src.document_pipeline import ingest_document
 from src.document_registry import list_documents
 from src.document_structure import analyze_document_structure
 from src.citation_viewer import render_citation_page
+from src.legal_reasoning_ui import render_legal_reasoning_explorer
 
 from src.case_management import (
     create_case,
@@ -657,6 +658,10 @@ with tab_qa:
 
     if "last_rag_result" in st.session_state:
         display_rag_result(
+            st.session_state["last_rag_result"]
+        )
+
+        render_legal_reasoning_explorer(
             st.session_state["last_rag_result"]
         )
 
