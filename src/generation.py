@@ -46,9 +46,16 @@ def build_evidence_context(results):
             )
 
         if not clause:
-            raise ValueError(
-                f"Missing legal reference for {evidence_id}"
-            )
+            # Some legal documents have no formal article or
+            # clause numbering. Use an explicit PDF page
+            # reference rather than inventing a legal provision.
+            if len(pages) == 1:
+                clause = f"PDF p. {pages[0]}"
+            else:
+                clause = (
+                    "PDF pp. "
+                    + ", ".join(str(page) for page in pages)
+                )
 
         evidence_map[evidence_id] = {
             "document": document,
@@ -159,7 +166,11 @@ def format_cited_answer(claims, evidence_map):
                 )
 
             citation = (
-                f"[{document}, {reference}, {page_label}]"
+                (
+                    f"[{document}, {page_label}]"
+                    if reference == page_label
+                    else f"[{document}, {reference}, {page_label}]"
+                )
             )
 
             if citation not in citations:

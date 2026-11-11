@@ -110,11 +110,25 @@ def validate_citation_integrity(
                     f"Document mismatch for {evidence_id}."
                 )
 
-            # Verify legal clause identity
-            if (
-                source["clause_reference"]
-                != retrieved_chunk["clause_reference"]
-            ):
+            # Verify legal clause identity.
+            # Unnumbered documents use their actual PDF pages
+            # as references, matching evidence generation.
+            expected_clause = retrieved_chunk.get(
+                "clause_reference"
+            )
+
+            if not expected_clause:
+                pages = retrieved_chunk.get("page_numbers", [])
+
+                if len(pages) == 1:
+                    expected_clause = f"PDF p. {pages[0]}"
+                elif pages:
+                    expected_clause = (
+                        "PDF pp. "
+                        + ", ".join(str(page) for page in pages)
+                    )
+
+            if source["clause_reference"] != expected_clause:
                 errors.append(
                     f"Clause mismatch for {evidence_id}."
                 )
