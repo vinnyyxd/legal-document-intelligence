@@ -1,6 +1,7 @@
 
 import re
 import streamlit as st
+from src.demo_auth import require_demo_access
 from google import genai
 from sentence_transformers import CrossEncoder
 
@@ -366,6 +367,9 @@ st.set_page_config(
     layout="wide",
     initial_sidebar_state="expanded",
 )
+
+# Private deployment access gate
+require_demo_access()
 
 st.markdown("""
 <style>
