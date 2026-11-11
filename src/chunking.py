@@ -1,5 +1,6 @@
 
 import re
+import hashlib
 from pathlib import Path
 
 
@@ -112,7 +113,7 @@ def split_into_paragraphs(pages):
                 set(current["page_numbers"])
             )
 
-            paragraphs.append({
+            paragraph_record = {
                 "document": current["document"],
                 "chapter": current["chapter"],
                 "chapter_title": current["chapter_title"],
@@ -127,21 +128,39 @@ def split_into_paragraphs(pages):
                 "page_numbers": unique_pages,
                 "line_records": current["line_records"],
                 "text": text
-            })
+            }
+
+            if current.get("document_id") is not None:
+                paragraph_record["document_id"] = (
+                    current["document_id"]
+                )
+
+            paragraphs.append(paragraph_record)
 
         current = None
 
-    previous_document = None
+    previous_document_identity = None
 
     for page in pages:
 
         page_number = page["page"]
         document = page.get("document", "unknown.pdf")
 
-        # Reset the legal hierarchy when a new PDF starts
+        document_id = page.get("document_id")
+
+        # Use persistent identity when available.
+        # Preserve filename-based behavior for legacy records.
+
+        if document_id is not None:
+            document_identity = ("id", str(document_id))
+        else:
+            document_identity = ("filename", document)
+
+        # Reset legal hierarchy when a different document starts.
+
         if (
-            previous_document is not None
-            and document != previous_document
+            previous_document_identity is not None
+            and document_identity != previous_document_identity
         ):
 
             flush_current()
@@ -154,7 +173,7 @@ def split_into_paragraphs(pages):
             article_title = None
             pending_title = None
 
-        previous_document = document
+        previous_document_identity = document_identity
 
         for raw_line in page["text"].splitlines():
 
@@ -217,7 +236,7 @@ def split_into_paragraphs(pages):
                 pending_title = "article"
                 continue
 
-            # Capture the heading title on the following line
+            # Capture heading title on the following line
             if pending_title:
 
                 if not PARAGRAPH_PATTERN.match(line):
@@ -236,7 +255,7 @@ def split_into_paragraphs(pages):
 
                 pending_title = None
 
-            # Detect a numbered legal paragraph
+            # Detect numbered legal paragraph
             match = PARAGRAPH_PATTERN.match(line)
 
             if match:
@@ -261,6 +280,9 @@ def split_into_paragraphs(pages):
                     "subclauses": []
                 }
 
+                if document_id is not None:
+                    current["document_id"] = str(document_id)
+
                 if paragraph_text:
                     current["lines"].append(paragraph_text)
                     current["page_numbers"].append(page_number)
@@ -269,7 +291,7 @@ def split_into_paragraphs(pages):
                         "text": paragraph_text
                     })
 
-            # Continuation of the current paragraph
+            # Continuation of current paragraph
             elif current is not None:
 
                 current["lines"].append(line)
@@ -290,11 +312,9 @@ def split_into_paragraphs(pages):
                     if letter not in current["subclauses"]:
                         current["subclauses"].append(letter)
 
-    # Save the final paragraph
     flush_current()
 
     return paragraphs
-
 
 # --------------------------------------------------
 # 4. Create final legal chunks
@@ -316,7 +336,6 @@ def create_legal_chunks(pages, max_words=800):
         original_word_count = len(original_text.split())
 
         # Identify actual subclause boundaries.
-        # Only markers at the beginning of an extracted line count.
 
         marker_indices = []
 
@@ -346,25 +365,20 @@ def create_legal_chunks(pages, max_words=800):
 
             for item in lines:
 
-                match = SUBCLAUSE_PATTERN.match(
-                    item["text"]
-                )
+                match = SUBCLAUSE_PATTERN.match(item["text"])
 
                 if match:
 
-                    # Save the previous segment
                     if current_segment:
                         segments.append((
                             current_letter,
                             current_segment
                         ))
 
-                    # Start a new subclause
                     current_letter = match.group(1).lower()
                     current_segment = [item]
 
                 else:
-                    # Add continuation text
                     current_segment.append(item)
 
             if current_segment:
@@ -375,10 +389,9 @@ def create_legal_chunks(pages, max_words=800):
 
         else:
 
-            # Keep normal-sized paragraphs together
             segments = [(None, lines)]
 
-        # Build individual chunks
+        # Generate the legacy filename-based document slug.
 
         document_stem = Path(
             record["document"]
@@ -389,6 +402,47 @@ def create_legal_chunks(pages, max_words=800):
             "_",
             document_stem
         ).strip("_")
+
+        # Add persistent identity when available.
+        # Preserve the original legacy format otherwise.
+
+        document_id = record.get("document_id")
+
+        if document_id is not None:
+
+            original_document_id = str(document_id)
+
+            document_id_slug = re.sub(
+                r"[^a-zA-Z0-9_-]+",
+                "_",
+                original_document_id
+            ).strip("_-").lower()
+
+            if not document_id_slug:
+                raise ValueError(
+                    "Invalid document_id: "
+                    "sanitized document ID cannot be empty."
+                )
+
+            # Add a deterministic suffix when sanitization or
+            # case normalization changes the original identity.
+            # This prevents collisions between different raw IDs.
+
+            if original_document_id != document_id_slug:
+
+                identity_hash = hashlib.sha256(
+                    original_document_id.encode("utf-8")
+                ).hexdigest()[:8]
+
+                document_id_slug = (
+                    f"{document_id_slug}_{identity_hash}"
+                )
+
+            document_prefix = f"{document_id_slug}_"
+
+        else:
+
+            document_prefix = ""
 
         article = record["article"]
         paragraph = record["paragraph"]
@@ -417,6 +471,7 @@ def create_legal_chunks(pages, max_words=800):
                 ))
 
             else:
+
                 text = original_text
                 segment_pages = record["page_numbers"]
 
@@ -433,7 +488,6 @@ def create_legal_chunks(pages, max_words=800):
                 )
 
                 chunk_subclauses = [subclause]
-
                 chunk_suffix = f"_subclause_{subclause}"
 
             else:
@@ -448,14 +502,15 @@ def create_legal_chunks(pages, max_words=800):
                 chunk_suffix = "_body"
 
             chunk_id = (
-                f"{document_slug}_article_{article_slug}"
+                f"{document_prefix}{document_slug}"
+                f"_article_{article_slug}"
                 f"_paragraph_{paragraph}"
                 f"{chunk_suffix}"
                 f"_page_{segment_pages[0]}"
                 f"_chunk_{chunk_counter:04d}"
             )
 
-            chunks.append({
+            chunk_record = {
 
                 "chunk_id": chunk_id,
 
@@ -487,11 +542,14 @@ def create_legal_chunks(pages, max_words=800):
                 "text": text,
 
                 "word_count": len(text.split())
-            })
+            }
+
+            if document_id is not None:
+                chunk_record["document_id"] = str(document_id)
+
+            chunks.append(chunk_record)
 
     return chunks
-
-
 
 # --------------------------------------------------
 # 5. Validate generated chunks

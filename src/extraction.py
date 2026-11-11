@@ -1,29 +1,36 @@
-
 import fitz
 import os
 
-def extract_pdf(pdf_path):
+
+def extract_pdf(pdf_path, document_id=None):
     if not os.path.exists(pdf_path):
         raise FileNotFoundError(f"PDF not found: {pdf_path}")
 
     doc = fitz.open(pdf_path)
     extracted_pages = []
 
-    for page_num, page in enumerate(doc, start=1):
-        text = page.get_text("text", sort=True)
-        is_scanned = len(text.strip()) < 30
+    try:
+        for page_num, page in enumerate(doc, start=1):
+            text = page.get_text("text", sort=True)
+            is_scanned = len(text.strip()) < 30
 
-        page_data = {
-            "document": os.path.basename(pdf_path),
-            "page": page_num,
-            "text": text,
-            "is_scanned": is_scanned,
-            "word_count": len(text.split())
-        }
+            page_data = {
+                "document": os.path.basename(pdf_path),
+                "page": page_num,
+                "text": text,
+                "is_scanned": is_scanned,
+                "word_count": len(text.split())
+            }
 
-        extracted_pages.append(page_data)
+            # Preserve persistent document identity when supplied.
+            if document_id is not None:
+                page_data["document_id"] = str(document_id)
 
-    doc.close()
+            extracted_pages.append(page_data)
+
+    finally:
+        doc.close()
+
     return extracted_pages
 
 
