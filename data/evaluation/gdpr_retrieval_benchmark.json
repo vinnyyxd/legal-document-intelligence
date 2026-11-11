@@ -1,0 +1,234 @@
+[
+  {
+    "question_id": "GDPR-Q001",
+    "question": "What are the principles relating to processing personal data?",
+    "answerable": true,
+    "expected_article": "5",
+    "expected_paragraph": "1",
+    "expected_chunk_ids": [
+      "gdpr_article_5_paragraph_1_body_page_35_chunk_0011"
+    ],
+    "expected_reference": "Article 5(1)",
+    "label_status": "provisional"
+  },
+  {
+    "question_id": "GDPR-Q002",
+    "question": "Who is responsible for demonstrating compliance with GDPR principles?",
+    "answerable": true,
+    "expected_article": "5",
+    "expected_paragraph": "2",
+    "expected_chunk_ids": [
+      "gdpr_article_5_paragraph_2_body_page_36_chunk_0012"
+    ],
+    "expected_reference": "Article 5(2)",
+    "label_status": "provisional"
+  },
+  {
+    "question_id": "GDPR-Q003",
+    "question": "What are the lawful grounds for processing personal data?",
+    "answerable": true,
+    "expected_article": "6",
+    "expected_paragraph": "1",
+    "expected_chunk_ids": [
+      "gdpr_article_6_paragraph_1_body_page_36_chunk_0013"
+    ],
+    "expected_reference": "Article 6(1)",
+    "label_status": "provisional"
+  },
+  {
+    "question_id": "GDPR-Q004",
+    "question": "Who must demonstrate that a data subject has consented?",
+    "answerable": true,
+    "expected_article": "7",
+    "expected_paragraph": "1",
+    "expected_chunk_ids": [
+      "gdpr_article_7_paragraph_1_body_page_37_chunk_0017"
+    ],
+    "expected_reference": "Article 7(1)",
+    "label_status": "provisional"
+  },
+  {
+    "question_id": "GDPR-Q005",
+    "question": "How must GDPR information be communicated to data subjects?",
+    "answerable": true,
+    "expected_article": "12",
+    "expected_paragraph": "1",
+    "expected_chunk_ids": [
+      "gdpr_article_12_paragraph_1_body_page_39_chunk_0030"
+    ],
+    "expected_reference": "Article 12(1)",
+    "label_status": "provisional"
+  },
+  {
+    "question_id": "GDPR-Q006",
+    "question": "What information must a controller provide when collecting personal data directly?",
+    "answerable": true,
+    "expected_article": "13",
+    "expected_paragraph": "1",
+    "expected_chunk_ids": [
+      "gdpr_article_13_paragraph_1_body_page_40_chunk_0038"
+    ],
+    "expected_reference": "Article 13(1)",
+    "label_status": "provisional"
+  },
+  {
+    "question_id": "GDPR-Q007",
+    "question": "What access rights does a data subject have?",
+    "answerable": true,
+    "expected_article": "15",
+    "expected_paragraph": "1",
+    "expected_chunk_ids": [
+      "gdpr_article_15_paragraph_1_body_page_43_chunk_0047"
+    ],
+    "expected_reference": "Article 15(1)",
+    "label_status": "provisional"
+  },
+  {
+    "question_id": "GDPR-Q008",
+    "question": "When must a controller erase personal data?",
+    "answerable": true,
+    "expected_article": "17",
+    "expected_paragraph": "1",
+    "expected_chunk_ids": [
+      "gdpr_article_17_paragraph_1_body_page_43_chunk_0051"
+    ],
+    "expected_reference": "Article 17(1)",
+    "label_status": "provisional"
+  },
+  {
+    "question_id": "GDPR-Q009",
+    "question": "What is the right to data portability?",
+    "answerable": true,
+    "expected_article": "20",
+    "expected_paragraph": "1",
+    "expected_chunk_ids": [
+      "gdpr_article_20_paragraph_1_body_page_45_chunk_0057"
+    ],
+    "expected_reference": "Article 20(1)",
+    "label_status": "provisional"
+  },
+  {
+    "question_id": "GDPR-Q010",
+    "question": "Can a data subject object to processing for direct marketing?",
+    "answerable": true,
+    "expected_article": "21",
+    "expected_paragraph": "2",
+    "expected_chunk_ids": [
+      "gdpr_article_21_paragraph_2_body_page_45_chunk_0062"
+    ],
+    "expected_reference": "Article 21(2)",
+    "label_status": "provisional"
+  },
+  {
+    "question_id": "GDPR-Q011",
+    "question": "What does data protection by default require?",
+    "answerable": true,
+    "expected_article": "25",
+    "expected_paragraph": "2",
+    "expected_chunk_ids": [
+      "gdpr_article_25_paragraph_2_body_page_48_chunk_0077"
+    ],
+    "expected_reference": "Article 25(2)",
+    "label_status": "provisional"
+  },
+  {
+    "question_id": "GDPR-Q012",
+    "question": "What records of processing activities must a controller maintain?",
+    "answerable": true,
+    "expected_article": "30",
+    "expected_paragraph": "1",
+    "expected_chunk_ids": [
+      "gdpr_article_30_paragraph_1_body_page_50_chunk_0097"
+    ],
+    "expected_reference": "Article 30(1)",
+    "label_status": "provisional"
+  },
+  {
+    "question_id": "GDPR-Q013",
+    "question": "What security measures must controllers and processors implement?",
+    "answerable": true,
+    "expected_article": "32",
+    "expected_paragraph": "1",
+    "expected_chunk_ids": [
+      "gdpr_article_32_paragraph_1_body_page_51_chunk_0102"
+    ],
+    "expected_reference": "Article 32(1)",
+    "label_status": "provisional"
+  },
+  {
+    "question_id": "GDPR-Q014",
+    "question": "Within what period must a controller notify a supervisory authority of a personal data breach?",
+    "answerable": true,
+    "expected_article": "33",
+    "expected_paragraph": "1",
+    "expected_chunk_ids": [
+      "gdpr_article_33_paragraph_1_body_page_52_chunk_0106"
+    ],
+    "expected_reference": "Article 33(1)",
+    "label_status": "provisional"
+  },
+  {
+    "question_id": "GDPR-Q015",
+    "question": "When must a controller notify data subjects of a personal data breach?",
+    "answerable": true,
+    "expected_article": "34",
+    "expected_paragraph": "1",
+    "expected_chunk_ids": [
+      "gdpr_article_34_paragraph_1_body_page_52_chunk_0111"
+    ],
+    "expected_reference": "Article 34(1)",
+    "label_status": "provisional"
+  },
+  {
+    "question_id": "GDPR-Q016",
+    "question": "When is a data protection impact assessment required?",
+    "answerable": true,
+    "expected_article": "35",
+    "expected_paragraph": "1",
+    "expected_chunk_ids": [
+      "gdpr_article_35_paragraph_1_body_page_53_chunk_0115"
+    ],
+    "expected_reference": "Article 35(1)",
+    "label_status": "provisional"
+  },
+  {
+    "question_id": "GDPR-Q017",
+    "question": "What is the current weather in Hamburg?",
+    "answerable": false,
+    "expected_article": null,
+    "expected_paragraph": null,
+    "expected_chunk_ids": [],
+    "expected_reference": null,
+    "label_status": "provisional"
+  },
+  {
+    "question_id": "GDPR-Q018",
+    "question": "Who won the 2026 Formula One World Championship?",
+    "answerable": false,
+    "expected_article": null,
+    "expected_paragraph": null,
+    "expected_chunk_ids": [],
+    "expected_reference": null,
+    "label_status": "provisional"
+  },
+  {
+    "question_id": "GDPR-Q019",
+    "question": "What is the price of Bitcoin today?",
+    "answerable": false,
+    "expected_article": null,
+    "expected_paragraph": null,
+    "expected_chunk_ids": [],
+    "expected_reference": null,
+    "label_status": "provisional"
+  },
+  {
+    "question_id": "GDPR-Q020",
+    "question": "What is the capital of Australia?",
+    "answerable": false,
+    "expected_article": null,
+    "expected_paragraph": null,
+    "expected_chunk_ids": [],
+    "expected_reference": null,
+    "label_status": "provisional"
+  }
+]

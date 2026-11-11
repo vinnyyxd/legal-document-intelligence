@@ -1,0 +1,612 @@
+{
+  "benchmark": "gdpr_retrieval_benchmark",
+  "questions_evaluated": 16,
+  "k": 5,
+  "embedding_model": "gemini-embedding-001",
+  "bm25": {
+    "questions_evaluated": 16,
+    "hit_at_k": 0.75,
+    "recall_at_k": 0.75,
+    "mrr_at_k": 0.5072916666666667
+  },
+  "hybrid": {
+    "questions_evaluated": 16,
+    "hit_at_k": 1.0,
+    "recall_at_k": 1.0,
+    "mrr_at_k": 0.7916666666666666
+  },
+  "per_question": [
+    {
+      "question_id": "GDPR-Q001",
+      "question": "What are the principles relating to processing personal data?",
+      "expected_chunk_ids": [
+        "gdpr_article_5_paragraph_1_body_page_35_chunk_0011"
+      ],
+      "bm25_retrieved_ids": [
+        "gdpr_article_5_paragraph_1_body_page_35_chunk_0011",
+        "gdpr_article_5_paragraph_2_body_page_36_chunk_0012",
+        "gdpr_article_85_paragraph_2_body_page_84_chunk_0368",
+        "gdpr_article_15_paragraph_2_body_page_43_chunk_0048",
+        "gdpr_article_89_paragraph_3_body_page_85_chunk_0375"
+      ],
+      "hybrid_retrieved_ids": [
+        "gdpr_article_5_paragraph_1_body_page_35_chunk_0011",
+        "gdpr_article_5_paragraph_2_body_page_36_chunk_0012",
+        "gdpr_article_6_paragraph_4_body_page_37_chunk_0016",
+        "gdpr_article_1_paragraph_1_body_page_32_chunk_0001",
+        "gdpr_article_6_paragraph_1_body_page_36_chunk_0013"
+      ],
+      "bm25_metrics": {
+        "hit_at_k": 1,
+        "recall_at_k": 1.0,
+        "reciprocal_rank_at_k": 1.0,
+        "relevant_retrieved": 1,
+        "relevant_expected": 1,
+        "k": 5
+      },
+      "hybrid_metrics": {
+        "hit_at_k": 1,
+        "recall_at_k": 1.0,
+        "reciprocal_rank_at_k": 1.0,
+        "relevant_retrieved": 1,
+        "relevant_expected": 1,
+        "k": 5
+      }
+    },
+    {
+      "question_id": "GDPR-Q002",
+      "question": "Who is responsible for demonstrating compliance with GDPR principles?",
+      "expected_chunk_ids": [
+        "gdpr_article_5_paragraph_2_body_page_36_chunk_0012"
+      ],
+      "bm25_retrieved_ids": [
+        "gdpr_article_5_paragraph_2_body_page_36_chunk_0012",
+        "gdpr_article_42_paragraph_1_body_page_58_chunk_0163",
+        "gdpr_article_43_paragraph_4_body_page_60_chunk_0174",
+        "gdpr_article_68_paragraph_4_body_page_76_chunk_0287",
+        "gdpr_article_6_paragraph_2_body_page_36_chunk_0014"
+      ],
+      "hybrid_retrieved_ids": [
+        "gdpr_article_5_paragraph_2_body_page_36_chunk_0012",
+        "gdpr_article_43_paragraph_4_body_page_60_chunk_0174",
+        "gdpr_article_7_paragraph_1_body_page_37_chunk_0017",
+        "gdpr_article_42_paragraph_4_body_page_59_chunk_0166",
+        "gdpr_article_39_paragraph_1_body_page_56_chunk_0144"
+      ],
+      "bm25_metrics": {
+        "hit_at_k": 1,
+        "recall_at_k": 1.0,
+        "reciprocal_rank_at_k": 1.0,
+        "relevant_retrieved": 1,
+        "relevant_expected": 1,
+        "k": 5
+      },
+      "hybrid_metrics": {
+        "hit_at_k": 1,
+        "recall_at_k": 1.0,
+        "reciprocal_rank_at_k": 1.0,
+        "relevant_retrieved": 1,
+        "relevant_expected": 1,
+        "k": 5
+      }
+    },
+    {
+      "question_id": "GDPR-Q003",
+      "question": "What are the lawful grounds for processing personal data?",
+      "expected_chunk_ids": [
+        "gdpr_article_6_paragraph_1_body_page_36_chunk_0013"
+      ],
+      "bm25_retrieved_ids": [
+        "gdpr_article_17_paragraph_1_body_page_43_chunk_0051",
+        "gdpr_article_21_paragraph_6_body_page_46_chunk_0066",
+        "gdpr_article_18_paragraph_1_body_page_44_chunk_0054",
+        "gdpr_article_21_paragraph_1_body_page_45_chunk_0061",
+        "gdpr_article_5_paragraph_1_body_page_35_chunk_0011"
+      ],
+      "hybrid_retrieved_ids": [
+        "gdpr_article_6_paragraph_1_body_page_36_chunk_0013",
+        "gdpr_article_5_paragraph_1_body_page_35_chunk_0011",
+        "gdpr_article_6_paragraph_3_body_page_36_chunk_0015",
+        "gdpr_article_21_paragraph_1_body_page_45_chunk_0061",
+        "gdpr_article_17_paragraph_1_body_page_43_chunk_0051"
+      ],
+      "bm25_metrics": {
+        "hit_at_k": 0,
+        "recall_at_k": 0.0,
+        "reciprocal_rank_at_k": 0.0,
+        "relevant_retrieved": 0,
+        "relevant_expected": 1,
+        "k": 5
+      },
+      "hybrid_metrics": {
+        "hit_at_k": 1,
+        "recall_at_k": 1.0,
+        "reciprocal_rank_at_k": 1.0,
+        "relevant_retrieved": 1,
+        "relevant_expected": 1,
+        "k": 5
+      }
+    },
+    {
+      "question_id": "GDPR-Q004",
+      "question": "Who must demonstrate that a data subject has consented?",
+      "expected_chunk_ids": [
+        "gdpr_article_7_paragraph_1_body_page_37_chunk_0017"
+      ],
+      "bm25_retrieved_ids": [
+        "gdpr_article_7_paragraph_1_body_page_37_chunk_0017",
+        "gdpr_article_18_paragraph_3_body_page_45_chunk_0056",
+        "gdpr_article_49_paragraph_1_body_page_64_chunk_0197",
+        "gdpr_article_34_paragraph_3_body_page_53_chunk_0113",
+        "gdpr_article_14_paragraph_5_body_page_42_chunk_0046"
+      ],
+      "hybrid_retrieved_ids": [
+        "gdpr_article_7_paragraph_1_body_page_37_chunk_0017",
+        "gdpr_article_6_paragraph_1_body_page_36_chunk_0013",
+        "gdpr_article_20_paragraph_1_body_page_45_chunk_0057",
+        "gdpr_article_18_paragraph_3_body_page_45_chunk_0056",
+        "gdpr_article_5_paragraph_2_body_page_36_chunk_0012"
+      ],
+      "bm25_metrics": {
+        "hit_at_k": 1,
+        "recall_at_k": 1.0,
+        "reciprocal_rank_at_k": 1.0,
+        "relevant_retrieved": 1,
+        "relevant_expected": 1,
+        "k": 5
+      },
+      "hybrid_metrics": {
+        "hit_at_k": 1,
+        "recall_at_k": 1.0,
+        "reciprocal_rank_at_k": 1.0,
+        "relevant_retrieved": 1,
+        "relevant_expected": 1,
+        "k": 5
+      }
+    },
+    {
+      "question_id": "GDPR-Q005",
+      "question": "How must GDPR information be communicated to data subjects?",
+      "expected_chunk_ids": [
+        "gdpr_article_12_paragraph_1_body_page_39_chunk_0030"
+      ],
+      "bm25_retrieved_ids": [
+        "gdpr_article_34_paragraph_4_body_page_53_chunk_0114",
+        "gdpr_article_14_paragraph_5_body_page_42_chunk_0046",
+        "gdpr_article_12_paragraph_7_body_page_40_chunk_0036",
+        "gdpr_article_40_paragraph_2_body_page_56_chunk_0147",
+        "gdpr_article_64_paragraph_5_body_page_74_chunk_0270"
+      ],
+      "hybrid_retrieved_ids": [
+        "gdpr_article_12_paragraph_7_body_page_40_chunk_0036",
+        "gdpr_article_12_paragraph_1_body_page_39_chunk_0030",
+        "gdpr_article_34_paragraph_4_body_page_53_chunk_0114",
+        "gdpr_article_34_paragraph_3_body_page_53_chunk_0113",
+        "gdpr_article_38_paragraph_4_body_page_56_chunk_0141"
+      ],
+      "bm25_metrics": {
+        "hit_at_k": 0,
+        "recall_at_k": 0.0,
+        "reciprocal_rank_at_k": 0.0,
+        "relevant_retrieved": 0,
+        "relevant_expected": 1,
+        "k": 5
+      },
+      "hybrid_metrics": {
+        "hit_at_k": 1,
+        "recall_at_k": 1.0,
+        "reciprocal_rank_at_k": 0.5,
+        "relevant_retrieved": 1,
+        "relevant_expected": 1,
+        "k": 5
+      }
+    },
+    {
+      "question_id": "GDPR-Q006",
+      "question": "What information must a controller provide when collecting personal data directly?",
+      "expected_chunk_ids": [
+        "gdpr_article_13_paragraph_1_body_page_40_chunk_0038"
+      ],
+      "bm25_retrieved_ids": [
+        "gdpr_article_14_paragraph_3_body_page_42_chunk_0044",
+        "gdpr_article_13_paragraph_2_body_page_41_chunk_0039",
+        "gdpr_article_8_paragraph_1_body_page_37_chunk_0021",
+        "gdpr_article_12_paragraph_1_body_page_39_chunk_0030",
+        "gdpr_article_5_paragraph_1_body_page_35_chunk_0011"
+      ],
+      "hybrid_retrieved_ids": [
+        "gdpr_article_13_paragraph_2_body_page_41_chunk_0039",
+        "gdpr_article_13_paragraph_1_body_page_40_chunk_0038",
+        "gdpr_article_14_paragraph_3_body_page_42_chunk_0044",
+        "gdpr_article_12_paragraph_1_body_page_39_chunk_0030",
+        "gdpr_article_13_paragraph_3_body_page_41_chunk_0040"
+      ],
+      "bm25_metrics": {
+        "hit_at_k": 0,
+        "recall_at_k": 0.0,
+        "reciprocal_rank_at_k": 0.0,
+        "relevant_retrieved": 0,
+        "relevant_expected": 1,
+        "k": 5
+      },
+      "hybrid_metrics": {
+        "hit_at_k": 1,
+        "recall_at_k": 1.0,
+        "reciprocal_rank_at_k": 0.5,
+        "relevant_retrieved": 1,
+        "relevant_expected": 1,
+        "k": 5
+      }
+    },
+    {
+      "question_id": "GDPR-Q007",
+      "question": "What access rights does a data subject have?",
+      "expected_chunk_ids": [
+        "gdpr_article_15_paragraph_1_body_page_43_chunk_0047"
+      ],
+      "bm25_retrieved_ids": [
+        "gdpr_article_15_paragraph_2_body_page_43_chunk_0048",
+        "gdpr_article_15_paragraph_4_body_page_43_chunk_0050",
+        "gdpr_article_15_paragraph_3_body_page_43_chunk_0049",
+        "gdpr_article_78_paragraph_2_body_page_80_chunk_0340",
+        "gdpr_article_14_paragraph_4_body_page_42_chunk_0045"
+      ],
+      "hybrid_retrieved_ids": [
+        "gdpr_article_15_paragraph_2_body_page_43_chunk_0048",
+        "gdpr_article_15_paragraph_1_body_page_43_chunk_0047",
+        "gdpr_article_15_paragraph_3_body_page_43_chunk_0049",
+        "gdpr_article_15_paragraph_4_body_page_43_chunk_0050",
+        "gdpr_article_12_paragraph_4_body_page_40_chunk_0033"
+      ],
+      "bm25_metrics": {
+        "hit_at_k": 0,
+        "recall_at_k": 0.0,
+        "reciprocal_rank_at_k": 0.0,
+        "relevant_retrieved": 0,
+        "relevant_expected": 1,
+        "k": 5
+      },
+      "hybrid_metrics": {
+        "hit_at_k": 1,
+        "recall_at_k": 1.0,
+        "reciprocal_rank_at_k": 0.5,
+        "relevant_retrieved": 1,
+        "relevant_expected": 1,
+        "k": 5
+      }
+    },
+    {
+      "question_id": "GDPR-Q008",
+      "question": "When must a controller erase personal data?",
+      "expected_chunk_ids": [
+        "gdpr_article_17_paragraph_1_body_page_43_chunk_0051"
+      ],
+      "bm25_retrieved_ids": [
+        "gdpr_article_34_paragraph_1_body_page_52_chunk_0111",
+        "gdpr_article_17_paragraph_2_body_page_44_chunk_0052",
+        "gdpr_article_14_paragraph_3_body_page_42_chunk_0044",
+        "gdpr_article_17_paragraph_1_body_page_43_chunk_0051",
+        "gdpr_article_35_paragraph_2_body_page_53_chunk_0116"
+      ],
+      "hybrid_retrieved_ids": [
+        "gdpr_article_17_paragraph_1_body_page_43_chunk_0051",
+        "gdpr_article_17_paragraph_2_body_page_44_chunk_0052",
+        "gdpr_article_5_paragraph_1_body_page_35_chunk_0011",
+        "gdpr_article_34_paragraph_1_body_page_52_chunk_0111",
+        "gdpr_article_13_paragraph_2_body_page_41_chunk_0039"
+      ],
+      "bm25_metrics": {
+        "hit_at_k": 1,
+        "recall_at_k": 1.0,
+        "reciprocal_rank_at_k": 0.25,
+        "relevant_retrieved": 1,
+        "relevant_expected": 1,
+        "k": 5
+      },
+      "hybrid_metrics": {
+        "hit_at_k": 1,
+        "recall_at_k": 1.0,
+        "reciprocal_rank_at_k": 1.0,
+        "relevant_retrieved": 1,
+        "relevant_expected": 1,
+        "k": 5
+      }
+    },
+    {
+      "question_id": "GDPR-Q009",
+      "question": "What is the right to data portability?",
+      "expected_chunk_ids": [
+        "gdpr_article_20_paragraph_1_body_page_45_chunk_0057"
+      ],
+      "bm25_retrieved_ids": [
+        "gdpr_article_20_paragraph_2_body_page_45_chunk_0058",
+        "gdpr_article_20_paragraph_4_body_page_45_chunk_0060",
+        "gdpr_article_20_paragraph_1_body_page_45_chunk_0057",
+        "gdpr_article_20_paragraph_3_body_page_45_chunk_0059",
+        "gdpr_article_13_paragraph_2_body_page_41_chunk_0039"
+      ],
+      "hybrid_retrieved_ids": [
+        "gdpr_article_20_paragraph_2_body_page_45_chunk_0058",
+        "gdpr_article_20_paragraph_1_body_page_45_chunk_0057",
+        "gdpr_article_20_paragraph_4_body_page_45_chunk_0060",
+        "gdpr_article_20_paragraph_3_body_page_45_chunk_0059",
+        "gdpr_article_13_paragraph_2_body_page_41_chunk_0039"
+      ],
+      "bm25_metrics": {
+        "hit_at_k": 1,
+        "recall_at_k": 1.0,
+        "reciprocal_rank_at_k": 0.3333333333333333,
+        "relevant_retrieved": 1,
+        "relevant_expected": 1,
+        "k": 5
+      },
+      "hybrid_metrics": {
+        "hit_at_k": 1,
+        "recall_at_k": 1.0,
+        "reciprocal_rank_at_k": 0.5,
+        "relevant_retrieved": 1,
+        "relevant_expected": 1,
+        "k": 5
+      }
+    },
+    {
+      "question_id": "GDPR-Q010",
+      "question": "Can a data subject object to processing for direct marketing?",
+      "expected_chunk_ids": [
+        "gdpr_article_21_paragraph_2_body_page_45_chunk_0062"
+      ],
+      "bm25_retrieved_ids": [
+        "gdpr_article_21_paragraph_2_body_page_45_chunk_0062",
+        "gdpr_article_21_paragraph_3_body_page_45_chunk_0063",
+        "gdpr_article_21_paragraph_6_body_page_46_chunk_0066",
+        "gdpr_article_21_paragraph_1_body_page_45_chunk_0061",
+        "gdpr_article_89_paragraph_1_body_page_84_chunk_0373"
+      ],
+      "hybrid_retrieved_ids": [
+        "gdpr_article_21_paragraph_2_body_page_45_chunk_0062",
+        "gdpr_article_21_paragraph_3_body_page_45_chunk_0063",
+        "gdpr_article_21_paragraph_1_body_page_45_chunk_0061",
+        "gdpr_article_21_paragraph_6_body_page_46_chunk_0066",
+        "gdpr_article_21_paragraph_5_body_page_46_chunk_0065"
+      ],
+      "bm25_metrics": {
+        "hit_at_k": 1,
+        "recall_at_k": 1.0,
+        "reciprocal_rank_at_k": 1.0,
+        "relevant_retrieved": 1,
+        "relevant_expected": 1,
+        "k": 5
+      },
+      "hybrid_metrics": {
+        "hit_at_k": 1,
+        "recall_at_k": 1.0,
+        "reciprocal_rank_at_k": 1.0,
+        "relevant_retrieved": 1,
+        "relevant_expected": 1,
+        "k": 5
+      }
+    },
+    {
+      "question_id": "GDPR-Q011",
+      "question": "What does data protection by default require?",
+      "expected_chunk_ids": [
+        "gdpr_article_25_paragraph_2_body_page_48_chunk_0077"
+      ],
+      "bm25_retrieved_ids": [
+        "gdpr_article_11_paragraph_1_body_page_39_chunk_0028",
+        "gdpr_article_25_paragraph_2_body_page_48_chunk_0077",
+        "gdpr_article_11_paragraph_2_body_page_39_chunk_0029",
+        "gdpr_article_25_paragraph_3_body_page_48_chunk_0078",
+        "gdpr_article_25_paragraph_1_body_page_48_chunk_0076"
+      ],
+      "hybrid_retrieved_ids": [
+        "gdpr_article_25_paragraph_2_body_page_48_chunk_0077",
+        "gdpr_article_25_paragraph_1_body_page_48_chunk_0076",
+        "gdpr_article_25_paragraph_3_body_page_48_chunk_0078",
+        "gdpr_article_11_paragraph_1_body_page_39_chunk_0028",
+        "gdpr_article_37_paragraph_1_body_page_55_chunk_0131"
+      ],
+      "bm25_metrics": {
+        "hit_at_k": 1,
+        "recall_at_k": 1.0,
+        "reciprocal_rank_at_k": 0.5,
+        "relevant_retrieved": 1,
+        "relevant_expected": 1,
+        "k": 5
+      },
+      "hybrid_metrics": {
+        "hit_at_k": 1,
+        "recall_at_k": 1.0,
+        "reciprocal_rank_at_k": 1.0,
+        "relevant_retrieved": 1,
+        "relevant_expected": 1,
+        "k": 5
+      }
+    },
+    {
+      "question_id": "GDPR-Q012",
+      "question": "What records of processing activities must a controller maintain?",
+      "expected_chunk_ids": [
+        "gdpr_article_30_paragraph_1_body_page_50_chunk_0097"
+      ],
+      "bm25_retrieved_ids": [
+        "gdpr_article_30_paragraph_2_body_page_51_chunk_0098",
+        "gdpr_article_30_paragraph_3_body_page_51_chunk_0099",
+        "gdpr_article_30_paragraph_1_body_page_50_chunk_0097",
+        "gdpr_article_30_paragraph_4_body_page_51_chunk_0100",
+        "gdpr_article_30_paragraph_5_body_page_51_chunk_0101"
+      ],
+      "hybrid_retrieved_ids": [
+        "gdpr_article_30_paragraph_1_body_page_50_chunk_0097",
+        "gdpr_article_30_paragraph_2_body_page_51_chunk_0098",
+        "gdpr_article_30_paragraph_3_body_page_51_chunk_0099",
+        "gdpr_article_30_paragraph_4_body_page_51_chunk_0100",
+        "gdpr_article_30_paragraph_5_body_page_51_chunk_0101"
+      ],
+      "bm25_metrics": {
+        "hit_at_k": 1,
+        "recall_at_k": 1.0,
+        "reciprocal_rank_at_k": 0.3333333333333333,
+        "relevant_retrieved": 1,
+        "relevant_expected": 1,
+        "k": 5
+      },
+      "hybrid_metrics": {
+        "hit_at_k": 1,
+        "recall_at_k": 1.0,
+        "reciprocal_rank_at_k": 1.0,
+        "relevant_retrieved": 1,
+        "relevant_expected": 1,
+        "k": 5
+      }
+    },
+    {
+      "question_id": "GDPR-Q013",
+      "question": "What security measures must controllers and processors implement?",
+      "expected_chunk_ids": [
+        "gdpr_article_32_paragraph_1_body_page_51_chunk_0102"
+      ],
+      "bm25_retrieved_ids": [
+        "gdpr_article_32_paragraph_1_body_page_51_chunk_0102",
+        "gdpr_article_28_paragraph_1_body_page_49_chunk_0087",
+        "gdpr_article_40_paragraph_2_body_page_56_chunk_0147",
+        "gdpr_article_37_paragraph_4_body_page_55_chunk_0134",
+        "gdpr_article_35_paragraph_8_body_page_54_chunk_0122"
+      ],
+      "hybrid_retrieved_ids": [
+        "gdpr_article_32_paragraph_1_body_page_51_chunk_0102",
+        "gdpr_article_28_paragraph_1_body_page_49_chunk_0087",
+        "gdpr_article_24_paragraph_1_body_page_47_chunk_0073",
+        "gdpr_article_25_paragraph_1_body_page_48_chunk_0076",
+        "gdpr_article_25_paragraph_2_body_page_48_chunk_0077"
+      ],
+      "bm25_metrics": {
+        "hit_at_k": 1,
+        "recall_at_k": 1.0,
+        "reciprocal_rank_at_k": 1.0,
+        "relevant_retrieved": 1,
+        "relevant_expected": 1,
+        "k": 5
+      },
+      "hybrid_metrics": {
+        "hit_at_k": 1,
+        "recall_at_k": 1.0,
+        "reciprocal_rank_at_k": 1.0,
+        "relevant_retrieved": 1,
+        "relevant_expected": 1,
+        "k": 5
+      }
+    },
+    {
+      "question_id": "GDPR-Q014",
+      "question": "Within what period must a controller notify a supervisory authority of a personal data breach?",
+      "expected_chunk_ids": [
+        "gdpr_article_33_paragraph_1_body_page_52_chunk_0106"
+      ],
+      "bm25_retrieved_ids": [
+        "gdpr_article_33_paragraph_1_body_page_52_chunk_0106",
+        "gdpr_article_33_paragraph_2_body_page_52_chunk_0107",
+        "gdpr_article_34_paragraph_4_body_page_53_chunk_0114",
+        "gdpr_article_34_paragraph_1_body_page_52_chunk_0111",
+        "gdpr_article_33_paragraph_3_body_page_52_chunk_0108"
+      ],
+      "hybrid_retrieved_ids": [
+        "gdpr_article_33_paragraph_1_body_page_52_chunk_0106",
+        "gdpr_article_33_paragraph_2_body_page_52_chunk_0107",
+        "gdpr_article_33_paragraph_3_body_page_52_chunk_0108",
+        "gdpr_article_34_paragraph_1_body_page_52_chunk_0111",
+        "gdpr_article_33_paragraph_5_body_page_52_chunk_0110"
+      ],
+      "bm25_metrics": {
+        "hit_at_k": 1,
+        "recall_at_k": 1.0,
+        "reciprocal_rank_at_k": 1.0,
+        "relevant_retrieved": 1,
+        "relevant_expected": 1,
+        "k": 5
+      },
+      "hybrid_metrics": {
+        "hit_at_k": 1,
+        "recall_at_k": 1.0,
+        "reciprocal_rank_at_k": 1.0,
+        "relevant_retrieved": 1,
+        "relevant_expected": 1,
+        "k": 5
+      }
+    },
+    {
+      "question_id": "GDPR-Q015",
+      "question": "When must a controller notify data subjects of a personal data breach?",
+      "expected_chunk_ids": [
+        "gdpr_article_34_paragraph_1_body_page_52_chunk_0111"
+      ],
+      "bm25_retrieved_ids": [
+        "gdpr_article_33_paragraph_2_body_page_52_chunk_0107",
+        "gdpr_article_34_paragraph_1_body_page_52_chunk_0111",
+        "gdpr_article_33_paragraph_1_body_page_52_chunk_0106",
+        "gdpr_article_33_paragraph_3_body_page_52_chunk_0108",
+        "gdpr_article_34_paragraph_3_body_page_53_chunk_0113"
+      ],
+      "hybrid_retrieved_ids": [
+        "gdpr_article_33_paragraph_1_body_page_52_chunk_0106",
+        "gdpr_article_33_paragraph_2_body_page_52_chunk_0107",
+        "gdpr_article_34_paragraph_1_body_page_52_chunk_0111",
+        "gdpr_article_33_paragraph_3_body_page_52_chunk_0108",
+        "gdpr_article_34_paragraph_3_body_page_53_chunk_0113"
+      ],
+      "bm25_metrics": {
+        "hit_at_k": 1,
+        "recall_at_k": 1.0,
+        "reciprocal_rank_at_k": 0.5,
+        "relevant_retrieved": 1,
+        "relevant_expected": 1,
+        "k": 5
+      },
+      "hybrid_metrics": {
+        "hit_at_k": 1,
+        "recall_at_k": 1.0,
+        "reciprocal_rank_at_k": 0.3333333333333333,
+        "relevant_retrieved": 1,
+        "relevant_expected": 1,
+        "k": 5
+      }
+    },
+    {
+      "question_id": "GDPR-Q016",
+      "question": "When is a data protection impact assessment required?",
+      "expected_chunk_ids": [
+        "gdpr_article_35_paragraph_1_body_page_53_chunk_0115"
+      ],
+      "bm25_retrieved_ids": [
+        "gdpr_article_35_paragraph_11_body_page_54_chunk_0125",
+        "gdpr_article_35_paragraph_5_body_page_53_chunk_0119",
+        "gdpr_article_35_paragraph_2_body_page_53_chunk_0116",
+        "gdpr_article_35_paragraph_3_body_page_53_chunk_0117",
+        "gdpr_article_35_paragraph_1_body_page_53_chunk_0115"
+      ],
+      "hybrid_retrieved_ids": [
+        "gdpr_article_35_paragraph_3_body_page_53_chunk_0117",
+        "gdpr_article_35_paragraph_2_body_page_53_chunk_0116",
+        "gdpr_article_35_paragraph_1_body_page_53_chunk_0115",
+        "gdpr_article_35_paragraph_11_body_page_54_chunk_0125",
+        "gdpr_article_35_paragraph_4_body_page_53_chunk_0118"
+      ],
+      "bm25_metrics": {
+        "hit_at_k": 1,
+        "recall_at_k": 1.0,
+        "reciprocal_rank_at_k": 0.2,
+        "relevant_retrieved": 1,
+        "relevant_expected": 1,
+        "k": 5
+      },
+      "hybrid_metrics": {
+        "hit_at_k": 1,
+        "recall_at_k": 1.0,
+        "reciprocal_rank_at_k": 0.3333333333333333,
+        "relevant_retrieved": 1,
+        "relevant_expected": 1,
+        "k": 5
+      }
+    }
+  ]
+}
