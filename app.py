@@ -7,6 +7,7 @@ from src.multi_document_retrieval import answer_multiple_documents
 
 from src.document_pipeline import ingest_document
 from src.document_registry import list_documents
+from src.document_structure import analyze_document_structure
 
 from src.case_management import (
     create_case,
@@ -387,9 +388,10 @@ if active_case_id:
                     st.rerun()
 
 
-tab_qa, tab_documents = st.tabs([
+tab_qa, tab_documents, tab_structure = st.tabs([
     "Ask Questions",
     "Document Management",
+    "Document Structure",
 ])
 
 with tab_qa:
@@ -595,3 +597,186 @@ with tab_documents:
         st.write("Selected files:")
         for uploaded in uploaded_files:
             st.write(f"📄 {uploaded.name}")
+
+
+# ==================================================
+# PHASE 14 — DOCUMENT STRUCTURE VIEWER
+# ==================================================
+
+with tab_structure:
+
+    st.subheader("Document Structure Explorer")
+
+    if not active_case_id:
+        st.info("Create or select a case first.")
+
+    else:
+        case_documents = get_case_documents(active_case_id)
+
+        document_lookup = {
+            document["document_id"]: document
+            for document in case_documents
+            if document
+            and document.get("status") == "ready"
+        }
+
+        if not document_lookup:
+            st.info(
+                "No processed documents are available "
+                "in this case."
+            )
+
+        else:
+            selected_structure_document = st.selectbox(
+                "Select a document",
+                options=list(document_lookup),
+                format_func=lambda document_id: (
+                    document_lookup[document_id].get(
+                        "filename", "Document"
+                    )
+                ),
+                key="structure_document_selector",
+            )
+
+            try:
+                with st.spinner(
+                    "Analyzing document structure..."
+                ):
+                    structure = analyze_document_structure(
+                        selected_structure_document
+                    )
+
+                # ----------------------------------
+                # Page statistics
+                # ----------------------------------
+
+                st.markdown("### Document Overview")
+
+                col1, col2, col3, col4 = st.columns(4)
+
+                col1.metric(
+                    "Pages",
+                    structure["page_count"],
+                )
+
+                col2.metric(
+                    "Articles",
+                    structure["article_count"],
+                )
+
+                col3.metric(
+                    "Tables",
+                    structure["table_count"],
+                )
+
+                col4.metric(
+                    "Potentially Scanned",
+                    structure["scanned_page_count"],
+                )
+
+                st.caption(
+                    f"Readable pages: "
+                    f"{structure['readable_page_count']} | "
+                    f"Total words: {structure['total_words']:,}"
+                )
+
+                # ----------------------------------
+                # Legal hierarchy
+                # ----------------------------------
+
+                st.markdown("### Legal Structure")
+
+                hierarchy_col1, hierarchy_col2 = st.columns(2)
+
+                with hierarchy_col1:
+                    st.metric(
+                        "Chapters",
+                        structure["chapter_count"],
+                    )
+
+                with hierarchy_col2:
+                    st.metric(
+                        "Sections",
+                        structure["section_count"],
+                    )
+
+                for heading, key in [
+                    ("Chapters", "chapters"),
+                    ("Sections", "sections"),
+                    ("Articles", "articles"),
+                ]:
+                    items = structure[key]
+
+                    with st.expander(
+                        f"{heading} ({len(items)})"
+                    ):
+                        if items:
+                            st.dataframe(
+                                items,
+                                use_container_width=True,
+                                hide_index=True,
+                            )
+                        else:
+                            st.info(
+                                f"No {heading.lower()} detected."
+                            )
+
+                # ----------------------------------
+                # Tables
+                # ----------------------------------
+
+                st.markdown("### Detected Tables")
+
+                if structure["tables"]:
+                    st.dataframe(
+                        structure["tables"],
+                        use_container_width=True,
+                        hide_index=True,
+                    )
+                else:
+                    st.info(
+                        "No tables detected using "
+                        "PyMuPDF table detection."
+                    )
+
+                if structure["table_detection_warnings"]:
+                    with st.expander(
+                        "Table Detection Warnings"
+                    ):
+                        st.json(
+                            structure["table_detection_warnings"]
+                        )
+
+                # ----------------------------------
+                # Scanned pages
+                # ----------------------------------
+
+                st.markdown("### Scanned Page Detection")
+
+                if structure["scanned_pages"]:
+                    st.warning(
+                        "Potentially scanned or text-light "
+                        "pages detected: "
+                        + ", ".join(
+                            map(
+                                str,
+                                structure["scanned_pages"],
+                            )
+                        )
+                    )
+
+                    st.caption(
+                        "These pages may require OCR. "
+                        "The current pipeline does not "
+                        "automatically extract image text."
+                    )
+
+                else:
+                    st.success(
+                        "No potentially scanned pages detected."
+                    )
+
+            except Exception as exc:
+                st.error(
+                    f"Document structure analysis failed: {exc}"
+                )
