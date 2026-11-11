@@ -137,31 +137,96 @@ def hybrid_search(
     top_k=10,
     rrf_k=60
 ):
+    """
+    Hybrid retrieval with basic backend recovery.
 
-    # Retrieve semantic results
-    dense_results = search_faiss(
-        client=client,
-        question=question,
-        index=faiss_index,
-        chunks=chunks,
-        top_k=dense_k
-    )
+    Temporary backend failures may fall back to the
+    remaining retrieval method.
 
-    # Retrieve keyword results
-    sparse_results = search_bm25(
-        question=question,
-        bm25=bm25_index,
-        chunks=chunks,
-        top_k=sparse_k
-    )
+    Structural and programming errors are not suppressed.
+    """
 
-    # Combine rankings
-    hybrid_results = reciprocal_rank_fusion(
+    if not isinstance(question, str) or not question.strip():
+        raise ValueError("Question cannot be empty.")
+
+    if dense_k < 1 or sparse_k < 1 or top_k < 1:
+        raise ValueError("Retrieval limits must be positive.")
+
+    # Structural consistency must be checked before
+    # attempting either backend.
+    if len(chunks) != faiss_index.ntotal:
+        raise ValueError(
+            "Number of chunks does not match indexed vectors."
+        )
+
+    if len(chunks) != bm25_index.corpus_size:
+        raise ValueError(
+            "Chunk count and BM25 corpus size differ."
+        )
+
+    def is_temporary_failure(exc):
+        message = str(exc).lower()
+
+        temporary_markers = (
+            "429",
+            "500",
+            "502",
+            "503",
+            "504",
+            "resource_exhausted",
+            "unavailable",
+            "deadline",
+            "timeout",
+            "temporarily",
+        )
+
+        return any(
+            marker in message
+            for marker in temporary_markers
+        )
+
+    dense_results = []
+    sparse_results = []
+    failures = []
+
+    try:
+        dense_results = search_faiss(
+            client=client,
+            question=question,
+            index=faiss_index,
+            chunks=chunks,
+            top_k=dense_k,
+        )
+    except Exception as exc:
+        if not is_temporary_failure(exc):
+            raise
+
+        failures.append(("dense", exc))
+
+    try:
+        sparse_results = search_bm25(
+            question=question,
+            bm25=bm25_index,
+            chunks=chunks,
+            top_k=sparse_k,
+        )
+    except Exception as exc:
+        if not is_temporary_failure(exc):
+            raise
+
+        failures.append(("bm25", exc))
+
+    # Do not silently convert complete backend failure
+    # into an ordinary no-evidence result.
+    if len(failures) == 2:
+        raise RuntimeError(
+            "Both retrieval backends failed temporarily."
+        ) from failures[-1][1]
+
+    return reciprocal_rank_fusion(
         dense_results=dense_results,
         bm25_results=sparse_results,
         chunks=chunks,
         rrf_k=rrf_k,
-        top_k=top_k
+        top_k=top_k,
     )
-
-    return hybrid_results
