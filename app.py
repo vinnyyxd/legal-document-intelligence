@@ -729,6 +729,17 @@ with tab_documents:
             "added to this case."
         )
 
+    enable_upload_ocr = st.checkbox(
+        "Enable OCR for scanned PDF pages",
+        value=False,
+        help=(
+            "Use local Tesseract OCR when a PDF page "
+            "contains little or no selectable text. "
+            "OCR may increase processing time."
+        ),
+        key="enable_upload_ocr",
+    )
+
     process_clicked = st.button(
         "Process Uploaded Documents",
         type="primary",
@@ -768,6 +779,7 @@ with tab_documents:
                         client=client,
                         filename=uploaded.name,
                         pdf_bytes=uploaded.getvalue(),
+                        enable_ocr=enable_upload_ocr,
                     )
 
                     if active_case_id:

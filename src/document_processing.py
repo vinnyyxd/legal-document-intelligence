@@ -14,7 +14,9 @@ from src.document_registry import (
 
 def process_document(
     document_id,
-    storage_root=DEFAULT_STORAGE_ROOT
+    storage_root=DEFAULT_STORAGE_ROOT,
+    enable_ocr=False,
+    ocr_language="eng",
 ):
     document = get_document(
         document_id,
@@ -50,13 +52,43 @@ def process_document(
 
         pages = extract_pdf(
             str(pdf_path),
-            document_id=document_id
+            document_id=document_id,
+            enable_ocr=enable_ocr,
+            ocr_language=ocr_language,
         )
 
         if not pages:
             raise ValueError(
                 "PDF extraction returned no pages."
             )
+
+        # Prevent incomplete OCR evidence from being indexed.
+        # Legacy extraction remains unchanged when OCR is disabled.
+        if enable_ocr:
+            incomplete_ocr_pages = [
+                page
+                for page in pages
+                if page.get("ocr_status")
+                in {"failed", "no_text"}
+            ]
+
+            if incomplete_ocr_pages:
+                details = "; ".join(
+                    "page "
+                    + str(page["page"])
+                    + ": "
+                    + str(
+                        page.get("ocr_error")
+                        or page.get("ocr_status")
+                    )
+                    for page in incomplete_ocr_pages
+                )
+
+                raise ValueError(
+                    "OCR could not recover text from "
+                    "all attempted pages: "
+                    + details
+                )
 
         # Preserve the user's original filename.
         for page in pages:
@@ -128,6 +160,26 @@ def process_document(
             "page_count": len(pages),
             "chunk_count": len(chunks),
             "validation": validation,
+            "ocr_summary": (
+                {
+                    "enabled": True,
+                    "attempted_pages": sum(
+                        page.get("ocr_status")
+                        in {"success", "no_text", "failed"}
+                        for page in pages
+                    ),
+                    "successful_pages": sum(
+                        page.get("ocr_status") == "success"
+                        for page in pages
+                    ),
+                    "failed_pages": sum(
+                        page.get("ocr_status") == "failed"
+                        for page in pages
+                    ),
+                }
+                if enable_ocr
+                else None
+            ),
         }
 
     except Exception as exc:

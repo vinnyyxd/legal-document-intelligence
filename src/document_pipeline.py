@@ -17,6 +17,8 @@ def run_document_pipeline(
     document_id,
     storage_root=DEFAULT_STORAGE_ROOT,
     batch_size=8,
+    enable_ocr=False,
+    ocr_language="eng",
 ):
     """
     Process a registered document through extraction,
@@ -38,7 +40,9 @@ def run_document_pipeline(
     if status == "registered":
         process_document(
             document_id,
-            storage_root=storage_root
+            storage_root=storage_root,
+            enable_ocr=enable_ocr,
+            ocr_language=ocr_language,
         )
 
     elif status != "chunked":
@@ -128,6 +132,8 @@ def ingest_document(
     pdf_bytes,
     storage_root=DEFAULT_STORAGE_ROOT,
     batch_size=8,
+    enable_ocr=False,
+    ocr_language="eng",
 ):
     """
     Register a PDF and execute the document pipeline.
@@ -148,4 +154,6 @@ def ingest_document(
         document_id=document["document_id"],
         storage_root=storage_root,
         batch_size=batch_size,
+        enable_ocr=enable_ocr,
+        ocr_language=ocr_language,
     )
