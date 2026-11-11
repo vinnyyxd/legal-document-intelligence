@@ -220,3 +220,6 @@ __marimo__/
 .streamlit/secrets.toml
 
 data/embeddings/gdpr_embedding_checkpoint.npz
+
+# Private uploaded legal documents and generated artifacts
+/data/user_documents/
