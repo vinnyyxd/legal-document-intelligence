@@ -339,7 +339,18 @@ def embed_document_chunks(
                 )
 
                 if match:
-                    wait_seconds = float(match.group(1)) + 2
+                    provider_delay = float(match.group(1))
+
+                    if provider_delay > 120:
+                        raise RuntimeError(
+                            "Gemini requested a retry delay of "
+                            f"{provider_delay:.0f} seconds. "
+                            "Processing stopped to avoid an excessive "
+                            "wait. Previously saved embedding "
+                            "checkpoints remain available for resume."
+                        ) from exc
+
+                    wait_seconds = provider_delay + 2
                 else:
                     wait_seconds = min(
                         120,

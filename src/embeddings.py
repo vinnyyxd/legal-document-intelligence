@@ -320,7 +320,19 @@ def embed_chunks(
                 )
 
                 if match:
-                    wait = float(match.group(1)) + 2
+                    provider_delay = float(match.group(1))
+
+                    if provider_delay > 120:
+                        raise RuntimeError(
+                            "Gemini requested a retry delay of "
+                            f"{provider_delay:.0f} seconds. "
+                            "Legacy embedding processing stopped "
+                            "to avoid an excessive wait. "
+                            "Previously saved checkpoints remain "
+                            "available for resume."
+                        ) from exc
+
+                    wait = provider_delay + 2
                 else:
                     wait = min(120, 2 ** (attempt + 1))
 
