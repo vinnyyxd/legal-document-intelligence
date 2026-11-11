@@ -237,6 +237,7 @@ def search_bm25(
             "bm25_score": score,
 
             "chunk_id": chunk["chunk_id"],
+            **({"document_id": chunk["document_id"]} if "document_id" in chunk else {}),
 
             "document": chunk["document"],
 

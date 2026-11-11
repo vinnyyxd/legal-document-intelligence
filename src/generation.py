@@ -54,7 +54,8 @@ def build_evidence_context(results):
             "document": document,
             "clause_reference": clause,
             "page_numbers": pages,
-            "chunk_id": result["chunk_id"]
+            "chunk_id": result["chunk_id"],
+        **({"document_id": result["document_id"]} if "document_id" in result else {})
         }
 
         block = f"""

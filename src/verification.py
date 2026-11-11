@@ -71,6 +71,37 @@ def validate_citation_integrity(
                 continue
 
             # Verify document identity
+            source_has_id = "document_id" in source
+            retrieved_has_id = "document_id" in retrieved_chunk
+
+            if source_has_id != retrieved_has_id:
+                errors.append(
+                    f"Incomplete document identity metadata "
+                    f"for {evidence_id}."
+                )
+
+            elif source_has_id and retrieved_has_id:
+
+                source_document_id = source["document_id"]
+                retrieved_document_id = retrieved_chunk["document_id"]
+
+                if (
+                    not isinstance(source_document_id, str)
+                    or not source_document_id.strip()
+                    or not isinstance(retrieved_document_id, str)
+                    or not retrieved_document_id.strip()
+                ):
+                    errors.append(
+                        f"Missing or invalid document identity "
+                        f"for {evidence_id}."
+                    )
+
+                elif source_document_id != retrieved_document_id:
+                    errors.append(
+                        f"Document identity mismatch for {evidence_id}."
+                    )
+
+            # Verify document filename
             if (
                 source["document"]
                 != retrieved_chunk["document"]
@@ -102,6 +133,7 @@ def validate_citation_integrity(
         "errors": errors,
         "claims_checked": len(claims)
     }
+
 
 
 # --------------------------------------------------
