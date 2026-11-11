@@ -1,4 +1,5 @@
 
+import re
 import streamlit as st
 from google import genai
 from sentence_transformers import CrossEncoder
@@ -8,6 +9,7 @@ from src.multi_document_retrieval import answer_multiple_documents
 from src.document_pipeline import ingest_document
 from src.document_registry import list_documents
 from src.document_structure import analyze_document_structure
+from src.citation_viewer import render_citation_page
 
 from src.case_management import (
     create_case,
@@ -118,38 +120,189 @@ def display_rag_result(result):
     if status == "verified":
         evidence = result.get("reranked_results") or []
 
-        st.markdown("#### Retrieved Legal Evidence")
+        st.markdown("#### Legal Evidence & Original PDF")
 
         if not evidence:
             st.info("No evidence passages available.")
 
-        for index, item in enumerate(evidence, start=1):
-            document = item.get("document", "Unknown document")
-            document_id = item.get("document_id", "Legacy document")
-            clause = item.get("clause_reference")
+        else:
+            generation = result.get("generation") or {}
+            evidence_map = generation.get("evidence_map") or {}
+
+            # Evidence IDs correspond to generation-time ordering.
+            all_evidence_ids = [
+                f"E{index}"
+                for index in range(1, len(evidence) + 1)
+            ]
+
+            # Match explicit evidence identifiers in the
+            # final verifier-approved answer.
+            cited_ids = set(
+                re.findall(
+                    r"(?<![A-Za-z0-9])E[1-9][0-9]*(?![A-Za-z0-9])",
+                    answer,
+                )
+            )
+
+            cited_evidence_ids = [
+                evidence_id
+                for evidence_id in all_evidence_ids
+                if evidence_id in cited_ids
+                and evidence_id in evidence_map
+            ]
+
+            other_evidence_ids = [
+                evidence_id
+                for evidence_id in all_evidence_ids
+                if evidence_id not in cited_evidence_ids
+            ]
+
+            if cited_evidence_ids:
+                st.success(
+                    f"{len(cited_evidence_ids)} evidence "
+                    "references found in the verified answer."
+                )
+
+                show_all_evidence = st.checkbox(
+                    "Include other retrieved passages",
+                    value=False,
+                    key="show_all_retrieved_evidence",
+                )
+
+                evidence_options = (
+                    cited_evidence_ids + other_evidence_ids
+                    if show_all_evidence
+                    else cited_evidence_ids
+                )
+
+            else:
+                st.info(
+                    "No explicit evidence IDs were found in "
+                    "the final answer. Showing retrieved passages."
+                )
+                evidence_options = all_evidence_ids
+
+            selected_evidence_id = st.selectbox(
+                "Inspect evidence",
+                options=evidence_options,
+                format_func=lambda evidence_id: (
+                    evidence_id + (
+                        " — cited in answer"
+                        if evidence_id in cited_evidence_ids
+                        else " — retrieved passage"
+                    )
+                ),
+                key="citation_evidence_selector",
+            )
+
+            selected_index = (
+                int(selected_evidence_id[1:]) - 1
+            )
+
+            selected_evidence = evidence[selected_index]
+
+            document_id = selected_evidence.get("document_id")
+            document_name = selected_evidence.get(
+                "document", "Unknown document"
+            )
+            chunk_id = selected_evidence.get(
+                "chunk_id", "Unknown chunk"
+            )
+
+            pages = selected_evidence.get("page_numbers") or []
+            clause = selected_evidence.get("clause_reference")
 
             if not clause:
-                evidence_pages = item.get("page_numbers") or []
+                clause = (
+                    "PDF pages "
+                    + ", ".join(map(str, pages))
+                    if pages else "Page unavailable"
+                )
 
-                if len(evidence_pages) == 1:
-                    clause = f"PDF p. {evidence_pages[0]}"
-                elif evidence_pages:
-                    clause = (
-                        "PDF pp. "
-                        + ", ".join(map(str, evidence_pages))
-                    )
-                else:
-                    clause = "Page unavailable"
-            pages = item.get("page_numbers") or []
-            chunk_id = item.get("chunk_id", "Unknown chunk")
+            evidence_text = selected_evidence.get("text", "")
 
-            with st.expander(
-                f"Evidence {index}: {document} — {clause}"
-            ):
-                st.caption(f"Document ID: {document_id}")
+            st.caption(
+                f"Evidence: {selected_evidence_id} | "
+                f"Document: {document_name} | "
+                f"Clause: {clause}"
+            )
+
+            left_column, right_column = st.columns([1, 1])
+
+            with left_column:
+                st.markdown("##### Verified Legal Answer")
+                st.write(answer)
+
+                st.divider()
+                st.markdown("##### Supporting Evidence Passage")
+                st.write(evidence_text)
                 st.caption(f"Chunk ID: {chunk_id}")
-                st.caption(f"Pages: {pages}")
-                st.write(item.get("text", ""))
+                st.caption(f"Document ID: {document_id}")
+
+                if selected_evidence_id in evidence_map:
+                    st.caption(
+                        "Evidence metadata is available "
+                        "in the generation context."
+                    )
+
+            with right_column:
+                st.markdown("##### Original PDF Page")
+
+                if not document_id:
+                    st.warning(
+                        "Original PDF cannot be resolved "
+                        "without document identity."
+                    )
+
+                elif not pages:
+                    st.warning(
+                        "No page reference is available "
+                        "for this evidence."
+                    )
+
+                else:
+                    selected_page = st.selectbox(
+                        "PDF page",
+                        options=pages,
+                        key=(
+                            "citation_page_"
+                            + str(document_id)
+                            + "_"
+                            + str(chunk_id)
+                        ),
+                    )
+
+                    try:
+                        rendered = render_citation_page(
+                            document_id=document_id,
+                            page_number=int(selected_page),
+                            evidence_text=evidence_text,
+                        )
+
+                        st.image(
+                            rendered["image_bytes"],
+                            caption=(
+                                f"{document_name} — "
+                                f"Page {selected_page} "
+                                f"of {rendered['page_count']}"
+                            ),
+                            use_container_width=True,
+                        )
+
+                        if rendered["highlight_count"]:
+                            st.caption(
+                                "Matching source text highlighted."
+                            )
+                        else:
+                            st.caption(
+                                "Original page displayed. "
+                                "Exact text highlighting unavailable."
+                            )
+
+                    except Exception as exc:
+                        st.error(
+                            f"Unable to display cited PDF page: {exc}"
+                        )
 
     with st.expander("Verification Details"):
         if verification:
