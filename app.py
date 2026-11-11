@@ -7,7 +7,7 @@ from sentence_transformers import CrossEncoder
 
 from src.multi_document_retrieval import answer_multiple_documents
 
-from src.document_pipeline import ingest_document
+from src.document_pipeline import ingest_document, run_document_pipeline
 from src.document_registry import list_documents
 from src.document_structure import analyze_document_structure
 from src.citation_viewer import render_citation_page
@@ -29,6 +29,9 @@ from src.case_management import (
     validate_case_for_query,
 )
 
+
+
+from src.embedding_progress_ui import make_embedding_progress_callback
 
 
 def get_gemini_client():
@@ -713,6 +716,131 @@ with tab_documents:
 
     display_documents()
 
+    st.divider()
+    st.subheader("Interrupted Document Recovery")
+
+    if not active_case_id:
+        st.info("Select a case to view resumable documents.")
+    else:
+        recovery_documents = [
+            document
+            for document in get_case_documents(active_case_id)
+            if document
+            and document.get("status") == "chunked"
+        ]
+
+        if not recovery_documents:
+            st.caption(
+                "No resumable documents in the selected case."
+            )
+        else:
+            st.info(
+                "Resume continues from validated embedding "
+                "checkpoints when available."
+            )
+
+            for document in recovery_documents:
+                document_id = document["document_id"]
+                filename = document.get(
+                    "filename", "Unknown document"
+                )
+
+                with st.container(border=True):
+                    st.markdown(f"**📄 {filename}**")
+                    st.caption(
+                        f"Document ID: {document_id}"
+                    )
+                    st.caption(
+                        "Status: chunked — eligible for resume"
+                    )
+
+                    if st.button(
+                        "Resume Processing",
+                        key=f"resume_{active_case_id}_{document_id}",
+                    ):
+                        try:
+                            current_case = get_case(active_case_id)
+
+                            if document_id not in current_case[
+                                "document_ids"
+                            ]:
+                                raise ValueError(
+                                    "Document is no longer in this case."
+                                )
+
+                            current_documents = {
+                                item["document_id"]: item
+                                for item in get_case_documents(
+                                    active_case_id
+                                )
+                                if item
+                            }
+
+                            current_document = (
+                                current_documents.get(document_id)
+                            )
+
+                            if (
+                                current_document is None
+                                or current_document.get("status")
+                                != "chunked"
+                            ):
+                                raise ValueError(
+                                    "Document is no longer eligible "
+                                    "for resume."
+                                )
+
+                            st.session_state.pop(
+                                "last_rag_result", None
+                            )
+                            st.session_state.pop(
+                                "last_rag_query_key", None
+                            )
+
+                            with st.status(
+                                f"Resuming {filename}",
+                                expanded=True,
+                            ) as recovery_status:
+                                st.write(
+                                    "Validating saved chunks and "
+                                    "reusing available embeddings..."
+                                )
+
+                                progress_bar = st.progress(
+                                    0.0,
+                                    text="Preparing embedding progress...",
+                                )
+                                progress_message = st.empty()
+
+                                progress_callback = (
+                                    make_embedding_progress_callback(
+                                        progress_bar,
+                                        progress_message,
+                                    )
+                                )
+
+                                result = run_document_pipeline(
+                                    client=get_gemini_client(),
+                                    document_id=document_id,
+                                    progress_callback=progress_callback,
+                                )
+
+                                recovery_status.update(
+                                    label=f"Resumed {filename}",
+                                    state="complete",
+                                )
+
+                            st.success(
+                                f"Processing completed: {filename}"
+                            )
+                            st.json(result)
+
+                        except Exception as exc:
+                            st.error(
+                                f"Resume failed for {filename}: {exc}"
+                            )
+
+
     current_case_count = (
         len(get_case(active_case_id)["document_ids"])
         if active_case_id
@@ -779,25 +907,28 @@ with tab_documents:
                     expanded=True,
                 ) as status:
 
+                    progress_bar = st.progress(
+                        0.0,
+                        text="Preparing document processing...",
+                    )
+                    progress_message = st.empty()
+
+                    progress_callback = (
+                        make_embedding_progress_callback(
+                            progress_bar,
+                            progress_message,
+                        )
+                    )
+
                     result = ingest_document(
                         client=client,
                         filename=uploaded.name,
                         pdf_bytes=uploaded.getvalue(),
                         enable_ocr=enable_upload_ocr,
+                        case_id=active_case_id,
+                        progress_callback=progress_callback,
                     )
 
-                    if active_case_id:
-                        document_id = result.get("document_id")
-
-                        if not document_id:
-                            raise RuntimeError(
-                                "Ingestion result missing document_id."
-                            )
-
-                        add_document_to_case(
-                            active_case_id,
-                            document_id,
-                        )
 
                     status.update(
                         label=f"Processed {uploaded.name}",

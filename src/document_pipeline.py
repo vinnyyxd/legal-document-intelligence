@@ -1,3 +1,5 @@
+from src.case_management import add_document_to_case
+from src.document_lock import document_processing_lock
 import json
 from pathlib import Path
 
@@ -12,13 +14,14 @@ from src.document_embedding import embed_document_chunks
 from src.document_indexing import index_document
 
 
-def run_document_pipeline(
+def _run_document_pipeline_unlocked(
     client,
     document_id,
     storage_root=DEFAULT_STORAGE_ROOT,
     batch_size=8,
     enable_ocr=False,
     ocr_language="eng",
+    progress_callback=None,
 ):
     """
     Process a registered document through extraction,
@@ -104,6 +107,7 @@ def run_document_pipeline(
         chunks=chunks,
         checkpoint_path=checkpoint_path,
         batch_size=batch_size,
+        progress_callback=progress_callback,
     )
 
     # The indexing module validates chunk order,
@@ -134,6 +138,8 @@ def ingest_document(
     batch_size=8,
     enable_ocr=False,
     ocr_language="eng",
+    case_id=None,
+    progress_callback=None,
 ):
     """
     Register a PDF and execute the document pipeline.
@@ -149,6 +155,13 @@ def ingest_document(
         storage_root=storage_root,
     )
 
+    if case_id is not None:
+        add_document_to_case(
+            case_id=case_id,
+            document_id=document["document_id"],
+            storage_root=storage_root,
+        )
+
     return run_document_pipeline(
         client=client,
         document_id=document["document_id"],
@@ -156,4 +169,28 @@ def ingest_document(
         batch_size=batch_size,
         enable_ocr=enable_ocr,
         ocr_language=ocr_language,
+        progress_callback=progress_callback,
     )
+
+
+def run_document_pipeline(
+    client,
+    document_id,
+    storage_root=DEFAULT_STORAGE_ROOT,
+    batch_size=8,
+    enable_ocr=False,
+    ocr_language="eng",
+    progress_callback=None,
+):
+    """Run the document pipeline under a per-document lock."""
+
+    with document_processing_lock(str(document_id)):
+        return _run_document_pipeline_unlocked(
+            client=client,
+            document_id=document_id,
+            storage_root=storage_root,
+            batch_size=batch_size,
+            enable_ocr=enable_ocr,
+            ocr_language=ocr_language,
+            progress_callback=progress_callback,
+        )

@@ -237,8 +237,22 @@ def embed_document_chunks(
     chunks,
     checkpoint_path,
     batch_size=8,
+    progress_callback=None,
 ):
     ids = _validate_chunks(chunks)
+
+    if (
+        progress_callback is not None
+        and not callable(progress_callback)
+    ):
+        raise TypeError("progress_callback must be callable.")
+
+    def emit(event, **details):
+        if progress_callback is not None:
+            progress_callback({
+                "event": event,
+                **details,
+            })
 
     if not isinstance(batch_size, int) or batch_size < 1:
         raise ValueError("Batch size must be positive.")
@@ -255,8 +269,28 @@ def embed_document_chunks(
         if chunk["chunk_id"] not in completed
     ]
 
+    reused = len(completed)
+    total = len(chunks)
+
+    emit(
+        "checkpoint_loaded",
+        completed=reused,
+        total=total,
+        reused=reused,
+        generated=0,
+    )
+
     for start in range(0, len(pending), batch_size):
         batch = pending[start:start + batch_size]
+
+        emit(
+            "batch_started",
+            completed=len(completed),
+            total=total,
+            reused=reused,
+            generated=len(completed) - reused,
+            batch_size=len(batch),
+        )
 
         texts = [
             prepare_chunk_text(chunk)
@@ -312,6 +346,17 @@ def embed_document_chunks(
                         2 ** (attempt + 1),
                     )
 
+                emit(
+                    "retry_wait",
+                    completed=len(completed),
+                    total=total,
+                    reused=reused,
+                    generated=len(completed) - reused,
+                    attempt=attempt + 1,
+                    max_attempts=max_retries,
+                    wait_seconds=wait_seconds,
+                )
+
                 print(
                     "Temporary embedding API error. "
                     f"Retrying in {wait_seconds:.0f} seconds..."
@@ -360,6 +405,14 @@ def embed_document_chunks(
             fingerprints
         )
 
+        emit(
+            "batch_saved",
+            completed=len(completed),
+            total=total,
+            reused=reused,
+            generated=len(completed) - reused,
+        )
+
     result = np.vstack([
         completed[chunk_id]
         for chunk_id in ids
@@ -370,6 +423,14 @@ def embed_document_chunks(
         result,
         model=EMBEDDING_MODEL,
         task_type="RETRIEVAL_DOCUMENT"
+    )
+
+    emit(
+        "embedding_complete",
+        completed=total,
+        total=total,
+        reused=reused,
+        generated=len(pending),
     )
 
     return {
