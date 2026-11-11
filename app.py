@@ -11,6 +11,12 @@ from src.document_registry import list_documents
 from src.document_structure import analyze_document_structure
 from src.citation_viewer import render_citation_page
 from src.legal_reasoning_ui import render_legal_reasoning_explorer
+from src.workspace_ui import render_workspace_dashboard
+from src.result_ui import render_result_summary
+from src.research_ui import (
+    render_research_intro,
+    render_verification_guide,
+)
 
 from src.case_management import (
     create_case,
@@ -91,18 +97,15 @@ def display_rag_result(result):
     st.divider()
     st.subheader("Legal Research Result")
 
-    if status == "verified":
-        st.success("Answer verified against retrieved evidence")
-    elif status == "conflicting_evidence":
-        st.warning("Conflicting evidence detected")
-    elif status == "insufficient_evidence":
-        st.warning("Insufficient verified evidence")
-    else:
+    render_result_summary(result)
+
+    if status not in {
+        "verified",
+        "conflicting_evidence",
+        "insufficient_evidence",
+    }:
         st.error("Unexpected verification status")
         return
-
-    if confidence:
-        st.caption(f"Confidence: {confidence}")
 
     st.markdown("#### Answer")
     st.write(answer)
@@ -462,6 +465,26 @@ active_case_id = st.selectbox(
     placeholder="Create a case to begin",
 )
 
+# ==================================================
+# PHASE 17 — CASE WORKSPACE DASHBOARD
+# ==================================================
+
+if active_case_id:
+    dashboard_case = get_case(active_case_id)
+    dashboard_documents = get_case_documents(
+        active_case_id
+    )
+else:
+    dashboard_case = None
+    dashboard_documents = []
+
+render_workspace_dashboard(
+    active_case_id=active_case_id,
+    case_record=dashboard_case,
+    case_documents=dashboard_documents,
+)
+
+
 st.session_state["active_case_id"] = active_case_id
 
 if active_case_id:
@@ -565,6 +588,16 @@ tab_qa, tab_documents, tab_structure = st.tabs([
 
 with tab_qa:
     st.subheader("Ask your legal documents")
+
+    # Phase 17 — Research guidance
+    render_research_intro(
+        active_case_id=active_case_id,
+        case_documents=(
+            get_case_documents(active_case_id)
+            if active_case_id else []
+        ),
+    )
+    render_verification_guide()
 
     question = st.text_area(
         "Your question",
