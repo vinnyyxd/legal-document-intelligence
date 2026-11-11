@@ -1,3 +1,5 @@
+import re
+import time
 import os
 import tempfile
 
@@ -261,11 +263,61 @@ def embed_document_chunks(
             for chunk in batch
         ]
 
-        vectors = embed_texts(
-            client,
-            texts,
-            task_type="RETRIEVAL_DOCUMENT"
-        )
+        # Retry temporary provider errors without losing
+        # previously checkpointed embedding batches.
+        max_retries = 6
+
+        for attempt in range(max_retries):
+            try:
+                vectors = embed_texts(
+                    client,
+                    texts,
+                    task_type="RETRIEVAL_DOCUMENT"
+                )
+                break
+
+            except Exception as exc:
+                message = str(exc).lower()
+
+                retryable = any(
+                    marker in message
+                    for marker in (
+                        "429",
+                        "500",
+                        "502",
+                        "503",
+                        "504",
+                        "resource_exhausted",
+                        "unavailable",
+                        "deadline",
+                        "timeout",
+                        "temporarily",
+                    )
+                )
+
+                if not retryable or attempt == max_retries - 1:
+                    raise
+
+                # Respect retry delays returned by Gemini.
+                match = re.search(
+                    '[\'"]?retryDelay[\'"]?\\s*:\\s*[\'"]?(\\d+(?:\\.\\d+)?)s',
+                    str(exc),
+                )
+
+                if match:
+                    wait_seconds = float(match.group(1)) + 2
+                else:
+                    wait_seconds = min(
+                        120,
+                        2 ** (attempt + 1),
+                    )
+
+                print(
+                    "Temporary embedding API error. "
+                    f"Retrying in {wait_seconds:.0f} seconds..."
+                )
+
+                time.sleep(wait_seconds)
 
         # Validate the complete provider response before
         # modifying completed results or the checkpoint.
