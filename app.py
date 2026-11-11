@@ -8,6 +8,17 @@ from src.multi_document_retrieval import answer_multiple_documents
 from src.document_pipeline import ingest_document
 from src.document_registry import list_documents
 
+from src.case_management import (
+    create_case,
+    get_case,
+    list_cases,
+    add_document_to_case,
+    remove_document_from_case,
+    get_case_documents,
+    validate_case_for_query,
+)
+
+
 
 def get_gemini_client():
     """Initialize Gemini using Streamlit secrets."""
@@ -225,6 +236,157 @@ with st.sidebar:
         "Generation → Verification"
     )
 
+
+st.header("Legal Case Workspace")
+
+with st.expander("Create a New Case", expanded=False):
+    with st.form("create_case_form"):
+        new_case_name = st.text_input(
+            "Case name",
+            placeholder="Example: Rental Agreement Review",
+        )
+        new_case_description = st.text_area(
+            "Description (optional)",
+            height=80,
+        )
+        create_clicked = st.form_submit_button(
+            "Create Case",
+            type="primary",
+        )
+
+    if create_clicked:
+        try:
+            created = create_case(
+                name=new_case_name,
+                description=new_case_description,
+            )
+            st.session_state["active_case_id"] = created["case_id"]
+            st.success(f"Case created: {created['name']}")
+            st.rerun()
+        except Exception as exc:
+            st.error(f"Case creation failed: {exc}")
+
+available_cases = list_cases()
+
+case_lookup = {
+    case["case_id"]: case
+    for case in available_cases
+}
+
+case_options = list(case_lookup)
+
+previous_case_id = st.session_state.get("active_case_id")
+
+if previous_case_id not in case_lookup:
+    previous_case_id = case_options[0] if case_options else None
+
+active_case_id = st.selectbox(
+    "Active legal case",
+    options=case_options,
+    index=(
+        case_options.index(previous_case_id)
+        if previous_case_id in case_options
+        else None
+    ),
+    format_func=lambda case_id: case_lookup[case_id]["name"],
+    placeholder="Create a case to begin",
+)
+
+st.session_state["active_case_id"] = active_case_id
+
+if active_case_id:
+    active_case = get_case(active_case_id)
+    assigned_ids = active_case["document_ids"]
+
+    st.caption(
+        f"Documents in case: {len(assigned_ids)}/5 "
+        "(minimum 2 required for questions)"
+    )
+
+    all_documents = list_documents()
+
+    if isinstance(all_documents, dict):
+        all_documents = list(all_documents.values())
+
+    available_document_lookup = {
+        document["document_id"]: document
+        for document in all_documents
+        if isinstance(document, dict)
+        and document.get("document_id")
+    }
+
+    attachable_ids = [
+        document_id
+        for document_id in available_document_lookup
+        if document_id not in assigned_ids
+    ]
+
+    with st.expander("Assign Indexed Documents to Case"):
+        selected_attachment_ids = st.multiselect(
+            "Available documents",
+            options=attachable_ids,
+            format_func=lambda document_id: (
+                available_document_lookup[document_id].get(
+                    "filename", "Document"
+                )
+                + " — "
+                + document_id[:8]
+            ),
+            key="case_document_attachment",
+        )
+
+        if st.button(
+            "Add Documents to Case",
+            disabled=not selected_attachment_ids,
+        ):
+            try:
+                if len(assigned_ids) + len(selected_attachment_ids) > 5:
+                    raise ValueError(
+                        "A case cannot contain more than five PDFs."
+                    )
+
+                for document_id in selected_attachment_ids:
+                    add_document_to_case(
+                        active_case_id,
+                        document_id,
+                    )
+
+                st.success("Documents assigned successfully.")
+                st.rerun()
+            except Exception as exc:
+                st.error(str(exc))
+
+    if assigned_ids:
+        st.markdown("**Documents assigned to this case:**")
+
+        for document in get_case_documents(active_case_id):
+            if not document:
+                continue
+
+            document_id = document["document_id"]
+
+            name_column, remove_column = st.columns([5, 1])
+
+            with name_column:
+                st.write(
+                    f"📄 {document.get('filename', 'Document')} "
+                    f"— {document.get('status', 'unknown')}"
+                )
+
+            with remove_column:
+                if st.button(
+                    "Remove",
+                    key=f"remove_{active_case_id}_{document_id}",
+                ):
+                    remove_document_from_case(
+                        active_case_id,
+                        document_id,
+                    )
+                    st.session_state.pop("last_rag_result", None)
+                    st.session_state.pop("last_rag_query_key", None)
+                    st.rerun()
+
+
 tab_qa, tab_documents = st.tabs([
     "Ask Questions",
     "Document Management",
@@ -244,17 +406,23 @@ with tab_qa:
 
     ready_documents = get_ready_documents()
 
-    selected_document_ids = st.multiselect(
-        "Select documents to search",
-        options=list(ready_documents),
-        format_func=lambda document_id: (
-            f"{ready_documents[document_id].get('filename', 'Document')}"
-            f" — {document_id[:8]}"
-        ),
-        help="Only successfully indexed documents are available.",
+    if active_case_id:
+        active_case = get_case(active_case_id)
+        selected_document_ids = [
+            document_id
+            for document_id in active_case["document_ids"]
+            if document_id in ready_documents
+        ]
+    else:
+        selected_document_ids = []
+
+    st.caption(
+        f"Searching {len(selected_document_ids)} ready documents "
+        "from the active case."
     )
 
     current_query_key = (
+        active_case_id,
         question.strip(),
         tuple(sorted(selected_document_ids)),
     )
@@ -267,7 +435,8 @@ with tab_qa:
 
     search_enabled = (
         bool(question.strip())
-        and bool(selected_document_ids)
+        and bool(active_case_id)
+        and 2 <= len(selected_document_ids) <= 5
     )
 
     search_clicked = st.button(
@@ -278,6 +447,11 @@ with tab_qa:
 
     if search_clicked:
         try:
+            validated_case = validate_case_for_query(
+                active_case_id
+            )
+            selected_document_ids = validated_case["document_ids"]
+
             client = get_gemini_client()
             reranker_model = get_reranker()
 
@@ -327,10 +501,34 @@ with tab_documents:
 
     display_documents()
 
+    current_case_count = (
+        len(get_case(active_case_id)["document_ids"])
+        if active_case_id
+        else 0
+    )
+
+    remaining_slots = 5 - current_case_count
+
+    st.caption(
+        f"Remaining PDF slots in active case: {remaining_slots}"
+    )
+
+    upload_count = len(uploaded_files) if uploaded_files else 0
+
+    if upload_count > remaining_slots:
+        st.warning(
+            f"Only {remaining_slots} additional PDFs can be "
+            "added to this case."
+        )
+
     process_clicked = st.button(
         "Process Uploaded Documents",
         type="primary",
-        disabled=not uploaded_files,
+        disabled=(
+            not active_case_id
+            or upload_count == 0
+            or upload_count > remaining_slots
+        ),
     )
 
     if process_clicked:
@@ -338,6 +536,18 @@ with tab_documents:
         st.session_state.pop("last_rag_query_key", None)
 
         try:
+            if not active_case_id:
+                raise ValueError("Create or select a case first.")
+
+            remaining_slots = (
+                5 - len(get_case(active_case_id)["document_ids"])
+            )
+
+            if not 1 <= upload_count <= remaining_slots:
+                raise ValueError(
+                    "Upload exceeds the remaining case capacity."
+                )
+
             client = get_gemini_client()
 
             for uploaded in uploaded_files:
@@ -351,6 +561,19 @@ with tab_documents:
                         filename=uploaded.name,
                         pdf_bytes=uploaded.getvalue(),
                     )
+
+                    if active_case_id:
+                        document_id = result.get("document_id")
+
+                        if not document_id:
+                            raise RuntimeError(
+                                "Ingestion result missing document_id."
+                            )
+
+                        add_document_to_case(
+                            active_case_id,
+                            document_id,
+                        )
 
                     status.update(
                         label=f"Processed {uploaded.name}",
